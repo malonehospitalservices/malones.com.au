@@ -123,7 +123,13 @@
                 color: #ffffff;
             }
 
-            .body-link:visited{ color: inherit; }
+            .body-link:link,
+            .body-link:visited,
+            .body-link:hover,
+            .body-link:active {
+                color: inherit;
+                text-decoration: underline;
+            }
 
             .footer a{ text-decoration: none; color: #ffffff; }
             .footer a:hover{ text-decoration: underline; }
@@ -203,21 +209,26 @@
                         <div class="col-12 col-lg-6 order-2 order-lg-1">
                             <h1 class="h1 mb-3">KEN AL10</h1>
                             <p class="mb-3">
-                                Unique robot solution for transportation in the CSSD to and from the washer-disinfectors. The robot selects a vacant machine, loads it and automatically starts the correct washing program.
+                                Unique autonomous robot solution designed for Central Sterile Services Departments (CSSDs). It automates the transport of racks between washer-disinfectors, storage tables, and return hatches, reducing manual handling and increasing efficiency.
                             </p>
                             <p class="mb-3">
-                                Space-saving design that increases ergonomics and releases staff to solve other important tasks.
+                                The AL10 identifies a free washer disinfector, loads the rack, and starts the correct washing cycle using RFID recognition. Once the cycle is complete, it returns empty racks to storage and then navigates safely back to its charging station when idle.
                             </p>
-                            <p class="mb-3">
-                                The robot returns empty racks to a storage area and finds its way autonomously to the charging station when idle.
-                            </p>
+                            <h5 class="h5 mb-2">Benefits</h5>
+                            <ul class="list ps-3 mb-3">
+                                <li>Eliminates heavy lifting and contact with hot racks to improve safety and ergonomics.</li>
+                                <li>Runs 24 hours, 7 days to keep CSSD workflows moving.</li>
+                                <li>Reduces noise and improves the working environment.</li>
+                                <li>Balances washer workload to extend service intervals and optimise throughput.</li>
+                                <li>Space saving design that enables higher productivity without additional floor space.</li>
+                            </ul>
                             <div class="d-grid gap-2 d-sm-flex">
                                 <a class="btn btn-outline-dark btn-sm px-4 rounded-pill w-100 mt-auto" href="data/ken-al10-datasheet.pdf" target="_blank" rel="noopener">Datasheet</a>
                             </div>
                         </div>
                         <div class="col-10 col-sm-8 col-lg-6 order-1 order-lg-2 mx-auto pt-3 pb-3">
                             <a href="ken-iq-comparison.html" class="d-block text-decoration-none">
-                                <img class="img-fluid rounded-4" src="img/ken-al10-1.png" alt="KEN AL10 Washer-Disinfector Loading and Unloading Robot" loading="lazy" decoding="async">
+                                <img class="img-fluid rounded-4" src="img/ken-al10-3.png" alt="KEN AL10 Washer-Disinfector Loading and Unloading Robot" loading="lazy" decoding="async">
                             </a>
                         </div>
                     </div>

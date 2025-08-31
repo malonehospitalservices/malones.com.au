@@ -125,7 +125,13 @@
                 color: #ffffff;
             }
 
-            .body-link:visited{ color: inherit; }
+            .body-link:link,
+            .body-link:visited,
+            .body-link:hover,
+            .body-link:active {
+                color: inherit;
+                text-decoration: underline;
+            }
 
             .footer a{ text-decoration: none; color: #ffffff; }
             .footer a:hover{ text-decoration: underline; }
