@@ -57,7 +57,7 @@
                     "telephone": "+61243239731",
                     "currenciesAccepted": "AUD",
                     "paymentAccepted": ["Invoice","EFT"],
-                    "address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2251","addressCountry": "AU"},
+                    "address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2250","addressCountry": "AU"},
                     "sameAs": ["https://www.linkedin.com/company/malone-hospital-services","https://youtube.com/channel/UCHWcctvWlmlqqrSm8ofU93w"],
                     "contactPoint": [
                         {"@type": "ContactPoint","telephone": "+61243239731","email": "sales@malones.com.au","contactType": "customer service","areaServed": "AU","availableLanguage": "en-AU"},
@@ -75,7 +75,7 @@
                     ]},
                     "knowsAbout": ["Bedpan Washers","Washer Disinfectors","Autoclaves","Sterilisers","Utensil Washers","Laboratory Washers","Trolley Washers","Drying Cabinets","Ultrasonic Cleaners","Endoscope Washers","Blanket Warmers","Operating Tables","Fluid Refrigerators","Steam Generators","Boilers","Reverse Osmosis Systems","Robotic Automation","CSSD Equipment"],
                     "branch": [
-                        {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#new-south-wales","name": "Malone Hospital Services New South Wales","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2251","addressCountry": "AU"},"telephone": "+61243239731","geo": {"@type": "GeoCoordinates","latitude": -33.41649782149152,"longitude": 151.3168531452192},"hasMap": "https://g.page/malone-hospital-services-nsw?share"},
+                        {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#new-south-wales","name": "Malone Hospital Services New South Wales","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2250","addressCountry": "AU"},"telephone": "+61243239731","geo": {"@type": "GeoCoordinates","latitude": -33.41649782149152,"longitude": 151.3168531452192},"hasMap": "https://g.page/malone-hospital-services-nsw?share"},
                         {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#queensland","name": "Malone Hospital Services Queensland","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "7/9 Redcliffe Gardens Drive","addressLocality": "Clontarf","addressRegion": "QLD","postalCode": "4019","addressCountry": "AU"},"telephone": "+61732832566","geo": {"@type": "GeoCoordinates","latitude": -27.23594362806235,"longitude": 153.07849614007287},"hasMap": "https://g.page/malone-hospital-services-qld?share"}
                     ]
                 }
@@ -91,9 +91,9 @@
                 --offwhite: rgb(249, 244, 236);
                 --mhs-blue: rgb(133, 181, 192);
                 --mhs-original: rgb(133, 181, 192);
-                --footer: rgb(74, 77, 80);
+                --footer: rgb(38, 70, 88); /* was rgb(31, 52, 64) */
                 --overlay: rgba(19, 42, 65, 0.5);
-                --nav-back: rgb(54, 95, 115);
+                --nav-back: rgb(52, 86, 115);
             }
 
             html, body { height: 100%; }
@@ -163,7 +163,7 @@
                     </svg>
                 </button>
                 <div id="nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto gap-lg-2">
+                    <ul class="navbar-nav ms-auto gap-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                             <ul class="dropdown-menu" aria-labelledby="navServices">
@@ -212,6 +212,14 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navSteriliser" role="button" data-bs-toggle="dropdown" aria-expanded="false">Steam Sterilisers</a>
+                            <ul class="dropdown-menu" aria-labelledby="navSteriliser">
+                                <li><a class="dropdown-item" href="ajc-steri-21.html">AJC Steri 21</a></li>
+                                <li><a class="dropdown-item" href="ajc-uniclave-99.html">AJC Uniclave 99</a></li>
+                                <li><a class="dropdown-item" href="ajc-amaro-5000.html">AJC Amaro 5000</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navAccessories" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accessories</a>
                             <ul class="dropdown-menu" aria-labelledby="navAccessories">
                                 <li><a class="dropdown-item" href="accessory-detergent.html">Detergent</a></li>
@@ -231,11 +239,12 @@
                         <div class="list-group list-group-flush toc">
                             <a class="list-group-item" href="#disclaimer">Disclaimer</a>
                             <a class="list-group-item" href="#introduction">Introduction</a>
-                            <a class="list-group-item" href="#financial-model">10-Year Financial Model Comparison</a>
+                            <a class="list-group-item" href="#financial-model">Financial Model Comparison</a>
                             <a class="list-group-item" href="#logistics">Transport and Logistics Considerations</a>
                             <a class="list-group-item" href="#efficiency">Operational Efficiency and Turnaround Times</a>
                             <a class="list-group-item" href="#risk">Risk Profile Analysis</a>
                             <a class="list-group-item" href="#conclusion">Conclusions and Recommendations</a>
+                            <a class="list-group-item" href="#sources">Sources</a>
                         </div>
                     </div>
                 </aside>
@@ -244,214 +253,385 @@
                     <article class="mb-4">
                         <p class="h2 section-anchor">White Paper</p>
                         <p class="h2">Cost-Benefit Analysis of Outsourcing Sterilisation Services vs. In-House CSSD in Australian Healthcare</p>
-                        <p>August 2025</p>
+                        <p>October 2026</p>
                     </article>
 
-                    <p class="h3 section-anchor" id="disclaimer">Disclaimer</p>
-                    <p>This content is provided for information only. The authors make no representation or warranty regarding the accuracy, completeness or currency of the content. No information in this whitepaper should be construed as medical advice. Readers should seek appropriate professional guidance before acting on any information contained in this document. The authors expressly disclaim all liability for any direct or indirect loss or damage arising from the use of or reliance on this information.</p>
+                    <article class="mb-4">
+                        <p class="h3 section-anchor" id="disclaimer">Disclaimer</p>
+                        <p>This content is provided for information only. The authors make no representation or warranty regarding the accuracy, completeness or currency of the content. No information in this whitepaper should be construed as medical advice. Readers should seek appropriate professional guidance before acting on any information contained in this document. The authors expressly disclaim all liability for any direct or indirect loss or damage arising from the use of or reliance on this information.</p>
+                    </article>
 
-                    <p class="h3 section-anchor" id="introduction">Introduction</p>
-                    <p>Sterilisation of surgical instruments is a critical function in healthcare, directly impacting infection control and patient safety. Hospitals traditionally perform this function in-house through Central Sterile Supply Departments (CSSDs), which manage the decontamination, packaging, and sterilisation of reusable medical devices. In Australia, recent stricter standards such as AS/NZS 4187:2014 have raised the bar for sterilisation processes and infrastructure, requiring costly upgrades to many hospital CSSDs. This has prompted healthcare leaders to re-evaluate the cost-effectiveness of maintaining an in-house CSSD versus outsourcing sterilisation to an external specialised provider. The question is especially pertinent for large public hospitals with high surgical volumes and complex needs and small day surgeries with limited space and budget. This whitepaper provides a comprehensive cost-benefit analysis over a 10-year horizon, comparing financial models, operational efficiency, logistics, and risk profiles of the two approaches. All assumptions and data are based on Australian hospital contexts and reputable industry sources. The goal is to equip decision-makers with a clear understanding of the trade-offs, backed by qualitative and quantitative risk assessments including risk matrices, and to offer recommendations tailored to different healthcare settings.</p>
+                    <article class="mb-4">
+                        <p class="h3 section-anchor" id="introduction">Introduction</p>
+                        <p>Hospitals and day procedure centres can reprocess reusable medical devices (RMDs) in an in-house central sterile services department (CSSD) or contract an external provider to collect, reprocess and return them. AS 5369:2023, which superseded AS/NZS 4187:2014 and AS/NZS 4815:2006, applies to both. This paper compares the two on equivalent annual cost, logistics, turnaround and risk controls, and gives a break-even outsourcing fee for a large hospital and a day surgery.</p>
+                    </article>
 
-                    <p class="h3 section-anchor" id="financial-model">10-Year Financial Model Comparison</p>
-                    <p>A long-term financial projection illustrates the differences in capital and operating costs between an in-house CSSD and an outsourced sterilisation service. Table 1 summarises a 10-year cost model for a typical large Australian public hospital processing ~25,000 surgical procedures per year, based on representative cost assumptions drawn from industry data and case studies.</p>
-                    <p><strong>In-House CSSD:</strong> Requires significant capital expenditure upfront. A new or upgraded CSSD compliant with AS/NZS 4187 can cost on the order of several million dollars in construction, HVAC modifications, water treatment systems, and sterilisation equipment. For example, The Wesley Hospital (a large private hospital) recently doubled its sterilising department to 500 m² with state-of-the-art equipment, supporting over 25,000 procedures with 38 staff, an extensive project indicating the scale of investment. We assume a capital outlay of A$10 million in Year 0 for a major CSSD refurbishment building works and new autoclaves, washers, air/water systems. Staffing costs are a major ongoing expense: a large CSSD may employ 30 to 40 full-time-equivalent staff (sterilisation technicians, supervisors, maintenance), incurring roughly A$3 million per year (including wages, training, and on-costs) in our model. Facility overheads such as utilities (steam, water, electricity), consumables (wraps, chemical indicators), maintenance contracts, and equipment depreciation add additional operating costs, estimated at ~A$0.5 million per year. Many of these costs are “hidden” in general hospital budgets and not always attributed to CSSD, but they contribute to the true in-house cost. In total, the modeled annual operating cost for in-house CSSD is about A$3.5 to 4 million. Over 10 years, the in-house approach might total ~A$40 million including the initial capital and ten years of operating expenses in nominal terms.</p>
-                    <p><strong>Outsourced Sterilisation Service:</strong> Avoids the large upfront capital expenditure and shifts many costs to a pay-as-you-go model. In an outsourced scenario, the hospital contracts an external reprocessing provider to collect used instruments and return them sterilised, typically with a fee structure based on volume e.g. cost per tray or per instrument or a fixed service contract. For a similar high-volume hospital, we assume an outsourcing contract of approximately A$3.0 to 3.5 million per year, which covers all sterilisation processing, quality assurance, compliance, and transport logistics by the vendor. This figure is in line with the in-house operating cost but notably excludes capital costs, the hospital doesn’t need to invest in new sterilisation equipment or major facility upgrades. There may be some residual internal costs: for example, hospitals often maintain a small soiled holding area or do initial pre-cleaning of instruments before pickup requiring minimal space and a few staff. We allocate ~A$0.2 million annually for this internal handling. Thus, the total outsourced cost is estimated at ~A$3.2 to 3.5 million per year, or roughly A$32 to 35 million over 10 years, with the benefit of costs spread evenly over time rather than concentrated upfront.</p>
+                    <article class="mb-4">
+                        <p class="h3 section-anchor" id="financial-model">Financial Model Comparison</p>
+                        <p><strong>Method:</strong> Compare options on equivalent annual cost (EAC) in constant dollars at a real discount rate. Spread each capital item over its own life with the capital recovery factor, add annual operating costs, and divide by annual trays to give cost per tray. Exclude sunk costs, and include only costs that differ between the options. Calculate the all-inclusive provider fee at which the options cost the same, and compare quoted fees with it on the same tray or instrument basis. Comparing 10 year cash totals overstates the in-house cost, because building works last longer than 10 years.</p>
+                        <p><strong>Large hospital model:</strong> The following illustrative model uses 25,000 procedures per year on 260 operating days and a 5 % real discount rate. Replace each input with measured data, e.g. trays per procedure and process times from the instrument tracking system, and with quoted prices.</p>
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Value</th>
+                                        <th>Basis</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Trays per year</td>
+                                        <td>100,000</td>
+                                        <td>4 trays per procedure, about 200 instruments at 50 per tray</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Design daily throughput</td>
+                                        <td>500 trays</td>
+                                        <td>Mean 385 trays per day multiplied by a peak factor of 1.3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cycles per machine per day</td>
+                                        <td>12.8</td>
+                                        <td>60 min cycle including loading, 16 h operation, 80 % availability</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Washer-disinfectors</td>
+                                        <td>5</td>
+                                        <td>12 trays per cycle, 154 trays per day each. 4 duty units plus 1 redundant unit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Steam sterilisers</td>
+                                        <td>4</td>
+                                        <td>8 sterilisation modules of 300 by 300 by 600 mm [12 by 12 by 24"] per cycle at 2 trays per module, 205 trays per day each. 3 duty units plus 1 redundant unit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Process labour</td>
+                                        <td>32 min per tray</td>
+                                        <td>Decontamination 6 min, inspection, function testing and assembly 15 min (18 s per instrument), packaging 4 min, steriliser loading and release 3 min, storage and distribution 4 min</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Productive hours per FTE</td>
+                                        <td>1,700 h</td>
+                                        <td>1,976 paid hours less annual, public holiday, personal and training leave</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Staff</td>
+                                        <td>37.9 FTE</td>
+                                        <td>31.4 FTE process labour, 4.5 FTE manager, shift supervisors, educator and tracking administration, 2.0 FTE weekend and after-hours cover</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loaded staff cost</td>
+                                        <td>A$95,000 per FTE</td>
+                                        <td>Salary plus on-costs, including the 12 % superannuation guarantee, leave and workers compensation</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Running cost basis:</strong> Consumables are A$4.10 per tray: wrap or container filter A$2.50, chemical indicators A$1.00, tracking label A$0.20, and detergent and lubricant A$0.40, at illustrative unit prices. Washer-disinfector utilities are A$2.89 per cycle: 120 L [32 US gal] of water, and 7.6 kWh to heat 30 L [8 US gal] to 55 deg C [131 deg F] and 30 L [8 US gal] to 90 deg C [194 deg F] from 15 deg C [59 deg F], heat 60 kg [132 lb] of chamber and load steel to 90 deg C [194 deg F], and dry the load. Steriliser utilities are A$4.16 per cycle: 15 kg [33 lb] of steam requiring 11.1 kWh, and 165 L [44 US gal] of water. Tariffs are A$0.30 per kWh and A$5 per kL [A$18.93 per 1,000 US gal]. Cycle counts assume 85 % average load. Maintenance is A$12,000 per machine per year (four planned visits at A$2,250 and annual requalification at A$3,000), plus A$70,000 for water treatment, water testing, tracking system support and calibration, and A$10,400 for 1,040 daily air removal test packs at A$10.</p>
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Cost Item</th>
+                                        <th>In-House per Year</th>
+                                        <th>In-House per Tray</th>
+                                        <th>Share</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Building works, A$6M over 30 years</td>
+                                        <td>A$390,000</td>
+                                        <td>A$3.90</td>
+                                        <td>8 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Equipment, A$4M over 10 years</td>
+                                        <td>A$518,000</td>
+                                        <td>A$5.18</td>
+                                        <td>10 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Staff, 37.9 FTE</td>
+                                        <td>A$3,598,000</td>
+                                        <td>A$35.98</td>
+                                        <td>70 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Consumables</td>
+                                        <td>A$410,000</td>
+                                        <td>A$4.10</td>
+                                        <td>8 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maintenance, requalification and testing</td>
+                                        <td>A$188,000</td>
+                                        <td>A$1.88</td>
+                                        <td>4 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Utilities</td>
+                                        <td>A$59,000</td>
+                                        <td>A$0.59</td>
+                                        <td>1 %</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td>A$5,164,000</td>
+                                        <td>A$51.64</td>
+                                        <td>100 %</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="small text-muted">Illustrative in-house equivalent annual cost. Totals may differ from the sum of rounded values.</p>
+                        <p><strong>Costs retained when outsourcing:</strong> Outsourcing does not remove all on-site cost. Include the following:</p>
+                        <ul>
+                            <li>Staff: 3 min per tray for receipt inspection, point-of-use pre-treatment checks and packing for transport, 2.9 FTE, plus 1.0 FTE for contract and quality management. 3.9 FTE costs A$374,000 per year.</li>
+                            <li>Additional trays: only set types used more often than the outsourced turnaround need duplicates. With half of daily trays in that group and 1 additional day of turnaround, 192 trays are needed, plus 10 emergency sets held on site. 202 trays at A$5,000 over 10 years cost A$131,000 per year.</li>
+                            <li>Receipt and holding area works: A$0.3M over 30 years, A$20,000 per year.</li>
+                        </ul>
+                        <p>Retained costs total A$525,000 per year, or A$5.25 per tray.</p>
+                        <p><strong>Break-even fee:</strong> Outsourcing costs less where the all-inclusive fee is below A$4.64M per year. This is A$46.39 per tray, A$0.93 per instrument or A$186 per procedure. At a quoted A$40 per tray, outsourcing is A$639,000 per year lower. At A$45, it is A$139,000 lower. At A$50, in-house is A$361,000 lower.</p>
+                        <p><strong>Adjustments:</strong></p>
+                        <ul>
+                            <li>Fee escalation: a fee rising 2 % per year above inflation over a 10 year term has a levelised value 8.6 % above the starting fee. Divide the break-even fee by the levelisation factor, giving a starting fee of A$42.70 per tray.</li>
+                            <li>Transition costs: levelise one-off costs, e.g. staff redeployment or redundancy, contract establishment and decommissioning, over the contract term. A$1M over 10 years at 5 % adds A$129,500 per year, or A$1.30 per tray, to the outsourced option.</li>
+                            <li>Sunk costs: where the CSSD building already complies, remove building works. The break-even fee falls to A$42.48 per tray.</li>
+                            <li>Space: where outsourcing releases floor area for clinical use, add the annual value of that use to the in-house cost.</li>
+                            <li>Tray definition: providers price per tray, per container or per instrument. Convert quotes to the facility's instrument count and set mix before comparison.</li>
+                        </ul>
+                        <p><strong>Sensitivity:</strong> Staff is 70 % of in-house cost, so labour productivity and staff cost dominate the result. Utilities are 1 % and do not affect the decision.</p>
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Variable</th>
+                                        <th>Range Tested</th>
+                                        <th>Break-Even Fee per Tray</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Base case</td>
+                                        <td>As listed</td>
+                                        <td>A$46.39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Process labour</td>
+                                        <td>25.6 to 38.4 min per tray</td>
+                                        <td>A$40.43 to A$52.35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loaded staff cost</td>
+                                        <td>A$80,750 to A$109,250 per FTE</td>
+                                        <td>A$41.55 to A$51.22</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Trays per procedure</td>
+                                        <td>5 to 3</td>
+                                        <td>A$43.39 to A$51.38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Building works</td>
+                                        <td>A$0 to A$12M</td>
+                                        <td>A$42.48 to A$50.29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fee escalation above inflation</td>
+                                        <td>2 % to 0 % per year</td>
+                                        <td>A$42.70 to A$46.39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Consumables</td>
+                                        <td>A$3.00 to A$6.00 per tray</td>
+                                        <td>A$45.29 to A$48.29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Discount rate</td>
+                                        <td>3 % to 7 %</td>
+                                        <td>A$45.22 to A$47.66</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Additional tray cost</td>
+                                        <td>A$10,000 to A$2,500</td>
+                                        <td>A$45.08 to A$47.04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Trays needing duplicates</td>
+                                        <td>100 % to 25 % of daily use</td>
+                                        <td>A$45.14 to A$47.01</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Measure process labour per tray from tracking system time stamps before tendering. A 20 % difference in labour productivity moves the break-even fee by about A$6 per tray, the largest effect of any single input.</p>
+                        <p><strong>Day surgery model:</strong> 1.5 trays per procedure, 250 operating days and 32 min of process labour per tray. Staffing is the greater of workload and minimum cover of one technician for 10 h per day, plus 0.5 FTE for the competent person in charge. Capital is a A$400,000 room fit-out over 30 years and A$250,000 of equipment (one washer-disinfector and two sterilisers) over 10 years, with A$29,000 per year of maintenance and testing, A$4.10 per tray of consumables and A$2 per cycle of utilities. Retained costs when outsourcing are 3 min per tray plus 0.1 FTE of contract liaison, and duplicates for half of daily trays at A$3,000.</p>
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Procedures per Year</th>
+                                        <th>Staff</th>
+                                        <th>In-House Cost per Tray</th>
+                                        <th>Break-Even Fee per Tray (per Procedure)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1,500</td>
+                                        <td>2.0 FTE</td>
+                                        <td>A$127</td>
+                                        <td>A$119 (A$178)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3,000</td>
+                                        <td>2.0 FTE</td>
+                                        <td>A$66</td>
+                                        <td>A$60 (A$90)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4,500</td>
+                                        <td>2.6 FTE</td>
+                                        <td>A$54</td>
+                                        <td>A$49 (A$74)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6,000</td>
+                                        <td>3.3 FTE</td>
+                                        <td>A$49</td>
+                                        <td>A$45 (A$67)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Below about 3,000 procedures per year, minimum staffing cover sets the cost, so in-house cost per tray rises steeply as volume falls. At higher volume, in-house cost per tray approaches the large hospital value. Outsourcing is most likely to pay at low volume.</p>
+                    </article>
 
-                    <div class="table-responsive">
-                        <table class="table align-middle">
-                            <thead>
-                                <tr>
-                                    <th>Cost Category</th>
-                                    <th>In-House CSSD (Build &amp; Operate)</th>
-                                    <th>Outsourced Sterilisation Service</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Initial Capital Investment</td>
-                                    <td>A$10,000,000 (facility construction, compliant equipment)</td>
-                                    <td>A$0 (No major capital by hospital; vendor invests in plant)</td>
-                                </tr>
-                                <tr>
-                                    <td>Annual Processing Volume</td>
-                                    <td>~5 million instruments (25k procedures)</td>
-                                    <td>~5 million instruments (25k procedures) handled by vendor</td>
-                                </tr>
-                                <tr>
-                                    <td>Staffing &amp; Labor</td>
-                                    <td>~A$3.0 M per year (35 FTE staff, training)</td>
-                                    <td>~A$0.2 M per year (minimal in-house staff for on-site handling)</td>
-                                </tr>
-                                <tr>
-                                    <td>Consumables &amp; Utilities</td>
-                                    <td>~A$0.3 M per year (packs, indicators, water, power)</td>
-                                    <td>Included in vendor fee (handled by provider)</td>
-                                </tr>
-                                <tr>
-                                    <td>Maintenance &amp; Depreciation</td>
-                                    <td>~A$0.2 M per year (equipment upkeep, testing, asset depreciation)</td>
-                                    <td>Included in vendor fee (provider maintains equipment)</td>
-                                </tr>
-                                <tr>
-                                    <td>Logistics (Transport)</td>
-                                    <td>N/A (onsite sterilisation, no transport needed)</td>
-                                    <td>Included or A$0.3 M per year (vendor’s collection &amp; delivery service)</td>
-                                </tr>
-                                <tr>
-                                    <td>Annual Operating Cost (Total)</td>
-                                    <td>~A$3.5 to 4.0 M (all in-house costs per year)</td>
-                                    <td>~A$3.2 to 3.5 M (service fees + minor internal costs)</td>
-                                </tr>
-                                <tr>
-                                    <td>10-Year Cumulative Cost</td>
-                                    <td>~A$40 M (including initial capital)</td>
-                                    <td>~A$33 M (primarily operating payments)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="small text-muted">Table 1. Ten-Year Cost Comparison: In-House CSSD vs. Outsourced Service (Large Hospital)</p>
+                    <article class="mb-4">
+                        <p class="h3 section-anchor" id="logistics">Transport and Logistics Considerations</p>
+                        <p><strong>In-house:</strong> Internal transport moves used devices from theatre to the CSSD and sterile items back. The hospital controls the schedule and can reprocess an urgent tray the same day.</p>
+                        <p><strong>Outsourced:</strong> A typical contract collects used devices after the list and returns them the next morning. Plan inventory on that basis: for each set type used more often than the outsourced turnaround, additional sets equal uses per day multiplied by the additional days of turnaround. AS 5369:2023 requires the total reprocessing time to be included in operational planning so that sufficient devices are available.</p>
+                        <p><strong>Time to cleaning:</strong> Delay between point-of-use pre-treatment and cleaning increases bioburden and lets soil dry on devices. Pre-treat at the point of use per the device instructions for use (IFU), keep devices moist where the IFU permits, and set a maximum time from use to cleaning that the provider's validated cleaning process covers.</p>
+                        <p><strong>Transport requirements:</strong> AS 5369:2023 requires transport procedures that protect devices, personnel and the environment, a risk assessment for transport between sites, and documented conditions under which transported devices are nonconforming. Specify:</p>
+                        <ul>
+                            <li>Rigid, robust, leak-proof, sealable, labelled and cleanable containers for used devices.</li>
+                            <li>Physical segregation of used and sterile loads in the vehicle.</li>
+                            <li>Compartment temperature and humidity limits set by the risk assessment, referenced to the sterile storage range of 18 to 25 deg C [64 to 77 deg F] and 35 % to 70 % relative humidity.</li>
+                            <li>Dispatch and receipt records for every container, with inspection of every pack on receipt.</li>
+                            <li>Reassessment of the need for revalidation when the transport route or means changes.</li>
+                        </ul>
+                        <p><strong>Contingency:</strong> Hold emergency sets on site for unplanned procedures, define the provider's response time for urgent runs, and agree backup routes and a second processing site. Immediate-use sterilisation is not a contingency for inventory shortfall: AS 5369:2023 prohibits its routine use where insufficient devices are available or as a cost-saving measure.</p>
+                    </article>
 
-                    <p><strong>Assumptions:</strong> In-house model assumes a major upgrade in Year 0 to meet standards, then steady-state operations. The outsourced model assumes a fixed annual fee with inflation and volume changes ignored for simplicity. Figures are illustrative, based on typical Australian metro hospital parameters; actual costs vary by hospital size, location, and contract specifics.</p>
-                    <p><strong>Financial Perspective:</strong> Over a 10-year period, outsourcing shows a slight cost advantage in this scenario on the order of 15–20% lower total cost, primarily because it eliminates the hefty capital investment and leverages vendor efficiencies. Even if the annual operating costs are comparable, the avoided upfront spending is a major benefit, hospitals can preserve capital funds for other needs. This aligns with findings that outsourcing can “save the investment costs” and contain direct and indirect expenses for support services. In New Zealand and other contexts, outsourcing non-core hospital services provided access to advanced technologies and reduced capital burden on hospitals. Additionally, vendor pricing is typically transparent with “no hidden costs, unlike intrahospital sterilisation, which often has many”. However, it must be noted that cost outcomes can hinge on contract details. If certain services e.g. rapid turnaround, instrument repairs are outside the base contract, “outsourcing can cost more than expected if non-inclusive services are needed”. Hospitals must analyze all included vs. extra costs in a vendor proposal.</p>
-                    <p>For small day surgeries and clinics, the financial calculus often tilts even more in favor of outsourcing. A standalone day surgery center might only process a few hundred procedures per month, making a full in-house CSSD unit underutilised yet still costly to equip and staff. The new compliance requirements apply to day procedure centers as well, meaning even small facilities would face non-trivial expenses to upgrade sterilisation equipment, maintain rigorous processes, and hire skilled sterilisation technicians. In our analysis, a day surgery with, say, two theatres might need a small steriliser capital ~$100k, washers, and 2 to 3 staff to run an in-house sterilisation room, all costs that could far exceed an outsourced pay-per-use model. By outsourcing to a central reprocessing facility, the day surgery avoids upfront spending and pays only for the volume it actually needs, achieving economies of scale via the vendor. Indeed, outsourcing of such “secondary activities” has been observed to increase efficiency and allow the organisation to focus on core clinical services. Thus, the financial benefit of outsourcing is typically more pronounced for smaller facilities due to disproportionate fixed costs of an in-house setup. Larger hospitals, on the other hand, may realise scale efficiencies internally, but still must weigh the capital opportunity cost and lifecycle costs of keeping sterilisation in-house.</p>
+                    <article class="mb-4">
+                        <p class="h3 section-anchor" id="efficiency">Operational Efficiency and Turnaround Times</p>
+                        <p><strong>In-house:</strong> Turnaround is set by CSSD capacity and staffing. Size washer-disinfectors and sterilisers for peak demand plus at least one unit of redundancy for maintenance, requalification and breakdown. A CSSD running near full capacity delays instruments at every demand peak.</p>
+                        <p><strong>Outsourced:</strong> A multi-client facility can run continuously and pool demand from several hospitals. Turnaround is set by the collection schedule, so processing speed at the provider does not shorten it. Same-day reprocessing requires an additional run at contract rates.</p>
+                        <p><strong>Performance indicators:</strong> Specify and report monthly:</p>
+                        <ul>
+                            <li>Turnaround time from collection to delivery, by priority class.</li>
+                            <li>Trays delivered complete and on time.</li>
+                            <li>Nonconforming items found on receipt: soil, damage, missing items, wet or damaged packs.</li>
+                            <li>Process failures, recalls and their root causes.</li>
+                            <li>Procedures delayed or cancelled for instrument reasons.</li>
+                        </ul>
+                        <p><strong>Instrument knowledge:</strong> Complex sets need assembly to surgeon and IFU requirements. Supply the provider with current set lists, IFUs and photographs for every set, and notify new devices before first use so the provider can confirm it can process them, including any low temperature process.</p>
+                        <p><strong>Hybrid model:</strong> A hospital can outsource high-volume routine sets and retain on-site capacity for urgent, specialised or low-volume devices. The retained capacity must meet AS 5369:2023 in full, so cost it as a second reprocessing facility.</p>
+                    </article>
 
-                    <p class="h3 section-anchor" id="logistics">Transport and Logistics Considerations</p>
-                    <p>One of the key operational differences between in-house and outsourced sterilisation is the logistics of moving instruments to and from the point of use. This impacts turnaround times, instrument inventory requirements, and potential disruption risks.</p>
-                    <p><strong>In-House CSSD (Onsite):</strong> Sterilisation occurs within the hospital, usually close to operating theatres often deliberately located adjacent to OR suites to speed instrument availability. There is no external transport delay, used instruments can be sent directly to CSSD and reprocessed in the same building. This proximity allows for faster turnaround if an instrument or tray is needed urgently; some hospitals can perform quick re-sterilisation cycles “flash” sterilisation, though used sparingly for rapid needs. Onsite processing minimizes the total cycle time from surgery completion to instruments being ready for reuse. It also simplifies the chain of custody, since items remain on hospital premises and under the hospital’s direct control and tracking systems. However, maintaining this convenience requires dedicating prime hospital space to CSSD functions. In many hospitals, CSSD occupies valuable real estate that could otherwise be used for revenue-generating clinical areas. The hospital also must manage internal logistics like collecting soiled instruments from ORs, moving carts to CSSD, and distributing sterilised packs back to departments, an internal workflow that requires coordination but no external transport.</p>
-                    <p><strong>Outsourced (Offsite Reprocessing Center):</strong> Instruments must travel offsite to a vendor’s sterilisation facility. This introduces transport logistics as a critical part of the process. Typically, the vendor provides secure, tracked pickup and delivery, often with dedicated vehicles and containers to ensure sterility and regulatory compliance in transit. A common model is same-day or overnight processing: for example, a vendor might collect soiled trays in the afternoon and return them sterilised by the next morning, or within 24 hours. This means hospitals need enough instrument inventory (duplicate sets) to cover the lag time while one batch is offsite. Indeed, when outsourcing, “the stock of surgical instruments increases and adapts in relation to the number being treated or used at any one time”, because extra instruments are required as a buffer during transport and offsite processing. Turnaround time inevitably lengthens compared to an on-campus CSSD; even with efficient processes, one must account for packing, transit, and distribution. Geography and traffic play a role, a hospital located far from the vendor facility or in a congested city must plan for potential delays. Sources note that outsourcing often entails “long journeys to larger central facilities, which can add to reprocessing time”. Environmental factors can intervene as well: an early trial of off-site sterilisation had to be abandoned after storms and bad weather repeatedly delayed instrument deliveries. Thus, risk mitigation for outsourced logistics includes using robust transport containers to maintain sterility, real-time tracking, backup delivery routes, and maintaining some reserve of critical instruments at the hospital.</p>
-                    <p><strong>Transport Costs and Coordination:</strong> In outsourcing, transport is not only a time factor but a cost component. The vendor’s fees typically include vehicle, fuel, drivers, and handling, which the hospital would indirectly pay for. In our financial model we assumed ~A$300k/year of the outsourcing cost is attributable to logistics. Vendors may schedule pickups at fixed times e.g. twice daily; any unscheduled emergency run could incur extra fees. The hospital needs to synchronise its surgical schedule and instrument usage with the vendor’s timetable. If surgeries run late or additional cases are added, there must be processes in place so that instruments can still be turned around. By contrast, an in-house CSSD can be more immediately responsive to schedule fluctuations, staff can work overtime or run extra loads on short notice, whereas a contract may not easily accommodate such changes without cost. One article points out that if a hospital needs a faster-than-contracted turnaround from an outsourcer, it “will be billed for the extra cost”, whereas internal teams might manage rush jobs by reallocating staff or taking other ad-hoc measures incurring internal costs. In either case, meeting urgent needs has a cost, but the control over timing differs.</p>
-                    <p><strong>Reliability and Contingencies:</strong> A well-structured outsourced system can be very reliable, many offsite reprocessing providers operate 24/7 with sophisticated tracking and quality systems. They often employ route optimisation and dedicated logistics teams to ensure timely delivery. However, hospitals must consider contingency plans. If the vendor’s truck breaks down or if an accident closes a highway, how will surgical schedules be impacted? Leading outsourcing providers emphasize contingency capacity and emergency support for example, Eco Jemss in WA operates 24/7 and claims to offer “emergency rescue support” and “no cancellations” by bypassing the hospital’s CSSD in case of disruptions. Contracts should stipulate penalties or backup procedures for late deliveries. Some hospitals maintain a small “emergency instrument stock” on site for life-saving surgeries in case of delay. In contrast, the main reliability risks for an onsite CSSD are equipment downtime or staff shortages. These can be mitigated by having multiple sterilisers so one can cover if another fails and on-call staff. During planned CSSD maintenance or renovations, even hospitals with in-house services sometimes use mobile CSSD units or outsource temporarily to ensure continuity. This underscores that regardless of model, continuity of sterile supply is paramount, logistics solutions must be robust and integrated into the hospital’s disaster and emergency planning.</p>
-                    <p>In summary, outsourcing adds a transportation dimension to sterilisation management: hospitals trading the convenience of on-site processing for the potential efficiencies of a centralised service must invest in excellent coordination. Urban hospitals near a vendor facility or co-located networks where one hub CSSD serves multiple sites may find the transit time acceptable. Rural hospitals or day surgeries at a distance need to weigh transit delays more heavily. Often, large hospitals with continuous surgery schedules are more sensitive to any delay, whereas small day surgeries with predictable, elective schedules can more easily plan around a 24-hour instrument return cycle. These logistic factors directly influence operational efficiency, which we examine next.</p>
+                    <article class="mb-4">
+                        <p class="h3 section-anchor" id="risk">Risk Profile Analysis</p>
+                        <p><strong>Method:</strong> Rate the likelihood and consequence of each risk with the organisation's risk matrix under AS ISO 31000, using local data where available. The same patient safety risks apply to both models. The controls and the party that applies them differ.</p>
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Risk</th>
+                                        <th>In-House Control</th>
+                                        <th>Outsourced Control</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cleaning or sterilisation failure</td>
+                                        <td>Validation, routine monitoring, release checks, staff competency</td>
+                                        <td>Contracted conformance to AS 5369:2023, audit rights, cycle records with each delivery, inspection on receipt</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Equipment failure or capacity loss</td>
+                                        <td>Redundant units, maintenance contract, mutual aid agreement</td>
+                                        <td>Provider redundancy and second site, service levels, emergency sets on site</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Transport delay or damage</td>
+                                        <td>Internal transport procedures</td>
+                                        <td>Transport risk assessment, specified containers, buffer inventory, delivery indicators</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Delay to cleaning</td>
+                                        <td>Prompt internal transfer</td>
+                                        <td>Point-of-use pre-treatment, maximum validated time from use to cleaning</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Staffing shortfall</td>
+                                        <td>Evidence-based staffing levels, cross-training</td>
+                                        <td>Contracted staffing and competency obligations, retained liaison staff</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Non-compliance with AS 5369:2023</td>
+                                        <td>Gap analysis and compliance plan</td>
+                                        <td>Evidence of accreditation, internal or external audit and other quality activities</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Traceability gap</td>
+                                        <td>Tracking system linked to patient records</td>
+                                        <td>Interface of provider cycle records with patient records</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Provider failure or site loss</td>
+                                        <td>Not applicable</td>
+                                        <td>Step-in rights, termination assistance, alternate provider agreement, retained expertise</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price escalation or lock-in</td>
+                                        <td>Not applicable</td>
+                                        <td>Indexation caps, full fee schedule including surcharges, market testing at renewal</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><strong>Accountability:</strong> The health service remains accountable for devices used on its patients. NSQHS Standards Action 3.17 requires reprocessing consistent with national and international standards and a traceability process for critical and semi-critical devices that identifies the patient, the procedure and the devices used. Australian Commission on Safety and Quality in Health Care Advisory AS24/01 required a gap analysis against AS 5369:2023 by 30 June 2025 and a compliance plan with timeframes.</p>
+                        <p><strong>Contract:</strong> AS 5369:2023 requires an agreement for outsourced activities that defines each party's responsibilities, including conformance to the standard. Include evidence of accreditation, audits or other quality activities, right of access to the provider's facility and records, performance indicators with remedies, nonconformance and recall notification times, business continuity arrangements, and exit provisions.</p>
+                        <p><strong>Provider failure:</strong> A hospital that has closed its CSSD cannot rebuild compliant capacity quickly. Before outsourcing all reprocessing, confirm the provider's second processing site or an alternate provider agreement, and retain staff with reprocessing expertise to audit the provider and manage any transition.</p>
+                    </article>
 
-                    <p class="h3 section-anchor" id="efficiency">Operational Efficiency and Turnaround Times</p>
-                    <p><strong>Operational performance:</strong> how quickly and effectively instruments are reprocessed and ready for reuse is a crucial factor. It affects operating theatre throughput, scheduling flexibility, and even clinical outcomes, for example a delayed instrument can delay a surgery.</p>
-                    <p><strong>In-House CSSD Efficiency:</strong> A well-run in-house CSSD can offer excellent turnaround times, since the physical distance is minimal and processes are fully under the hospital’s control. For instance, instruments from a morning case can potentially be sterilised and made available for an afternoon case if needed, assuming adequate staffing and steriliser capacity. Hospitals typically maintain a certain inventory of each instrument or tray type, but in-house processing means they can get by with a smaller inventory than if outsourcing.Instruments circulate quickly back into availability. In emergencies, in-house teams can prioritise specific sets e.g. for an unexpected trauma surgery. However, inefficiencies can occur if the CSSD is under-resourced or poorly managed. Bottlenecks like insufficient washers or sterilisers, staff fatigue, or lack of automation can slow turnaround. There is also the challenge of peaks in surgical volume: a busy day with many concurrent surgeries will generate a large load of instruments to process. Large tertiary hospitals often design their CSSD to handle these peaks, for example, one CSSD can serve dozens of operating theatres by staggering loads and shifts. If an internal CSSD is appropriately sized with some excess capacity, it can absorb fluctuations. But if it runs at near full capacity normally, any spike might cause delays or force staff overtime. In summary, in-house efficiency is highly dependent on maintaining sufficient capacity and skilled staff. When done right, it offers fast turnaround and responsiveness, integrated into the hospital’s workflow.</p>
-                    <p><strong>Outsourced Efficiency:</strong> An outsourcing provider usually runs a high-volume facility, potentially serving multiple hospitals. This scale can allow for advanced automation, continuous processing, and optimisation that a single-hospital CSSD might not afford. In theory, a larger centralised operation could achieve a lower cost per instrument and cope better with uneven demand by pooling work from multiple clients. Peaks across hospitals may average out, if one hospital has a light day while another is heavy, the central CSSD can balance the combined workload. Thus, a well-resourced vendor might handle volume surges without impacting turnaround for all clients. However, the constraint is the fixed transport schedule. No matter how fast instruments are sterilised at the offsite center, they still must wait for the next delivery slot to get back to the hospital. If a hospital suddenly needs a quick re-sterilisation of a device the same day, an offsite provider may not be able to accommodate it unless a special trip is arranged with associated cost. The contractual nature of outsourcing means the hospital must forecast its needs. Any requirement outside the agreed volumes or times can be challenging. As noted, “if a hospital asks for a quick turnaround not covered in the contract, they will be billed extra”, whereas an in-house CSSD could attempt it by reallocating internal resources incurring internal cost but not an external fee.</p>
-                    <p>Quality and consistency are another aspect of efficiency. Outsourcing companies specialise in sterilisation; they invest in training their staff and often use strict quality management systems e.g. ISO 9001 certified processes. They may attain very consistent processing times and thorough documentation. Hospitals outsourcing should ensure key performance indicators (KPIs) are in place: e.g. maximum turnaround time per tray, error rates, etc. In-house CSSDs can likewise be efficient, but some hospitals struggle with staffing or process variation, for instance, staff may not always follow best practices under pressure, potentially causing delays or errors. Maintaining high skill levels internally requires continuous training and oversight, which some hospitals find challenging. An outsource provider, being a specialist, might better maintain standardized high-quality output. On the other hand, as one analysis noted, sterilisation of diverse surgical instruments is more of a “handcrafted” process than an industrial one, each instrument set has nuances, and staff need deep knowledge of the instruments. A hospital’s own team, working closely with its surgeons, may have that familiarity. A third-party provider processing thousands of sets might be very systematic but could lack specific knowledge of a particular surgeon’s preferences unless communication is strong.</p>
-                    <p><strong>Turnaround Time in Practice:</strong> In an internal model, a typical cycle from surgery end to ready-to-use might be on the order of a few hours to same-day for urgent items, or 1 day for routine reprocessing. In an outsourced model, it often becomes a next-day turnaround for routine items. Hospitals mitigate this by increasing instrument inventory e.g. having 2 to 3 sets of the same instruments so one is in use, one being processed, and one ready. This inventory increase is a hidden cost of outsourcing, one must purchase more instruments to ensure availability, which can be significant for expensive instrument sets. Onsite CSSDs can reduce the need for duplicates by returning items faster. However, keeping too lean an inventory in-house can be risky if any delay occurs e.g. machine breakdown. So each approach requires careful capacity planning: insource requires enough steriliser capacity and staffing; outsource requires enough instruments on hand to cover the longer cycle.</p>
-                    <p><strong>Equipment and Technology:</strong> A modern in-house CSSD can implement cutting-edge technology. But doing so requires capital and expertise. A large outsource provider likely uses advanced tech as well and spreads the cost across clients. They might introduce new sterilisation methods more readily if they serve many hospitals. However, if a hospital needs a specialised process, say low-temperature sterilisation for certain devices, it must ensure the vendor offers it. An outsourcing company should be able to “respond to all sorts of individual needs, such as sterilising thermo-sensitive material at low temperatures”, but in practice they will only invest in capabilities that are justified by sufficient volume and predictable demand. If a new technology arises, the question is who can adopt it faster, a hospital or an outsourced firm? This could vary; both have to justify the investment.</p>
-                    <p>In summary, both models can be operationally efficient, but the nature of flexibility differs. In-house offers more direct control and potentially faster on-demand turnaround at the cost of needing overcapacity to handle peaks, whereas outsourcing offers consistency and possible scale efficiencies at the cost of some delay and rigidity. It’s notable that many hospitals in the US and Europe have moved to outsource sterile processing, by 2022 an estimated 45% of facilities in some European countries were using outsourced reprocessing. This suggests that, when managed well, outsourced operations can meet service level requirements. Yet, other studies show mixed results; for example, a UK option appraisal found off-site sterilisation had higher total costs and scored lowest among options, while older U.S. studies found cost savings. The efficiency and cost-effectiveness thus depend highly on context. Australian hospitals must consider their surgical volume, existing CSSD performance, and the reliability of any external provider. In the next section, we delve into the risk profile of each option, complementing the cost and efficiency analysis with a look at potential risks and how they compare qualitatively and quantitatively.</p>
+                    <article class="mb-4">
+                        <p class="h3 section-anchor" id="conclusion">Conclusions and Recommendations</p>
+                        <p>Neither model is cheaper in all cases. The decision turns on the quoted all-inclusive fee against the in-house equivalent annual cost, the state of the existing CSSD, procedure volume and the hospital's tolerance for next-day turnaround. In the illustrative large hospital, outsourcing pays below about A$46 per tray (A$186 per procedure), and staff productivity is the dominant input. In the illustrative day surgery, it pays below A$45 to A$119 per tray depending on volume, because minimum staffing cover sets in-house cost at low volume.</p>
+                        <ul>
+                            <li><strong>Cost the in-house option fully:</strong> Include building and equipment capital recovery, staff, consumables, utilities, maintenance, validation and water testing.</li>
+                            <li><strong>Cost the outsourced option fully:</strong> Include the fee schedule with surcharges and indexation, additional trays, retained staff, emergency sets and contingency arrangements.</li>
+                            <li><strong>Calculate the break-even fee per tray</strong> from measured trays per procedure and process labour per tray, and test it against staff cost, volume and fee escalation.</li>
+                            <li><strong>Plan logistics to AS 5369:2023:</strong> Transport risk assessment, specified containers, point-of-use pre-treatment, maximum time to cleaning and inspection on receipt.</li>
+                            <li><strong>Contract for control:</strong> Performance indicators, audit rights, traceability data, continuity arrangements and exit provisions.</li>
+                            <li><strong>Pilot before full transfer:</strong> Outsource one service line first and confirm turnaround, inventory and nonconformance rates before transferring the rest.</li>
+                            <li><strong>Large hospitals:</strong> Retain in-house reprocessing where the CSSD is compliant or the quoted fee exceeds the break-even fee. Consider outsourcing or a hybrid model where a major rebuild is due.</li>
+                            <li><strong>Day surgeries:</strong> Outsource where volume is low and the quoted fee is below the break-even fee. Designate a competent staff member to manage the contract and inspect incoming packs.</li>
+                        </ul>
+                    </article>
 
-                    <p class="h3 section-anchor" id="risk">Risk Profile Analysis</p>
-                    <p>Beyond cost and efficiency, the decision to outsource or retain in-house sterilisation hinges on risk considerations. This includes patient safety risks (infection control), regulatory and compliance risks, operational disruption risks, and strategic risks like dependency on vendors. We compare these factors for in-house vs outsourced models. Below, Table 2 and Table 3 present qualitative risk matrices for each scenario, mapping key risk events in terms of Likelihood (probability of occurrence) and Consequence (impact severity). The risks are rated using standard qualitative levels, for instance, Likelihood: Rare / Unlikely / Possible / Likely / Almost Certain and Impact: Minor (insignificant) to Severe/Catastrophic (critical harm). This provides a visual ranking of which model carries higher risks in certain domains. A narrative discussion follows, including quantitative aspects where applicable e.g. potential costs or downtime associated with risks.</p>
-
-                    <div class="table-responsive">
-                        <table class="table align-middle">
-                            <thead>
-                                <tr>
-                                    <th>Risk Event (In-House)</th>
-                                    <th>Likelihood</th>
-                                    <th>Consequence</th>
-                                    <th>Overall Risk</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Sterilisation failure or contamination (leading to surgical site infection outbreak), e.g. due to process lapse or equipment malfunction</td>
-                                    <td>Unlikely (robust processes make serious failures rare)</td>
-                                    <td>Severe/Catastrophic (patient harm, widespread infection)</td>
-                                    <td>High: Hospitals face potential liability and patient safety crises. Must maintain strict QA to keep this risk rare.</td>
-                                </tr>
-                                <tr>
-                                    <td>Equipment breakdown or CSSD downtime causing surgery delays or cancellations</td>
-                                    <td>Possible (equipment can fail or require maintenance unexpectedly)</td>
-                                    <td>Major (OR schedule disruption, up to halting surgeries)</td>
-                                    <td>High: Without backup steriliser capacity, consequences are serious. Hospitals must invest in redundancy.</td>
-                                </tr>
-                                <tr>
-                                    <td>Staffing shortfall or human error (insufficient or inadequately trained staff, leading to errors or slower processing)</td>
-                                    <td>Possible (staff sickness or turnover can occur; training lapses possible)</td>
-                                    <td>Moderate (processing delays, minor errors caught by checks; if uncorrected, could escalate to contamination)</td>
-                                    <td>Medium: Ongoing training and proper staffing levels are needed to mitigate this.</td>
-                                </tr>
-                                <tr>
-                                    <td>Regulatory non-compliance with AS/NZS 4187 (failing audits, not meeting standards)</td>
-                                    <td>Unlikely (with effort to comply, but risk exists especially if upgrades aren’t done)</td>
-                                    <td>Major (loss of accreditation, needing costly corrective action)</td>
-                                    <td>Medium: High emphasis on compliance is needed to keep likelihood low; non-compliance could halt services (high impact).</td>
-                                </tr>
-                                <tr>
-                                    <td>Cost overrun or inefficiency risk (in-house costs higher than anticipated due to unaccounted expenses)</td>
-                                    <td>Possible (many hidden costs, maintenance, etc., can escalate)</td>
-                                    <td>Minor to Moderate (financial impact, but typically won’t directly harm patients)</td>
-                                    <td>Low-Medium: Financial risk that requires good budgeting. Typically smaller impact than clinical risks.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="small text-muted">Table 2. Risk Matrix: In-House CSSD (Hospital-managed sterilisation)</p>
-
-                    <p><strong>Discussion (In-House Risks):</strong> The foremost concern in any CSSD is infection control, ensuring that every instrument is properly sterilised to prevent patient infections. In-house departments give the hospital direct oversight of this process. If managed well, the risk of a sterilisation failure causing infection is very low (unlikely), hospitals adhere to strict protocols and monitoring (biological indicators, batch records). However, the consequence of a failure is extremely high: a non-sterile instrument could introduce pathogens into a patient, causing an outbreak or serious harm. This is rightly classified as a catastrophic impact on the risk matrix, meaning even a rare occurrence must be treated with utmost seriousness. Hospitals mitigate this by quality systems and by having skilled staff; they cannot become complacent. Notably, when sterilisation is internal, any lapse is the hospital’s own responsibility, there is no external party to share blame. Thus, hospitals must invest continuously in training and monitoring “compulsory training program and evaluation at every stage”. In the risk matrix (Table 2), we label this as “High” risk overall despite low probability, due to the severity.</p>
-                    <p>Another significant risk for in-house CSSD is equipment failure or service downtime. Sterilisers or washer-disinfectors are complex machines that require maintenance. If a steriliser breaks down unexpectedly and the department has only limited capacity, surgeries might have to be postponed, a scenario that carries major operational and financial impact. For example, if a day’s surgeries are cancelled, the hospital loses revenue and patients are inconvenienced. The risk likelihood is rated “Possible,” as breakdowns do happen, hospitals commonly experience occasional CSSD equipment issues. Consequence is “Major” since even short downtime can affect many patients. Overall this is High risk that hospitals address by maintaining multiple machines and service contracts. Many hospitals keep an older steriliser as backup or arrange mutual aid e.g. sending instruments to a nearby hospital’s CSSD in emergencies. However, that introduces a de facto outsourcing on an ad-hoc basis.</p>
-                    <p>Human factors: staffing and errors, represent another area of risk. In-house CSSDs depend on competent technicians who follow procedures meticulously. Under pressure e.g. quick turnovers, staff shortages, mistakes can occur: improper cleaning, wrong instrument assembly, documentation errors, etc. The impact of a single human error can range from minor e.g. a tray has to be reprocessed due to a packaging tear, causing a short delay to potentially severe if an infection stems from a mistake. We rate likelihood “Possible” because staffing issues are not uncommon; many hospitals struggle with recruiting and retaining experienced sterile processing staff, and fatigue can lead to lapses. Impact on the matrix we mark as “Moderate” on average, most errors are caught by safety nets such as failed indicators, visual inspection catching a dirty instrument, etc. but the worst-case would be serious. Overall this comes out Medium risk. Hospitals mitigate it with cross-training staff, maintaining good staff-to-workload ratios, and fostering a culture of quality. Internal CSSD means the hospital has to cover for sick leaves or surges, if multiple staff are off, the risk of processing delays or errors increases. By contrast, a large outsourcing firm might have a bigger pool of staff to draw on (we discuss that in the next section).</p>
-                    <p>Regulatory compliance risk is front-of-mind in Australia due to AS/NZS 4187. If a hospital cannot meet the new requirements for airflow separation, water quality, instrument tracking, etc. it could fail accreditation audits. The media reports estimated A$1 billion collectively needed for hospitals to upgrade CSSDs nationally, highlighting how widespread the compliance gap was. For an individual hospital, non-compliance might mean being forced to curtail surgeries or rapidly spend money to fix issues. We rate the likelihood of serious non-compliance as Unlikely for a hospital that is actively managing this because hospitals know accreditation is mandatory. But if it were to happen, impact is Major (loss of accreditation or reputational damage). Thus Medium risk. One way some hospitals mitigated this was by considering outsourcing or mobile units as a route to compliance if they couldn’t renovate in time.</p>
-                    <p>Finally, there’s a financial/efficiency risk that an in-house CSSD might run over budget or not achieve expected cost savings. As shown earlier, many costs are not transparent; a hospital might underestimate the true cost per sterilisation cycle. This risk is more about wasted resources than immediate patient harm, so we consider its consequence Minor to Moderate. Likelihood is Possible since cost overruns in hospital projects are common. It’s a lower priority risk compared to patient safety issues, but it does tie into long-term sustainability. Efficient management and cost tracking, for example, using tracking systems to calculate cost per tray can reduce this risk.</p>
-
-                    <div class="table-responsive">
-                        <table class="table align-middle">
-                            <thead>
-                                <tr>
-                                    <th>Risk Event (Outsourcing)</th>
-                                    <th>Likelihood</th>
-                                    <th>Consequence</th>
-                                    <th>Overall Risk</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Transport or delivery disruption (e.g. traffic delay, vehicle issue leading to late or missing instrument delivery)</td>
-                                    <td>Possible (traffic or minor delays are not uncommon)</td>
-                                    <td>Major (surgery delays or cancellations if instruments not available)</td>
-                                    <td>High: Requires robust logistics and contingency plans; even moderate probability events can seriously disrupt OR schedules.</td>
-                                </tr>
-                                <tr>
-                                    <td>Vendor service failure (catastrophic outage at vendor, or vendor bankruptcy) and  complete stoppage of service</td>
-                                    <td>Rare (major failures or business closure are unlikely with reliable providers)</td>
-                                    <td>Catastrophic (hospital unable to sterilise instruments, surgeries halt until alternate arrangements)</td>
-                                    <td>High: A low-probability but extremely high-impact risk. Hospitals must have emergency fallback agreements (e.g. another vendor or internal capability for short-term).</td>
-                                </tr>
-                                <tr>
-                                    <td>Quality lapse by vendor (instrument not properly sterilised or lost/damaged)</td>
-                                    <td>Unlikely (vendors have stringent QA, but errors can happen)</td>
-                                    <td>Severe (same impact as in-house contamination: infection risk to patient)</td>
-                                    <td>High: The hospital relies on vendor’s quality systems; any lapse can harm patients and the hospital still bears liability. Strong contract oversight and audits needed.</td>
-                                </tr>
-                                <tr>
-                                    <td>Loss of control / dependency (hospital dependent on external staff and processes, less direct oversight)</td>
-                                    <td>Likely (by outsourcing, hospital inherently cedes direct control)</td>
-                                    <td>Moderate (indirect effect could lead to slower improvements, less flexibility)</td>
-                                    <td>Medium: Strategic risk that hospital’s fortunes tied to vendor’s performance. Manageable by good relationships and maintaining some internal expertise.</td>
-                                </tr>
-                                <tr>
-                                    <td>Contract or cost escalation (vendor raising prices, or disputes about contract terms)</td>
-                                    <td>Possible (prices may rise after initial term; limited competition could create lock-in)</td>
-                                    <td>Moderate (financial impact; could also affect service if disputes arise)</td>
-                                    <td>Medium: Long-term contracts need clauses to control cost and ensure performance; switching provider can be difficult once dependent.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="small text-muted">Table 3. Risk Matrix – Outsourced Sterilisation (External vendor service)</p>
-
-                    <p><strong>Discussion (Outsourcing Risks):</strong> Many risks in outsourcing parallel those in-house, but responsibility and control differ. The infection control risk does not disappear, instruments must still be 100% sterile, but the hospital now relies on the vendor’s processes to ensure that. We listed a “quality lapse by vendor” risk which is analogous to a sterilisation failure in-house. Ideally, a reputable vendor will have equal or better compliance than a hospital CSSD as they stake their business on it. Providers often invite audits and maintain certifications e.g. ISO standards, external infection control audits. This likely keeps the probability of a severe quality failure Unlikely or even Rare. In fact, some argue outsourcing can increase quality, because specialists “follow manufacturers’ reprocessing guidelines with complete traceability to minimise risks”. Nevertheless, if such an event did occur, the impact is as catastrophic as in-house, patient infections or exposure. Moreover, the hospital cannot fully escape blame; legally and ethically, the hospital is responsible for patient care even if a contractor errs. Thus, this remains a High risk area. To mitigate it, hospitals should vet the vendor’s quality thoroughly, include right-to-audit clauses as recommended: “get access to their installations and documents” via contract, and possibly keep some internal checking e.g. inspect a sample of returned instruments.</p>
-                    <p>The risk that stands out unique to outsourcing is vendor failure or service disruption on a large scale. This could be a one-off disaster, a fire at the vendor’s sterilisation facility, or an IT failure that paralyzes their operations or a business failure (vendor insolvency). The likelihood of a well-established vendor abruptly failing is low (Rare), but healthcare administrators must contemplate it because the consequence is catastrophic: if your sole sterilisation provider cannot function, your surgical service is effectively grounded. Unlike in-house, where a hospital has some internal control to jury-rig a solution e.g. recall retired machines, call staff in, with outsourcing the hospital might have zero sterilising capacity on its own. As one strategic analysis pointed out, “if an outsourcing company fails, there is not sufficient time to rebuild a hospital’s sterilisation unit” in short order. This risk is often mitigated by requiring the vendor to have contingency plans, perhaps multiple facilities in different locations and by not outsourcing 100% of capability, some hospitals keep a small steriliser for backup, or have mutual aid pacts. It’s also wise to ensure the contract has provisions for termination or vendor default so the hospital isn’t left in limbo). In Australia, where the outsourcing market for CSSD is still emerging, hospitals must weigh vendor stability, ideally choosing providers with a track record. The risk matrix flags this as High due to the extreme impact, even if probability is low.</p>
-                    <p>More routine but still serious is the logistics risk: any transport delay or mix-up can quickly disrupt operations. We rate this “Possible” because minor delays e.g. a courier stuck in traffic for an hour will occasionally occur. The impact can be Major, if even one critical tray is late for a scheduled surgery, that case might be delayed or cancelled. In outsourcing arrangements, hospitals often schedule cases with more margin for instrument availability, but unexpected events happen. Mitigations include strong communication, the vendor warning the hospital of any delay early, and perhaps the hospital retaining a minimal onsite flash sterilisation capability for emergencies. The vendor’s reliability in transport is key, many tout rigor in this area (GPS-tracked vans, spare drivers). Nonetheless, the risk matrix shows this as High priority to manage, given that “new risks are encountered… more time must be added into strategy to account for delays or sharp increases in patient numbers” when outsourcing. One way to reduce likelihood is for hospitals to outsource to a nearby provider or one that places a facility regionally to minimize transit distance.</p>
-                    <p>Another consideration is the loss of direct control. By outsourcing, the hospital entrusts a portion of its operations to another entity. This has implications: internal staff may feel a loss of ownership, and communication gaps can arise between surgical teams and the reprocessing staff. Cultural differences can also be an issue, for example, a study of outsourcing in healthcare noted problems with “sharing of culture” and trust between internal and contract staff. We rated the likelihood of some control issues as Likely since inherently the vendor runs things day-to-day but the impact as Moderate. Over time, if not well-managed, this could lead to lower flexibility or innovation. For example, if a surgeon wants to introduce a new instrument, an in-house CSSD might quickly adapt, whereas with an external provider there’s an extra layer to coordinate ensuring the vendor can process it, updating contracts if needed for a new item type, etc.. To mitigate strategic dependency, experts suggest “do not abandon all skills internally”, i.e. keep some knowledgeable staff to liaise with the vendor and audit their performance, so the hospital remains an informed client rather than entirely hands-off.</p>
-                    <p>Lastly, the contractual risk: once a hospital has outsourced, especially if it invested in outsourcing to avoid a capital upgrade, the vendor gains leverage. There may be few alternative providers (market competition). If, after a few years, the vendor increases prices above inflation, the hospital might face significantly higher costs. We rate this risk Possible and impact Moderate (financial strain, potentially passed on in budgets). A well-negotiated long-term contract with price controls can alleviate this. Still, the hospital loses some flexibility to go back, reinternalising the service would require building a CSSD from scratch, which is expensive and slow. Thus, the decision can “lock in” a path. Ensuring that competition exists or at least the threat of it is advisable: “it is desirable that competition exists so you are not tied to one provider if costs increase”. Some regions might consider multi-vendor models or keeping tenders competitive at renewal. In Victoria in the 1990s, a very large public hospital outsourcing contract failed partly due to underpricing and contract mismanagement. The lesson is that contracts must be realistic and include clear performance and cost terms to avoid disputes or unsustainable deals.</p>
-                    <p><strong>Risk Mitigation Summary:</strong> Whether in-house or outsourced, risk management is paramount. Table 2 and Table 3 highlight that many of the highest risks (infection, service disruption) exist in both models; they are manifested differently but must be actively managed. In-house demands internal investment in quality systems, backups, and staff competence. Outsourcing demands diligent vendor selection, strong contracts, and oversight. It’s not a one-time decision, it requires ongoing risk monitoring. Some hospitals adopt a hybrid approach: keep a minimal sterile processing capability in-house as a backup or for specific urgent needs or delicate instruments, while outsourcing the bulk of routine reprocessing. This can combine some benefits at the expense of some duplication. The risk matrices can help decision-makers weigh what configuration best mitigates the most critical risks for their situation.</p>
-
-                    <p class="h3 section-anchor" id="conclusion">Conclusions and Recommendations</p>
-                    <p>The decision to outsource sterilisation services versus maintaining an in-house CSSD involves a complex trade-off between cost, efficiency, and risk. Our analysis for Australian healthcare settings leads to several key conclusions:</p>
-                    <p>Financially, outsourcing can be attractive, especially to avoid large capital expenditures needed for compliance upgrades. Over a 10-year model, the outsourced option showed potential cost savings, in our example, on the order of 15 to 20% lower total costs largely by eliminating upfront investment and leveraging vendor economies of scale. Small day surgeries stand to benefit the most from outsourcing, as it converts high fixed costs into variable costs aligned with their smaller volume. Large public hospitals might achieve lower unit costs in-house if they already have sunk capital in CSSD, but must consider the opportunity cost of that capital and the ongoing compliance costs. Any financial comparison should account for all hidden costs of in-house CSSD (management, utilities, maintenance, training), and for potential extra costs in outsourcing (transport, contract management).</p>
-                    <p>Operationally, in-house CSSDs offer faster turnaround and direct control, which is critical for high-throughput surgical centers that require rapid instrument cycling or have unpredictable emergency demands. Outsourcing introduces transit time and requires careful scheduling and inventory management to ensure surgical schedules are not impacted. However, reputable outsourcing providers can deliver high-quality, standardised reprocessing with minimal disruption if properly integrated. They also take on the burden of maintaining compliance with standards (facilities, testing, record-keeping), which can reduce the hospital’s administrative load. For day surgeries with scheduled cases, outsourcing’s turnaround often next-day is usually acceptable; for trauma centers or tertiary hospitals, any outsourcing plan must ensure near-continuous availability of critical instruments, possibly through hybrid arrangements or on-site vendor-managed inventory.</p>
-                    <p>Risk profiles differ but can be managed under both models. In-house sterilisation puts the onus on the hospital for every aspect of quality and reliability, hospitals must invest in redundancy such as extra steriliser capacity, backup power, etc. and rigorous training to mitigate risks of failure. Outsourcing transfers some risks to the vendor e.g. equipment maintenance, regulatory compliance but introduces new ones, like dependency on the vendor’s performance and logistics. The analysis indicates no option is risk-free: patient safety risks like infection remain paramount and must be controlled via strict quality systems either way. Strategic risks like vendor lock-in can be addressed by careful contracting and keeping an “exit strategy”, for example, a clause for the vendor to support transition if contract ends, or maintaining a skeleton CSSD as fallback. We emphasize the recommendation from experts: if outsourcing, do not completely disband in-house expertise. Retain some sterile processing knowledge on staff to monitor the vendor and handle small-scale or emergency processing if needed.</p>
-                    <p>Context matters: For large Australian public hospitals, a decision may hinge on the state of existing infrastructure. If a hospital’s CSSD is outdated and would require tens of millions to rebuild to new standards, outsourcing provides a way to achieve compliance more quickly and with less capital. It can also free up hospital space for other uses e.g. converting a former CSSD area into additional operating theatres, which can generate revenue. However, the hospital must ensure the chosen outsourcing solution has the capacity and reliability equal to an internal department. Conversely, if a hospital has recently invested in a modern CSSD like Wesley Hospital’s 2024 upgrade, it likely makes sense to utilise that and not outsource, the sunk cost has been paid, and in-house capabilities are state-of-the-art. Thus, timing and current state are critical.</p>
-                    <p><strong>Recommendations:</strong> Decision-makers should undertake a comprehensive feasibility study specific to their facility. This should include: a detailed cost comparison with sensitivity analysis on factors like instrument volume growth, labor cost changes, and vendor price escalation; a workflow impact analysis on how surgery scheduling and instrument inventory would need adjustment; and a risk assessment like those in this paper, but tailored with actual probabilities if data available. Engaging stakeholders is crucial, involving surgical staff and infection control practitioners in evaluating outsourcing vendors to ensure quality expectations match. If outsourcing is chosen, prefer a gradual transition or pilot if possible, for example, outsource one service line’s instruments first to troubleshoot logistics before full implementation. Ensure the contract includes clear performance indicators such as turnaround time, sterility assurance levels, accountability for errors, etc. and penalties for non-performance, as well as clauses for audit rights and termination. Maintaining a partnership approach with the vendor, rather than purely transactional, will help align the vendor’s service with hospital priorities.</p>
-                    <p>For small day surgeries and clinics, the recommendation often leans toward outsourcing due to lower complexity: partner with a reputable sterilisation service or a larger hospital’s CSSD on a fee-for-service basis if available to handle reprocessing. The cost-benefit usually favors not investing in full CSSD infrastructure for low volumes. These facilities should still designate a staff member to manage the relationship and ensure compliance and someone who understands sterilisation to liaise with the vendor and check incoming sterile packs.</p>
-                    <p>Finally, healthcare networks and policymakers in Australia might consider regional solutions. If multiple hospitals in an area face expensive upgrades, a centralized sterilisation facility whether privately run or shared among the hospitals could achieve economies of scale. This has been the trend in some countries, and Australia is seeing the emergence of providers offering “outsourced reprocessing with pickup and next-day delivery”. Standards compliance deadlines have catalysed interest in such models. However, as this whitepaper shows, they must be evaluated carefully against the alternative of upgrading in-house. Risk matrices and financial models, like those provided here, are useful tools.</p>
-                    <p>In conclusion, there is no one-size-fits-all answer, large public hospitals might even choose a hybrid path e.g. outsource high-volume straightforward instrument sets, but keep in-house processing for immediate-turnaround needs or specialised items. Small surgeries will likely benefit from outsourcing to concentrate on core clinical activities. The central goal must remain clear: safe, timely, and cost-effective sterilisation of instruments to support patient care. Any approach, in-house, outsourced, or hybrid can succeed if implemented with diligent planning, adequate resources, and continuous oversight. Decision-makers should use the evidence and considerations outlined in this whitepaper to inform a strategy that best meets their institution’s needs, regulatory obligations, and long-term service goals in the Australian healthcare context.</p>
+                    <article class="mb-4">
+                        <p class="h3 section-anchor" id="sources">Sources</p>
+                        <ol>
+                            <li>Standards Australia. AS 5369:2023 Reprocessing of reusable medical devices and other devices in health and non-health related facilities.</li>
+                            <li>Australian Commission on Safety and Quality in Health Care. National Safety and Quality Health Service Standards, Action 3.17 Reprocessing of reusable equipment and devices.</li>
+                            <li>Australian Commission on Safety and Quality in Health Care. Advisory AS24/01 Requirements for reprocessing of reusable medical devices in health service organisations, November 2024.</li>
+                            <li>Standards Australia. AS ISO 31000:2018 Risk management, Guidelines.</li>
+                            <li>IEC 60300-3-3 Dependability management, Part 3-3: Application guide, Life cycle costing.</li>
+                        </ol>
+                    </article>
                 </section>
             </div>
         </main>
@@ -462,7 +642,7 @@
                         <div class="mb-0"><a class="heading" href="index.html">Malone Hospital Services</a></div>
                         <div class="mb-2">ABN 80 061 127 179</div>
                         <div class="mb-3"><a href="mailto:sales@malones.com.au">sales@malones.com.au</a></div>
-                        <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-nsw?share">24 Tathra Street <br>West Gosford, NSW, 2251</a></div>
+                        <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-nsw?share">24 Tathra Street <br>West Gosford, NSW, 2250</a></div>
                         <div class="mb-0"><a target="_blank" rel="noopener" href="tel:+61243239731">(02) 4323 9731</a></div>
                         <div class="mb-3">Electrical Licence 240395C</div>
                         <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-qld?share">7/9 Redcliffe Gardens Drive <br>Clontarf, QLD, 4019</a></div>
@@ -487,10 +667,6 @@
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
-                        <div class="heading">Resources</div>
-                        <ul class="list-unstyled m-0">
-                            <li class="mb-3"><a href="white-papers.html">White Papers</a></li>
-                        </ul>
                         <div class="heading">Accessories</div>
                         <ul class="list-unstyled m-0">
                             <li class="mb-1"><a href="accessory-detergent.html">Detergent</a></li>
@@ -500,6 +676,12 @@
                         <ul class="list-unstyled m-0">
                             <li class="mb-1"><a href="thermoline-tbw-250.html">Thermoline TBW 250</a></li>
                             <li class="mb-3"><a href="thermoline-tbw-520.html">Thermoline TBW 520</a></li>
+                        </ul>
+                        <div class="heading">Steam Sterilisers</div>
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-1"><a href="ajc-steri-21.html">AJC Steri 21</a></li>
+                            <li class="mb-1"><a href="ajc-uniclave-99.html">AJC Uniclave 99</a></li>
+                            <li class="mb-3"><a href="ajc-amaro-5000.html">AJC Amaro 5000</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
@@ -533,7 +715,11 @@
                             <li class="mb-1"><a href="ken-dw-330.html">KEN DW 330</a></li>
                             <li class="mb-1"><a href="ken-dw-410.html">KEN DW 410</a></li>
                             <li class="mb-3"><a href="ken-dw-412.html">KEN DW 412</a></li>
-                        </ul>  
+                        </ul>
+                        <div class="heading">Resources</div>
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-3"><a href="white-papers.html">White Papers</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
