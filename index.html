@@ -57,7 +57,7 @@
                     "telephone": "+61243239731",
                     "currenciesAccepted": "AUD",
                     "paymentAccepted": ["Invoice","EFT"],
-                    "address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2251","addressCountry": "AU"},
+                    "address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2250","addressCountry": "AU"},
                     "sameAs": ["https://www.linkedin.com/company/malone-hospital-services","https://youtube.com/channel/UCHWcctvWlmlqqrSm8ofU93w"],
                     "contactPoint": [
                         {"@type": "ContactPoint","telephone": "+61243239731","email": "sales@malones.com.au","contactType": "customer service","areaServed": "AU","availableLanguage": "en-AU"},
@@ -75,7 +75,7 @@
                     ]},
                     "knowsAbout": ["Bedpan Washers","Washer Disinfectors","Autoclaves","Sterilisers","Utensil Washers","Laboratory Washers","Trolley Washers","Drying Cabinets","Ultrasonic Cleaners","Endoscope Washers","Blanket Warmers","Operating Tables","Fluid Refrigerators","Steam Generators","Boilers","Reverse Osmosis Systems","Robotic Automation","CSSD Equipment"],
                     "branch": [
-                        {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#new-south-wales","name": "Malone Hospital Services New South Wales","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2251","addressCountry": "AU"},"telephone": "+61243239731","geo": {"@type": "GeoCoordinates","latitude": -33.41649782149152,"longitude": 151.3168531452192},"hasMap": "https://g.page/malone-hospital-services-nsw?share"},
+                        {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#new-south-wales","name": "Malone Hospital Services New South Wales","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2250","addressCountry": "AU"},"telephone": "+61243239731","geo": {"@type": "GeoCoordinates","latitude": -33.41649782149152,"longitude": 151.3168531452192},"hasMap": "https://g.page/malone-hospital-services-nsw?share"},
                         {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#queensland","name": "Malone Hospital Services Queensland","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "7/9 Redcliffe Gardens Drive","addressLocality": "Clontarf","addressRegion": "QLD","postalCode": "4019","addressCountry": "AU"},"telephone": "+61732832566","geo": {"@type": "GeoCoordinates","latitude": -27.23594362806235,"longitude": 153.07849614007287},"hasMap": "https://g.page/malone-hospital-services-qld?share"}
                     ]
                 }
@@ -92,9 +92,9 @@
                 --offwhite: rgb(249, 244, 236);
                 --mhs-blue: rgb(133, 181, 192);
                 --mhs-original: rgb(133, 181, 192);
-                --footer: rgb(74, 77, 80);
+                --footer: rgb(38, 70, 88); /* was rgb(31, 52, 64) */
                 --overlay: rgba(19, 42, 65, 0.5);
-                --nav-back: rgb(54, 95, 115);
+                --nav-back: rgb(52, 86, 115);
             }
 
             html, body { height: 100%; }
@@ -164,13 +164,16 @@
                 z-index: 1;
                 padding: 3rem 0;
                 color: #ffffff;
-                max-width: 720px;
             }
+            .hero h1, .hero .lead{ max-width: 720px; }   /* text stays at 720px; buttons can use the full width */
             .hero h1{ line-height: 1.15; letter-spacing: .2px; }
 
             /* Accent button */
-            .btn-accent{ background: var(--ink); border: 0; color: #ffffff; }
-            .btn-accent:hover{ filter: brightness(1); }
+            .btn-accent{ background: var(--nav-back); border: 0; color: #ffffff; }
+            .btn-accent:hover,
+            .btn-accent:focus-visible{ background: var(--head); color: #ffffff; }
+            .btn-accent:focus-visible,
+            .hero .btn-outline-light:focus-visible{ outline: 3px solid #ffffff; outline-offset: 2px; }
 
             /* Footer */
             footer.footer{
@@ -206,7 +209,7 @@
                     </svg>
                 </button>
                 <div id="nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto gap-lg-2">
+                    <ul class="navbar-nav ms-auto gap-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                             <ul class="dropdown-menu" aria-labelledby="navServices">
@@ -255,6 +258,14 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navSteriliser" role="button" data-bs-toggle="dropdown" aria-expanded="false">Steam Sterilisers</a>
+                            <ul class="dropdown-menu" aria-labelledby="navSteriliser">
+                                <li><a class="dropdown-item" href="ajc-steri-21.html">AJC Steri 21</a></li>
+                                <li><a class="dropdown-item" href="ajc-uniclave-99.html">AJC Uniclave 99</a></li>
+                                <li><a class="dropdown-item" href="ajc-amaro-5000.html">AJC Amaro 5000</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navAccessories" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accessories</a>
                             <ul class="dropdown-menu" aria-labelledby="navAccessories">
                                 <li><a class="dropdown-item" href="accessory-detergent.html">Detergent</a></li>
@@ -267,7 +278,7 @@
             </div>
         </nav>
         <header class="hero" id="top" aria-label="Site introduction">
-            <iframe class="hero__iframe" src="https://player.vimeo.com/video/1116762306?background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&controls=0&dnt=1&initial_quality=360p" title="Background video" referrerpolicy="no-referrer" aria-hidden="true" allowfullscreen></iframe>
+            <iframe class="hero__iframe" src="https://player.vimeo.com/video/1116762306?background=1&autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0&controls=0&dnt=1&initial_quality=360p" title="Background video" referrerpolicy="no-referrer" aria-hidden="true" tabindex="-1" allowfullscreen></iframe>
             <div class="hero__overlay"></div>
             <div class="container">
                 <div class="hero-inner">
@@ -275,19 +286,23 @@
                     <p class="lead">
                         Malones have looked after Australian medical equipment since 1969 and are the exclusive importer of the Danish engineered <a href="https://www.ken.dk/" target="_blank" class="text-light" rel="noopener">KEN</a> equipment.
                     </p>
-                    <a href="ken-bwd-comparison.html" class="btn btn-accent btn-lg">Explore Washer-Disinfector Range</a>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="ken-bwd-comparison.html" class="btn btn-accent btn-lg">Explore Washer-Disinfector Range</a>
+                        <a href="tel:+61243239731" class="btn btn-outline-light btn-lg">Call (02) 4323 9731</a>
+                        <a href="mailto:sales@malones.com.au" target="_blank" rel="noopener" class="btn btn-outline-light btn-lg">Request Service</a>
+                    </div>
                 </div>
             </div>
         </header>
         <main>
             <section class="pt-5 pb-5">
                 <div class="container">
-                    <div class="row gy-4 gx-5 align-items-stretch">
+                    <div class="row gy-4 gx-lg-5 align-items-stretch">
                         <div class="col-lg-5">
                             <h1 class="h1 mb-3">First Class Service</h1>
                             <p class="lead">Malones are experts in supplying and maintaining Australian medical equipment:</p>
                             <ul class="list mb-4">
-                                <li class="lead">Washer-Disinfectors, Autoclaves, Bedpan Washers, Sterilisers, Laboratory Washers, Utensil Washers, Robotic Automation and CSSD equipment.</li>
+                                <li class="lead">Washer-Disinfectors, Autoclaves, Steam Sterilisers, Bedpan Washers, Laboratory Washers, Utensil Washers, Robotic Automation and CSSD equipment.</li>
                                 <li class="lead">Ultrasonic Cleaners, Operating Tables, Blanket Warmers, Endoscope Washers, Reverse Osmosis Systems, Steam Generators and Boilers.</li>
                             </ul>
                             <p class="mb-4 lead">We are ISO 9001 certified and comply with Australian Standards AS 5369 (formerly AS/NZS 4187) for Reprocessing of Reusable Medical Devices and with AS/NZS 3551 for Management Programs for Medical Equipment.</p>
@@ -312,7 +327,7 @@
                                         </a>
                                     </h6>
                                     <p class="text-muted mb-0">
-                                        scheduled inspections, calibration checks, and wear part replacement to stop failures and extend life
+                                        scheduled inspections, calibration checks, and wear-part replacement to prevent failures and extend life
                                     </p>
                                 </div>
                             </div>
@@ -326,7 +341,7 @@
                                         </a>
                                     </h6>
                                     <p class="text-muted mb-0">
-                                        rapid fault diagnosis and on-site rectification, includes a corrective actions report and prevention advice
+                                        fault diagnosis and on-site repair, with a corrective action report and advice to prevent recurrence
                                     </p>
                                 </div>
                             </div>
@@ -340,7 +355,7 @@
                                         </a>
                                     </h6>
                                     <p class="text-muted mb-0">
-                                        annual performance qualification and audit-ready calibration certificates and validation reports
+                                        annual performance qualification with audit-ready calibration certificates and validation reports
                                     </p>
                                 </div>
                             </div>
@@ -354,7 +369,7 @@
                                         </a>
                                     </h6>
                                     <p class="text-muted mb-0">
-                                         covers daily checks, correct loading, cycles, and alarm response, plus unlimited ongoing phone support
+                                        daily checks, correct loading, cycle selection and alarm response, plus unlimited ongoing phone support
                                     </p>
                                 </div>
                             </div>
@@ -368,7 +383,7 @@
                                         </a>
                                     </h6>
                                     <p class="text-muted mb-0">
-                                        short or long term rates to support demand peaks, includes commissioning, training, and maintenance
+                                        short or long-term hire to cover demand peaks, including commissioning, training and maintenance
                                     </p>
                                 </div>
                             </div>
@@ -382,7 +397,7 @@
                                         </a>
                                     </h6>
                                     <p class="text-muted mb-0">
-                                        optional remote monitoring with alerts. Enables faster fault finding, trend analysis, and compliance
+                                        optional monitoring with alerts for faster fault finding, trend analysis and compliance records
                                     </p>
                                 </div>
                             </div>
@@ -398,7 +413,7 @@
                         <div class="mb-0"><a class="heading" href="index.html">Malone Hospital Services</a></div>
                         <div class="mb-2">ABN 80 061 127 179</div>
                         <div class="mb-3"><a href="mailto:sales@malones.com.au">sales@malones.com.au</a></div>
-                        <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-nsw?share">24 Tathra Street <br>West Gosford, NSW, 2251</a></div>
+                        <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-nsw?share">24 Tathra Street <br>West Gosford, NSW, 2250</a></div>
                         <div class="mb-0"><a target="_blank" rel="noopener" href="tel:+61243239731">(02) 4323 9731</a></div>
                         <div class="mb-3">Electrical Licence 240395C</div>
                         <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-qld?share">7/9 Redcliffe Gardens Drive <br>Clontarf, QLD, 4019</a></div>
@@ -423,10 +438,6 @@
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
-                        <div class="heading">Resources</div>
-                        <ul class="list-unstyled m-0">
-                            <li class="mb-3"><a href="white-papers.html">White Papers</a></li>
-                        </ul>
                         <div class="heading">Accessories</div>
                         <ul class="list-unstyled m-0">
                             <li class="mb-1"><a href="accessory-detergent.html">Detergent</a></li>
@@ -436,6 +447,12 @@
                         <ul class="list-unstyled m-0">
                             <li class="mb-1"><a href="thermoline-tbw-250.html">Thermoline TBW 250</a></li>
                             <li class="mb-3"><a href="thermoline-tbw-520.html">Thermoline TBW 520</a></li>
+                        </ul>
+                        <div class="heading">Steam Sterilisers</div>
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-1"><a href="ajc-steri-21.html">AJC Steri 21</a></li>
+                            <li class="mb-1"><a href="ajc-uniclave-99.html">AJC Uniclave 99</a></li>
+                            <li class="mb-3"><a href="ajc-amaro-5000.html">AJC Amaro 5000</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
@@ -469,7 +486,11 @@
                             <li class="mb-1"><a href="ken-dw-330.html">KEN DW 330</a></li>
                             <li class="mb-1"><a href="ken-dw-410.html">KEN DW 410</a></li>
                             <li class="mb-3"><a href="ken-dw-412.html">KEN DW 412</a></li>
-                        </ul>  
+                        </ul>
+                        <div class="heading">Resources</div>
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-3"><a href="white-papers.html">White Papers</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
