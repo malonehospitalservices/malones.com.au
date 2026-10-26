@@ -57,7 +57,7 @@
                     "telephone": "+61243239731",
                     "currenciesAccepted": "AUD",
                     "paymentAccepted": ["Invoice","EFT"],
-                    "address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2251","addressCountry": "AU"},
+                    "address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2250","addressCountry": "AU"},
                     "sameAs": ["https://www.linkedin.com/company/malone-hospital-services","https://youtube.com/channel/UCHWcctvWlmlqqrSm8ofU93w"],
                     "contactPoint": [
                         {"@type": "ContactPoint","telephone": "+61243239731","email": "sales@malones.com.au","contactType": "customer service","areaServed": "AU","availableLanguage": "en-AU"},
@@ -75,7 +75,7 @@
                     ]},
                     "knowsAbout": ["Bedpan Washers","Washer Disinfectors","Autoclaves","Sterilisers","Utensil Washers","Laboratory Washers","Trolley Washers","Drying Cabinets","Ultrasonic Cleaners","Endoscope Washers","Blanket Warmers","Operating Tables","Fluid Refrigerators","Steam Generators","Boilers","Reverse Osmosis Systems","Robotic Automation","CSSD Equipment"],
                     "branch": [
-                        {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#new-south-wales","name": "Malone Hospital Services New South Wales","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2251","addressCountry": "AU"},"telephone": "+61243239731","geo": {"@type": "GeoCoordinates","latitude": -33.41649782149152,"longitude": 151.3168531452192},"hasMap": "https://g.page/malone-hospital-services-nsw?share"},
+                        {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#new-south-wales","name": "Malone Hospital Services New South Wales","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2250","addressCountry": "AU"},"telephone": "+61243239731","geo": {"@type": "GeoCoordinates","latitude": -33.41649782149152,"longitude": 151.3168531452192},"hasMap": "https://g.page/malone-hospital-services-nsw?share"},
                         {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#queensland","name": "Malone Hospital Services Queensland","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "7/9 Redcliffe Gardens Drive","addressLocality": "Clontarf","addressRegion": "QLD","postalCode": "4019","addressCountry": "AU"},"telephone": "+61732832566","geo": {"@type": "GeoCoordinates","latitude": -27.23594362806235,"longitude": 153.07849614007287},"hasMap": "https://g.page/malone-hospital-services-qld?share"}
                     ]
                 }
@@ -91,9 +91,9 @@
                 --offwhite: rgb(249, 244, 236);
                 --mhs-blue: rgb(133, 181, 192);
                 --mhs-original: rgb(133, 181, 192);
-                --footer: rgb(74, 77, 80);
+                --footer: rgb(38, 70, 88); /* was rgb(31, 52, 64) */
                 --overlay: rgba(19, 42, 65, 0.5);
-                --nav-back: rgb(54, 95, 115);
+                --nav-back: rgb(52, 86, 115);
             }
 
             html, body { height: 100%; }
@@ -130,6 +130,43 @@
                 color: inherit;
                 text-decoration: underline;
             }
+            /* comparison table: equal-width model columns */
+            .compare-table{ table-layout: fixed; min-width: 1090px; margin-bottom: 0; --bs-table-hover-bg: rgba(52, 86, 115, .08); }
+            .compare-table thead th{ padding-left: .25rem; padding-right: .25rem; }
+            .compare-table thead th:first-child{ width: 120px; }
+            .compare-table tbody th,
+            .compare-table tbody td{ padding: .35rem .5rem; line-height: 1.3; }
+
+            /* comparison cards: whole card is one framed link */
+            .model-card{
+                display: flex;
+                flex-direction: column;
+                padding: .5rem;
+                border: 1px solid rgba(30, 58, 86, .18);
+                border-radius: .75rem;
+                background: #ffffff;
+                color: var(--head);
+                text-decoration: none;
+                transition: border-color .15s ease;
+            }
+            .model-card:hover,
+            .model-card:focus-visible{
+                border-color: var(--nav-back);
+                color: var(--head);
+            }
+            .model-card:focus-visible{ outline: 3px solid var(--mhs-blue); outline-offset: 2px; }
+            .model-card .model-img{
+                display: flex; align-items: flex-end; justify-content: center;
+                height: 100px; margin-bottom: .25rem;
+            }
+            .model-card img{ display: block; flex: 0 0 auto; height: auto; }
+            .model-card .model-name{ font-weight: 500; line-height: 1.2; white-space: nowrap; }
+
+            /* contact action */
+            .contact-btn{ background: var(--nav-back); border: 1px solid var(--nav-back); color: #ffffff; }
+            .contact-btn:hover, .contact-btn:focus-visible{ background: var(--head); border-color: var(--head); color: #ffffff; }
+            .contact-btn-outline{ background: transparent; border: 1px solid var(--nav-back); color: var(--nav-back); }
+            .contact-btn-outline:hover, .contact-btn-outline:focus-visible{ background: var(--nav-back); color: #ffffff; }
 
             .footer a{ text-decoration: none; color: #ffffff; }
             .footer a:hover{ text-decoration: underline; }
@@ -151,7 +188,7 @@
                     </svg>
                 </button>
                 <div id="nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto gap-lg-2">
+                    <ul class="navbar-nav ms-auto gap-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                             <ul class="dropdown-menu" aria-labelledby="navServices">
@@ -200,6 +237,14 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navSteriliser" role="button" data-bs-toggle="dropdown" aria-expanded="false">Steam Sterilisers</a>
+                            <ul class="dropdown-menu" aria-labelledby="navSteriliser">
+                                <li><a class="dropdown-item" href="ajc-steri-21.html">AJC Steri 21</a></li>
+                                <li><a class="dropdown-item" href="ajc-uniclave-99.html">AJC Uniclave 99</a></li>
+                                <li><a class="dropdown-item" href="ajc-amaro-5000.html">AJC Amaro 5000</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navAccessories" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accessories</a>
                             <ul class="dropdown-menu" aria-labelledby="navAccessories">
                                 <li><a class="dropdown-item" href="accessory-detergent.html">Detergent</a></li>
@@ -212,92 +257,75 @@
             </div>
         </nav>
         <main>
-            <section class="pt-3 pb-4">
+            <section class="pt-3 pb-0">
                 <div class="container">
                     <div class="row pb-0 align-items-center">
-                        <div class="col-lg-12 p-3 p-lg-4 pt-lg-3">
+                        <div class="col-lg-12 px-3 pt-3 pb-0 px-lg-4">
                             <div class="table-responsive">
-                                <table class="table align-middle">
+                                <table class="table table-hover align-middle compare-table">
+                                    <caption class="visually-hidden">Comparison of KEN IQ10 and IQ10E cart washer-disinfector models</caption>
                                     <thead>
                                         <tr class="text-center">
-                                            <th style="width: 10%"></th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10-2.png" alt="" width="100" height="100" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10
+                                            <th></th>
+                                            <th>
+                                                <a href="ken-iq10.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10-2.png" alt="" width="100" height="100" style="width:min(100px, 83.33%);aspect-ratio:1" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10</span>
                                                 </a>
                                             </th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10-2.png" alt="" width="100" height="100" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10-L
+                                            <th>
+                                                <a href="ken-iq10.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10-2.png" alt="" width="100" height="100" style="width:min(100px, 83.33%);aspect-ratio:1" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10-L</span>
                                                 </a>
                                             </th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10-2.png" alt="" width="120" height="100" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10-W
+                                            <th>
+                                                <a href="ken-iq10.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10-2.png" alt="" width="120" height="100" style="width:min(120px, 100%);aspect-ratio:120/100" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10-W</span>
                                                 </a>
                                             </th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10-2.png" alt="" width="120" height="100" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10-LW
+                                            <th>
+                                                <a href="ken-iq10.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10-2.png" alt="" width="120" height="100" style="width:min(120px, 100%);aspect-ratio:120/100" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10-LW</span>
                                                 </a>
                                             </th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10e-c.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10e-c-2.png" alt="" width="90" height="90" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10E-C
+                                            <th>
+                                                <a href="ken-iq10e-c.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10e-c-2.png" alt="" width="90" height="90" style="width:min(90px, 75%);aspect-ratio:1" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10E-C</span>
                                                 </a>
                                             </th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10e.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10e-2.png" alt="" width="90" height="90" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10E-S
+                                            <th>
+                                                <a href="ken-iq10e.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10e-2.png" alt="" width="90" height="90" style="width:min(90px, 75%);aspect-ratio:1" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10E-S</span>
                                                 </a>
                                             </th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10e.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10e-2.png" alt="" width="90" height="90" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10E-SL
+                                            <th>
+                                                <a href="ken-iq10e.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10e-2.png" alt="" width="90" height="90" style="width:min(90px, 75%);aspect-ratio:1" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10E-SL</span>
                                                 </a>
                                             </th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10e.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10e-2.png" alt="" width="110" height="90" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10E-WS
+                                            <th>
+                                                <a href="ken-iq10e.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10e-2.png" alt="" width="110" height="90" style="width:min(110px, 91.67%);aspect-ratio:110/90" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10E-WS</span>
                                                 </a>
                                             </th>
-                                            <th style="width: 10%">
-                                                <a href="ken-iq10e.html" class="align-items-center link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                                    <div class="col">
-                                                        <img class="rounded-lg-3" src="img/ken-iq10e-2.png" alt="" width="110" height="90" loading="lazy" decoding="async">
-                                                    </div>
-                                                    KEN<br>IQ10E-WL
+                                            <th>
+                                                <a href="ken-iq10e.html" class="model-card">
+                                                    <span class="model-img"><img class="rounded-lg-3" src="img/ken-iq10e-2.png" alt="" width="110" height="90" style="width:min(110px, 91.67%);aspect-ratio:110/90" loading="lazy" decoding="async"></span>
+                                                    <span class="model-name">KEN<br>IQ10E-WL</span>
                                                 </a>
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th scope="row">Size</th>
+                                            <th scope="row">Size (mm)</th>
                                             <td class="text-center fw-lighter">H2790<br>W2540<br>D2770</td>
                                             <td class="text-center fw-lighter">H2790<br>W2540<br>D3520</td>
                                             <td class="text-center fw-lighter">H2790<br>W2940<br>D2770</td>
@@ -309,7 +337,7 @@
                                             <td class="text-center fw-lighter">H2450<br>W2960<br>D3350</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row">Chamber</th>
+                                            <th scope="row">Chamber (mm)</th>
                                             <td class="text-center fw-lighter">H2000<br>W1000<br>D2250</td>
                                             <td class="text-center fw-lighter">H2000<br>W1000<br>D3100</td>
                                             <td class="text-center fw-lighter">H2000<br>W1200<br>D2250</td>
@@ -320,10 +348,44 @@
                                             <td class="text-center fw-lighter">H1875<br>W1200<br>D2200</td>
                                             <td class="text-center fw-lighter">H1875<br>W1200<br>D3000</td>
                                         </tr>
+                                        <tr>
+                                            <th scope="row">Door Type</th>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                            <td class="text-center fw-lighter">Auto<br>Slide</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Door Options</th>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                            <td class="text-center fw-lighter">Single Or<br>Pass-Through</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pt-5 pb-5">
+                <div class="container text-center">
+                    <h2 class="h4 mb-2">Unsure Which Model?</h2>
+                    <p class="text-muted mb-4">tell us your throughput and room layout and we will help you choose</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a class="btn btn-lg contact-btn" href="tel:+61243239731">Call (02) 4323 9731</a>
+                        <a class="btn btn-lg contact-btn-outline" href="mailto:sales@malones.com.au">Email Us</a>
                     </div>
                 </div>
             </section>
@@ -363,7 +425,7 @@
                                 <div class="card-body d-flex flex-column text-center">
                                     <h6 class="mb-1">
                                         <a href="service-process-validation.html" class="fs-5 stretched-link link-dark link-underline link-underline-opacity-0 link-underline-opacity-100-hover">
-                                            Reliable Sanitizing
+                                            Reliable Sanitising
                                         </a>
                                     </h6>
                                     <p class="text-muted mb-0">
@@ -397,7 +459,7 @@
                         <div class="mb-0"><a class="heading" href="index.html">Malone Hospital Services</a></div>
                         <div class="mb-2">ABN 80 061 127 179</div>
                         <div class="mb-3"><a href="mailto:sales@malones.com.au">sales@malones.com.au</a></div>
-                        <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-nsw?share">24 Tathra Street <br>West Gosford, NSW, 2251</a></div>
+                        <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-nsw?share">24 Tathra Street <br>West Gosford, NSW, 2250</a></div>
                         <div class="mb-0"><a target="_blank" rel="noopener" href="tel:+61243239731">(02) 4323 9731</a></div>
                         <div class="mb-3">Electrical Licence 240395C</div>
                         <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-qld?share">7/9 Redcliffe Gardens Drive <br>Clontarf, QLD, 4019</a></div>
@@ -422,10 +484,6 @@
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
-                        <div class="heading">Resources</div>
-                        <ul class="list-unstyled m-0">
-                            <li class="mb-3"><a href="white-papers.html">White Papers</a></li>
-                        </ul>
                         <div class="heading">Accessories</div>
                         <ul class="list-unstyled m-0">
                             <li class="mb-1"><a href="accessory-detergent.html">Detergent</a></li>
@@ -435,6 +493,12 @@
                         <ul class="list-unstyled m-0">
                             <li class="mb-1"><a href="thermoline-tbw-250.html">Thermoline TBW 250</a></li>
                             <li class="mb-3"><a href="thermoline-tbw-520.html">Thermoline TBW 520</a></li>
+                        </ul>
+                        <div class="heading">Steam Sterilisers</div>
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-1"><a href="ajc-steri-21.html">AJC Steri 21</a></li>
+                            <li class="mb-1"><a href="ajc-uniclave-99.html">AJC Uniclave 99</a></li>
+                            <li class="mb-3"><a href="ajc-amaro-5000.html">AJC Amaro 5000</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
@@ -468,7 +532,11 @@
                             <li class="mb-1"><a href="ken-dw-330.html">KEN DW 330</a></li>
                             <li class="mb-1"><a href="ken-dw-410.html">KEN DW 410</a></li>
                             <li class="mb-3"><a href="ken-dw-412.html">KEN DW 412</a></li>
-                        </ul>  
+                        </ul>
+                        <div class="heading">Resources</div>
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-3"><a href="white-papers.html">White Papers</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
