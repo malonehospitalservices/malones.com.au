@@ -57,7 +57,7 @@
                     "telephone": "+61243239731",
                     "currenciesAccepted": "AUD",
                     "paymentAccepted": ["Invoice","EFT"],
-                    "address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2251","addressCountry": "AU"},
+                    "address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2250","addressCountry": "AU"},
                     "sameAs": ["https://www.linkedin.com/company/malone-hospital-services","https://youtube.com/channel/UCHWcctvWlmlqqrSm8ofU93w"],
                     "contactPoint": [
                         {"@type": "ContactPoint","telephone": "+61243239731","email": "sales@malones.com.au","contactType": "customer service","areaServed": "AU","availableLanguage": "en-AU"},
@@ -75,7 +75,7 @@
                     ]},
                     "knowsAbout": ["Bedpan Washers","Washer Disinfectors","Autoclaves","Sterilisers","Utensil Washers","Laboratory Washers","Trolley Washers","Drying Cabinets","Ultrasonic Cleaners","Endoscope Washers","Blanket Warmers","Operating Tables","Fluid Refrigerators","Steam Generators","Boilers","Reverse Osmosis Systems","Robotic Automation","CSSD Equipment"],
                     "branch": [
-                        {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#new-south-wales","name": "Malone Hospital Services New South Wales","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2251","addressCountry": "AU"},"telephone": "+61243239731","geo": {"@type": "GeoCoordinates","latitude": -33.41649782149152,"longitude": 151.3168531452192},"hasMap": "https://g.page/malone-hospital-services-nsw?share"},
+                        {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#new-south-wales","name": "Malone Hospital Services New South Wales","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "24 Tathra Street","addressLocality": "West Gosford","addressRegion": "NSW","postalCode": "2250","addressCountry": "AU"},"telephone": "+61243239731","geo": {"@type": "GeoCoordinates","latitude": -33.41649782149152,"longitude": 151.3168531452192},"hasMap": "https://g.page/malone-hospital-services-nsw?share"},
                         {"@type": "ProfessionalService","@id": "https://www.malones.com.au/#queensland","name": "Malone Hospital Services Queensland","url": "https://www.malones.com.au/","parentOrganization": {"@id": "https://www.malones.com.au/#org"},"address": {"@type": "PostalAddress","streetAddress": "7/9 Redcliffe Gardens Drive","addressLocality": "Clontarf","addressRegion": "QLD","postalCode": "4019","addressCountry": "AU"},"telephone": "+61732832566","geo": {"@type": "GeoCoordinates","latitude": -27.23594362806235,"longitude": 153.07849614007287},"hasMap": "https://g.page/malone-hospital-services-qld?share"}
                     ]
                 }
@@ -91,9 +91,9 @@
                 --offwhite: rgb(249, 244, 236);
                 --mhs-blue: rgb(133, 181, 192);
                 --mhs-original: rgb(133, 181, 192);
-                --footer: rgb(74, 77, 80);
+                --footer: rgb(38, 70, 88); /* was rgb(31, 52, 64) */
                 --overlay: rgba(19, 42, 65, 0.5);
-                --nav-back: rgb(54, 95, 115);
+                --nav-back: rgb(52, 86, 115);
             }
 
             html, body { height: 100%; }
@@ -163,7 +163,7 @@
                     </svg>
                 </button>
                 <div id="nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto gap-lg-2">
+                    <ul class="navbar-nav ms-auto gap-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
                             <ul class="dropdown-menu" aria-labelledby="navServices">
@@ -212,6 +212,14 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navSteriliser" role="button" data-bs-toggle="dropdown" aria-expanded="false">Steam Sterilisers</a>
+                            <ul class="dropdown-menu" aria-labelledby="navSteriliser">
+                                <li><a class="dropdown-item" href="ajc-steri-21.html">AJC Steri 21</a></li>
+                                <li><a class="dropdown-item" href="ajc-uniclave-99.html">AJC Uniclave 99</a></li>
+                                <li><a class="dropdown-item" href="ajc-amaro-5000.html">AJC Amaro 5000</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navAccessories" role="button" data-bs-toggle="dropdown" aria-expanded="false">Accessories</a>
                             <ul class="dropdown-menu" aria-labelledby="navAccessories">
                                 <li><a class="dropdown-item" href="accessory-detergent.html">Detergent</a></li>
@@ -234,11 +242,12 @@
                             <a class="list-group-item" href="#key-points">Key Points</a>
                             <a class="list-group-item" href="#introduction">Introduction</a>
                             <a class="list-group-item" href="#risk-overview">Risk Overview</a>
-                            <a class="list-group-item" href="#strategic-areas">Key Strategic Areas</a>
+                            <a class="list-group-item" href="#strategic-areas">Contingency Planning Framework</a>
                             <a class="list-group-item" href="#backup-systems">Backup Systems and Redundant Equipment</a>
                             <a class="list-group-item" href="#staffing">Staffing Resilience and Emergency Workforce Plans</a>
                             <a class="list-group-item" href="#cross-facility">Cross-Facility Collaboration and Resource Sharing</a>
                             <a class="list-group-item" href="#communication">Communication, Reporting and Regulatory Compliance</a>
+                            <a class="list-group-item" href="#cost-model">Cost Model</a>
                             <a class="list-group-item" href="#conclusion">Conclusion and Recommendations</a>
                             <a class="list-group-item" href="#sources">Sources</a>
                         </div>
@@ -249,130 +258,158 @@
                     <article class="mb-4">
                         <p class="h2 section-anchor">White Paper</p>
                         <p class="h2">Emergency Preparedness and Contingency Planning for Sterilisation Service Disruptions in Regional Australian Hospitals</p>
-                        <p>August 2025</p>
+                        <p>August 2026</p>
                     </article>
 
                     <p class="h2 section-anchor" id="disclaimer">Disclaimer</p>
                     <p>This content is provided for information only. The authors make no representation or warranty regarding the accuracy, completeness or currency of the content. No information in this whitepaper should be construed as medical advice. Readers should seek appropriate professional guidance before acting on any information contained in this document. The authors expressly disclaim all liability for any direct or indirect loss or damage arising from the use of or reliance on this information.</p>
 
                     <p class="h2 section-anchor" id="executive-summary">Executive Summary</p>
-                    <p>Sterilisation services are a critical backbone of hospital operations, without properly sterilised surgical instruments and equipment, patient care and safety are immediately compromised. This whitepaper examines how regional Australian hospitals (public and private) can prepare for and respond to disruptions in their sterilisation services. It highlights lessons learned from past incidents and provides forward-looking strategies to ensure continuity of sterilisation in rural and remote settings. Key recommendations include establishing robust backup systems e.g. redundant sterilisation equipment and alternative processes, developing flexible staffing and training plans, fostering cross-facility support agreements, and adhering to regulatory requirements for emergency management and notification.</p>
+                    <p>Surgery, obstetrics, emergency procedures and many outpatient procedures depend on a continuous supply of sterile reusable medical devices (RMDs). Loss of reprocessing capacity stops these services once reserve sterile stock is consumed. Regional, rural and remote hospitals carry greater exposure than metropolitan hospitals because they operate fewer reprocessing units, rely on small specialist teams, and face longer response times for service technicians, spare parts, freight and inter-facility transport.</p>
+                    <p>This paper sets out contingency measures for public and private regional hospitals covering equipment redundancy, utility resilience, pre-qualified alternative processing routes, workforce cover, inter-facility support and incident reporting. AS 5369:2023 requires a business continuity plan with documented backup procedures, and the process to activate them, so that reprocessing requirements are met under emergency and suboptimal operating conditions.</p>
 
-                    <p class="h3 section-anchor" id="key-points">Key Points:</p>
+                    <p class="h3 section-anchor" id="key-points">Key Points</p>
                     <ul>
                         <li>
-                            <p><strong>Risks of Sterilisation Disruption:</strong> Equipment failures, power/water outages, environmental issues, or staff shortages can halt instrument reprocessing, leading to surgery delays or cancellations. Past incidents in Australia have shown hundreds of surgeries can be affected when sterilisation services fail. Rural and remote hospitals face amplified risks due to limited local redundancy and delayed technical support.</p>
+                            <p><strong>Failure Modes:</strong> Equipment faults, loss of power, steam, water or air conditioning, process contamination, workforce absence, supply interruption and site isolation each stop instrument reprocessing. In 2019 a single process fault stopped elective surgery at Austin Hospital, Melbourne, and at Princess Alexandra Hospital, Brisbane.</p>
                         </li>
                         <li>
-                            <p><strong>Backup Systems:</strong> Hospitals must invest in redundancy and backup equipment e.g. at least two sterilisers and washers on-site to avoid single points of failure. Contingency plans should include alternative sterilisation methods (low-temperature or chemical processes) and maintaining stocks of single-use sterile instruments to cover critical needs.</p>
+                            <p><strong>Redundancy:</strong> Provide two washer-disinfectors and two steam sterilisers, the configuration the Australasian Health Facility Guidelines (AusHFG) give as preferred for smaller, rural and remote sterilising services units (SSUs). Place at least one washer-disinfector, one steriliser and the sterile store on emergency power.</p>
                         </li>
                         <li>
-                            <p><strong>Staffing and Training:</strong> Staffing continuity plans are essential. Cross-train technicians and perioperative staff to perform essential sterilisation tasks in emergencies. Maintain an on-call roster or mutual aid agreements to bring in experienced sterile processing staff from other facilities or agencies if local staff become unavailable.</p>
+                            <p><strong>Alternative Processing:</strong> Pre-qualify every alternative route (second steriliser, small steam steriliser, partner facility, contracted reprocessor) for the loads it will carry. Low-temperature processes, high-level disinfection and immediate-use sterilisation do not replace lost steam sterilisation capacity.</p>
                         </li>
                         <li>
-                            <p><strong>Cross-Facility Support:</strong> Develop regional support networks so hospitals can assist each other. This includes formal agreements to share sterile supplies or reprocess instruments at a partner facility during outages. Examples include public hospitals sending instruments to a larger hospital’s CSSD or outsourcing to private/third-party reprocessing centers in emergencies. In some regions, public and private hospitals have co-developed shared sterilisation units to serve both facilities.</p>
+                            <p><strong>Workforce:</strong> Train and assess staff outside the SSU as competent for defined tasks, and pre-arrange relief staff through the health service, hospital group or agencies.</p>
                         </li>
                         <li>
-                            <p><strong>Regulatory and Communication:</strong> Ensure compliance with Australian standards (AS/NZS 4187 and related guidelines) and integrate sterilisation outage scenarios into the hospital’s emergency and business continuity plans. Immediate notification of major service disruptions to health authorities is crucial in public hospitals, alongside transparent communication with affected surgeons, staff, patients, and if required the broader community.</p>
+                            <p><strong>Cost:</strong> At the regional base case of the cost model, a partner SSU agreement returns about 17 times its annual cost. Duplicating the washer-disinfector and steriliser breaks even at an installed cost of about $287,800 for the two added units, rising to about $801,600 when each unit is sized for the full peak daily load.</p>
+                        </li>
+                        <li>
+                            <p><strong>Reporting and Compliance:</strong> Notify through the jurisdiction’s incident management system within its timeframes. AS 5369:2023 supersedes AS/NZS 4187:2014, and ACSQHC Advisory AS24/01 applies it to NSQHS Standards Action 3.17.</p>
                         </li>
                     </ul>
-                    <p>Overall, regional hospitals should treat sterilisation service continuity as a patient safety priority and invest in proactive contingency planning. By implementing the strategies in this paper, hospital administrators and sterile services teams can minimise downtime, maintain surgical services during crises, and uphold safety standards even under challenging rural and remote conditions.</p>
 
                     <p class="h2 section-anchor" id="introduction">Introduction</p>
-                    <p>Sterile processing (also known as Central Sterilising Services or CSSD) is fundamental to safe hospital practice. It ensures that all reusable surgical instruments and medical devices are meticulously cleaned, disinfected, and sterilised to eliminate any risk of infection for patients. Any disruption in sterilisation services can have immediate and far-reaching consequences: elective surgeries may be postponed, emergency procedures complicated, and patient safety jeopardised. This is especially pertinent in regional Australia, where hospitals often operate with fewer redundancies and are geographically isolated from backup options available in metropolitan centers.</p>
-                    <p>This whitepaper focuses on emergency preparedness and contingency planning for sterilisation service disruptions in regional Australian hospitals. It encompasses both public and private hospitals across Australia, with emphasis on rural and remote facilities. These hospitals face unique challenges, from limited on-site resources and workforce constraints to the tyranny of distance when seeking external support. The goal of this document is to help hospital administrators and technician teams anticipate potential failures and implement robust plans to maintain sterilisation capabilities during crises.</p>
-                    <p>We begin with an overview of the risks and potential causes of sterilisation service disruptions, including real-world Australian examples that highlight the severity of such events. We then delve into key strategic areas for contingency planning: backup systems and equipment, staffing plans, cross-facility support arrangements, and communication protocols including regulatory notifications. Differences and similarities between public vs. private hospitals, and between rural vs. more remote settings, are explored to tailor recommendations to various contexts. Finally, the paper consolidates best-practice recommendations, informed by both past incidents and forward-looking strategies, in a structured format for hospital leaders to adopt.</p>
-                    <p>By understanding the risks and preparing accordingly, regional hospitals can ensure that even if the unexpected occurs such as an autoclave breakdown, a power failure, or a contamination scare, there will be a clear plan to sustain sterilisation services and keep patient care on track.</p>
+                    <p>Sterilising services clean, disinfect, inspect, assemble, package, sterilise and store RMDs, and record the traceability of each critical RMD to an individual steriliser cycle. A disruption at any stage reduces the supply of sterile instrument sets. In a hospital with one washer-disinfector or one steriliser, a single fault removes all local capacity, and AusHFG notes that distance limits access to technicians and repairs for rural and remote services.</p>
+                    <p>This paper covers public and private hospitals in regional, rural and remote Australia. It addresses the SSU, its utilities and the arrangements that maintain sterile supply when the SSU is unavailable. AS 5369:2023, published 15 December 2023, supersedes AS/NZS 4187:2014 and AS/NZS 4815:2006 and is the reference standard throughout.</p>
 
                     <p class="h2 section-anchor" id="risk-overview">Risk Overview: Causes and Impacts of Sterilisation Service Disruptions</p>
-                    <p>Maintaining continuous sterilisation services involves managing complex equipment, utilities, and processes. Various risk factors can disrupt these services, including:</p>
-                    <p><strong>Equipment Failures:</strong> Autoclaves (steam sterilisers), washer-disinfectors, drying cabinets, and other CSSD equipment are mechanical systems prone to breakdown if not properly maintained, and sometimes even despite maintenance. For example, at Austin Hospital in Melbourne, five of seven surgical instrument washers failed unexpectedly in 2019, forcing the hospital to cancel nearly 500 elective surgeries to avoid running out of sterile instruments. In that case the sterilisation machines themselves remained functional, but without clean instruments coming out of the washers, surgical schedules could not be maintained. Such incidents illustrate how a single point of failure can cascade into a hospital-wide service disruption.</p>
-                    <p><strong>Utility Outages and Environmental Issues:</strong> Sterilisation units depend on critical utilities, steam, electricity, water, and climate control. Loss of steam or electricity will halt most sterilisation processes immediately. Even a loss of water supply or drop in water quality (e.g. a boil-water alert) can force a shutdown, since sterilisers and washers require high-purity water. HVAC failures leading to excessive humidity or temperature in sterile storage areas also pose a risk. High humidity can compromise the sterility of packaged instruments; one regional hospital in NSW highlighted the need for contingency plans if air-conditioning fails and humidity rises beyond safe thresholds. Without proper environment control, previously sterilised stock might have to be quarantined or reprocessed, reducing available instrument inventory.</p>
-                    <p><strong>Contamination and Quality Incidents:</strong> Not all disruptions are due to outright equipment failure, sometimes the process can be working but the output is suspect. A notable example occurred at Princess Alexandra Hospital (Brisbane) in 2019, when an unknown chemical residue was found on the packaging of sterilised instruments. Investigations traced it to a change in boiler chemicals; while the instruments were confirmed sterile, the residue prompted a halt in using those packs. Within 24 hours at least 46 surgeries were postponed. In such scenarios, a sterilisation service may choose to suspend operations or recall instruments out of caution until the issue is resolved, effectively creating a self-imposed disruption to protect patients. This underscores the importance of quality assurance and monitoring and having a backup plan for processing instruments elsewhere if the primary unit’s sterility assurance comes into doubt.</p>
-                    <p><strong>Staffing Shortages:</strong> Highly trained sterilisation technicians are essential to run CSSD operations. In smaller rural hospitals, the sterilising unit might be staffed by a single technician or a very small team. Sudden staff unavailability due to illness, emergencies, or even something like a COVID-19 outbreak, can therefore cripple the service. Unlike larger hospitals, a small facility may not have other staff readily able to step into the role. Furthermore, the learning curve for sterilisation practices is steep, requiring knowledge of infection control, machinery, and strict protocols, so reassigning nurses or other support staff in a crisis is challenging unless they have received prior training. Workforce issues are an ever-present risk that must be part of contingency planning, especially in remote areas where hiring temporary replacements can be extremely difficult.</p>
-                    <p><strong>Supply Chain Interruptions:</strong> Sterilisation units rely on a steady supply of consumables, packaging materials, chemical indicators, detergents, sterile wraps, etc. In remote hospitals, these supplies are often delivered on infrequent schedules. If shipments are delayed due to weather, transport strikes, etc. or if a particular item is unexpectedly out of stock, the CSSD might be unable to wrap and sterilise instruments properly. In addition, loan sets of surgical instruments often used for complex surgeries like orthopaedics pose logistical risks: regional facilities may hold loan instrument sets for longer periods to accommodate courier delivery schedules, requiring additional storage and coordination. A failure in the loan set return/delivery process could leave a hospital without the needed instruments or with unprocessed sets on hand.</p>
-                    <p><strong>Emergency Events and Disasters:</strong> Regional Australia is prone to natural events, bushfires, floods, cyclones that can directly or indirectly affect hospital operations. A disaster might cause physical damage to sterilisation equipment or cut off the power and water for an extended period. Even if the hospital is not damaged, it may become isolated e.g. roads cut by floodwaters, preventing transfer of instruments or resupply of sterile stock. Emergency events also often create surges in patient presentations, e.g. trauma from a disaster precisely when the hospital’s infrastructure is under strain. Thus, disaster planning must account for how critical services like sterilisation will be sustained in adverse conditions.</p>
-                    <p><strong>Impact on Hospital Services:</strong> When sterilisation capability is lost or limited, the most immediate impact is on surgical services and any other procedures that require sterile instruments (obstetric deliveries, endoscopy, emergency trauma care, etc.). Hospitals typically respond by prioritising emergency and urgent cases and postponing elective surgeries, as seen in the Austin Hospital case, where only essential surgeries continued and all non-urgent procedures were cancelled for about a week. Patients awaiting surgery can suffer prolonged pain or illness as a result of cancellations, and the hospital may face a growing backlog of cases. In some instances, patients have been transferred or redirected to other hospitals. For example, during the Austin Hospital washer failure, the Victorian Department of Health arranged for dozens of the most urgent patients to be treated at private hospitals with the costs covered by the public system. This kind of workaround is resource-intensive and may not always be feasible, especially in remote regions where alternate hospitals are far away.</p>
-                    <p>Loss of sterilisation services can also trigger safety and regulatory consequences. If there is any chance that non-sterile or improperly processed equipment reached a patient, it becomes a reportable incident with infection control follow-up, and potentially a sentinel event if patient harm occurred. Even if no patient is directly harmed, such disruptions are often of high interest to health regulators and the public, requiring formal incident investigations and external notifications. For example, hospital administrators may need to provide urgent briefs to the state health department if the incident has major implications or media attention. All these impacts underscore why robust contingency planning for sterilisation interruptions is not just an operational issue, but a patient safety imperative and a governance responsibility.</p>
-                    <p>In summary, the risk landscape for sterilisation services in regional hospitals spans mechanical, environmental, human, and external factors. The following sections discuss strategic areas to address these risks proactively, ensuring that hospitals can continue safe operations even when the unexpected occurs.</p>
+                    <p><strong>Equipment Failure:</strong> Washer-disinfectors, sterilisers, drying cabinets and ultrasonic cleaners fail through wear of door seals, gaskets, pumps, valves, heating elements, sensors and controls. A fault that creates a quality defect can remove more capacity than the failed unit. At Austin Hospital, Melbourne, in September 2019, a rubber seal disintegrated in a surgical instrument washer and deposited rubber particles on washed instruments. All washers were withdrawn from service after the fault was identified, and more than 500 elective procedures were cancelled. The Victorian Government directed that the highest priority patients be treated in private hospitals at government cost. The washers involved were replaced.</p>
+                    <p><strong>Utility Loss:</strong> Steam sterilisers require electricity, steam from a building boiler or a dedicated steam generator, treated feedwater, compressed air where pneumatic door seals or valves are fitted, seal and cooling water where liquid ring vacuum pumps are fitted, and drainage. Washer-disinfectors require electricity, hot and cold water, treated final rinse water and drainage. Loss of any one of these stops the process.</p>
+                    <p><strong>Water Quality:</strong> A boil-water notice, flood or main break changes the quality of water entering the SSU. AS 5369:2023 limits final rinse water for washer-disinfectors processing surgical instruments to pH 5.5 to 8.0, conductivity not greater than 30 µS/cm at 20 deg C [68 deg F], total viable count not greater than 100 cfu/100 mL and endotoxin not greater than 0.25 EU/mL. Feedwater to a dedicated steam generator is limited to conductivity not greater than 5 µS/cm at 20 deg C [68 deg F]. Where water is used untreated, the facility risk assessment should define the response to significant excursions in supply quality.</p>
+                    <p><strong>Steam Supply and Process Contamination:</strong> A process can run within its cycle parameters and still produce unusable output. At Princess Alexandra Hospital, Brisbane, in August 2019, a change to the chemical dosed into the steam boilers left a residue on the wrapping of sterilised packs. The instruments were confirmed sterile, but the packs were withdrawn, at least 46 procedures were postponed within 24 hours, and other Metro South facilities and the Royal Brisbane and Women’s Hospital processed instruments while the steam lines were flushed. AS 5369:2023 requires OQ when a service is changed and steam quality testing when the steam supply changes, with acceptance criteria of dryness value not less than 0.95, non-condensable gases not greater than 3.5 % V/V and superheat not greater than 25 deg C [45 deg F]. Where sterilisers draw on a non-dedicated steam supply, steam condensate purity is tested at IQ or OQ and annually thereafter. Treat any change to boiler water treatment as a change to the steam supply.</p>
+                    <p><strong>Environmental Control Failure:</strong> Loss of ventilation or air conditioning allows sterile store temperature and humidity to drift outside storage limits. RMDs with moisture on or in the packaging are treated as contaminated and must be reprocessed, which reduces available stock.</p>
+                    <p><strong>Workforce Loss:</strong> Small regional SSUs may be staffed by one or two technicians. Illness, leave, resignation or an outbreak stops the service if no other staff are trained and assessed as competent. AS 5369:2023 requires staffing sufficient for continuous, safe operation, a formal orientation and training program, and periodic competency assessment at intervals defined by the facility.</p>
+                    <p><strong>Consumables and Loan Sets:</strong> Reprocessing depends on packaging materials, chemical and biological indicators, air removal test packs, detergents and water treatment consumables, which remote sites receive on infrequent freight schedules. AusHFG notes that rural and remote facilities may hold loan sets and transport cases longer to suit courier timeframes, which requires additional storage space. AS 5369:2023 requires validated reprocessing instructions for loan sets and processing by a validated cleaning and further processing method on receipt.</p>
+                    <p><strong>Natural Disasters and Isolation:</strong> Floods, bushfires and cyclones can damage equipment, cut utilities for extended periods and close transport routes while increasing demand for emergency procedures. Set reserve sterile stock, single-use stock and consumable holdings against the longest credible isolation period for the site.</p>
+                    <p><strong>Service Impact:</strong> Loss of reprocessing capacity first affects surgery, obstetrics, emergency procedures and endoscopy. The response is to continue emergency and time-critical procedures on reserve stock, defer elective cases and transfer patients where capacity cannot be restored in time. Any possibility that an inadequately reprocessed RMD reached a patient requires recall of affected items, incident reporting, infection prevention and control follow-up and open disclosure.</p>
 
-                    <p class="h2 section-anchor" id="strategic-areas">Key Strategic Areas for Contingency Planning</p>
-                    <p>To mitigate the risks outlined above, hospital leadership and sterile services departments should develop comprehensive contingency strategies. The following are key strategic areas, each covering specific actions to prepare for or respond to a sterilisation service disruption. These strategies should be formalised in the hospital’s Business Continuity Plan (BCP) or emergency preparedness plans, and tested regularly through drills or simulations.</p>
+                    <p class="h2 section-anchor" id="strategic-areas">Contingency Planning Framework</p>
+                    <p>Document each contingency measure in the hospital business continuity plan with activation triggers, responsible roles and a procedure for each failure scenario. AS 5369:2023 requires reprocessing policies and procedures to include business continuity and contingency planning for emergencies, and requires a contingency plan for malfunction or breakdown of high-level disinfection equipment used for heat-labile semi-critical RMDs. Exercise the plan at defined intervals, including a scenario with total loss of the SSU.</p>
 
                     <p class="h3 section-anchor" id="backup-systems">1. Backup Systems and Redundant Equipment</p>
-                    <p><strong>Ensure Redundancy in Sterilisation Infrastructure:</strong> A fundamental principle of continuity planning is avoiding single points of failure. For sterilisation services, this means having multiple sterilisation units and critical equipment wherever feasible. National health facility guidelines recommend that even small hospitals install at least two sterilisers and supporting equipment like washers so that “at all times a backup is available”. This is especially important in rural and remote hospitals where service technicians and replacement parts may not be readily available, therefore built-in redundancy is needed to bridge the potentially long repair times. In practice, a regional hospital might have two steam sterilisers sized to handle its surgical load, or a combination of one steam autoclave and one low-temperature steriliser for example, hydrogen peroxide plasma as a fallback. Washer-disinfectors should also be duplicated if possible. The 2022 Australasian Health Facility Guidelines explicitly note that for smaller and rural/remote hospitals, “two WDs…and two steam sterilisers, and if required one low temperature sterilizer, are the preferred solution, as this allows redundancy for equipment maintenance and breakdown”.</p>
-                    <p><strong>Preventative Maintenance and Monitoring:</strong> Alongside having spare capacity, a vigorous maintenance program reduces the chance of sudden equipment failure. Regular servicing and calibration of sterilisers and washers should be ensured per manufacturer guidelines. Many modern sterilisers have built-in diagnostics; hospitals should respond promptly to alarms or suboptimal performance indicators e.g. failed Bowie-Dick tests, slow cycle times before a total failure occurs. Maintenance contractors in regional areas should be part of the contingency plan for instance, have arrangements for priority call-outs or fly-in servicing when critical equipment is down.</p>
-                    <p><strong>Emergency Power and Utilities:</strong> Backup power generators for hospitals must supply essential clinical services, and sterilisation should be considered part of that critical load. In some facilities, older backup generators only power lights and life-support equipment, not large electric sterilisation machinery. Hospitals should assess their emergency power circuits and, if needed, reconfigure to provide emergency electricity to at least one steriliser and one washer during a mains power outage. Similarly, storing reserve supplies of treated water or having a secondary water treatment unit can be invaluable, since sterilisers require high-purity water. Bigger hospitals might invest in a redundant water purification system for CSSD, whereas a small rural hospital could keep a tank of distilled water for a tabletop steriliser in a pinch. Environmental controls (like HVAC for sterile storage) should also be on emergency power where possible; if not, contingency steps must be outlined e.g. relocating sterile stock to a climate-controlled area during an extended HVAC failure, as queried by NSW health staff.</p>
-                    <p><strong>Alternate Sterilisation Methods:</strong> Identify and prepare for using alternative methods of reprocessing if the primary sterilisation modality is unavailable. For example, if steam autoclaving is down, can a low-temperature steriliser if available on-site handle some of the load for heat-sensitive or small loads? Some rural hospitals have benchtop sterilisers or tabletop autoclaves in other departments (dental clinics, endoscopy units), these could be leveraged to sterilise a limited selection of instruments in an emergency. In extreme situations, chemical high-level disinfection or sterilants might be used as a last resort for certain items. For instance, a business continuity plan might state that if all sterilisers fail, the hospital will “investigate alternative sterilisation methods e.g. chemical sterilisation” for equipment like dental or respiratory devices. It must be noted that chemical solutions (like peracetic acid or glutaraldehyde soaks) have significant limitations and safety concerns, so they are only stop-gaps. Nonetheless, including instructions for their use in a controlled manner with Infection Control oversight can add an extra layer of resiliency.</p>
-                    <p><strong>Stockpile Critical Disposable Supplies:</strong> Increasing the use of single-use sterile instruments and consumables can help bridge short disruptions. Items such as disposable procedure kits, sterile single-use surgical instruments (e.g. scalpel handles, suction tips), and pre-sterilised linens or gowns can be life-savers if the CSSD is out of action. Hospitals in rural/remote areas should maintain a buffer stock of these disposables. For example, a small facility might keep on hand a number of pre-packaged sterile suture kits, delivery kits, or even minor surgery kits that require no reprocessing. These can be used for low-complexity cases or in emergencies. Event-related stock rotation should be practiced i.e. the stockpile items have expiry dates or sterility assurance periods, so use and replace them periodically. The goal is that if sterilisation stops, the hospital has, say, a few days’ worth of the most common instruments in disposable form to carry on urgent work. Indeed, contingency plans often state “ensure stock at maximum levels” for disposable sterile consumables when an outage is anticipated.</p>
-                    <p><strong>Mobile or Offsite Sterilisation Units:</strong> In some scenarios, bringing in outside sterilisation capacity can resolve the crisis faster than repairing on-site equipment. Larger health systems and private companies have mobile CSSD units or trailer-mounted sterilisers that can be deployed. In the Austin Hospital incident, for example, the hospital arranged for two mobile instrument washer units to be delivered within days to restore cleaning capacity. Regional hospitals should know in advance if such mobile units are available through the state health department or a contracted provider and how to request them. Alternatively, offsite reprocessing services can be utilized: Australia now has commercial reprocessing centers that take used instruments, sterilise them in a central facility, and return them, even offering 24-hour turnaround via courier for nearby regions. While typically set up for routine outsourcing, these centers could also serve in an emergency. A hospital would need to arrange transport of soiled instruments out and inbound sterile supplies, which requires careful logistics and quality controls, but it is a viable contingency if local options are incapacitated.</p>
-                    <p>In implementing backup systems, prioritisation is crucial. Not every regional hospital can afford duplicate state-of-the-art sterilisers or a full inventory of disposable instruments. However, by analyzing which surgeries and instruments are absolutely mission-critical, the hospital can target investments smartly for instance, ensuring redundancy for the steriliser that handles emergency caesarean section instruments, or stocking disposable drapes for trauma kits. Table 1 provides a summary of common backup solutions and how they apply in practice:</p>
+                    <p><strong>Equipment Redundancy:</strong> AusHFG HPU 0190 (Revision 7.0, 2022) gives two washer-disinfectors, two automated flexible endoscope reprocessors and two steam sterilisers as the preferred configuration for smaller, rural and remote SSUs, to provide redundancy for maintenance and breakdown. AS 5369:2023 guidance calls for redundancy covering maintenance, calibration, qualification, requalification and unscheduled downtime. Size each unit of a duplicated pair to process at least the minimum essential load alone (emergency surgery, obstetric and emergency department sets), and preferably the full peak daily load within extended hours. Where a single unit is retained, document the alternative route and the delivery time for sterile sets from it.</p>
+                    <p><strong>Low-Temperature Processes:</strong> AS 5369:2023 requires critical RMDs that tolerate moist heat to be terminally sterilised by a validated moist heat process. Low-temperature processes are for RMDs that cannot withstand moist heat and whose instructions for use (IFU) specify that process. A low-temperature steriliser therefore provides no backup capacity for steam-compatible instrument sets.</p>
+                    <p><strong>Preventive Maintenance and Return to Service:</strong> Perform preventive maintenance to the equipment IFU, with no more than 12 months between scheduled maintenance on infrequently used equipment. Trend air removal test failures, leak rate results, aborted cycles, extended cycle times and drying failures, and act on adverse trends before failure. Hold critical spares on site, including door seals, gaskets, solenoid valves and temperature and pressure sensors. AS 5369:2023 requires OQ performance tests after repair and before return to service, and requalification after major repairs that could affect process efficacy. Agree in advance with the service provider which tests apply to each repair type and where the test instrumentation will come from, so that return to service is not held for test equipment or personnel.</p>
+                    <p><strong>Emergency Power:</strong> AusHFG recommends that at least one washer-disinfector, one steriliser and the sterile store are on emergency power supply. Confirm that the generator has spare capacity for the steriliser and any electric steam generator, vacuum pump, water treatment plant, compressed air plant and sterile store air handling. Where sterilisers draw on building steam, place the boiler controls, feed pumps and water treatment on the essential supply. Where building steam is unreliable, specify sterilisers with an integral electric steam generator as a second steam source. After any power or steam interruption, complete the leak rate test and the air removal and steam penetration test before releasing loads.</p>
+                    <p><strong>Water Treatment:</strong> Treated water is a common point of failure for washer-disinfectors and dedicated steam generators. Provide duplex reverse osmosis (RO) trains or treated water storage sized for a defined period of operation. For small steam sterilisers, hold a reserve of purified water that meets the steriliser feedwater specification. After any mains water event, test treated water against the final rinse and feedwater limits before resuming processing.</p>
+                    <p><strong>Sterile Store Environment:</strong> AS 5369:2023 recommends sterile storage at 18 to 25 deg C [64 to 77 deg F] and 35 to 70 % relative humidity (RH), and notes that emergency power may be required for ventilation of sterile stores serving operating theatres. Monitor temperature and RH continuously through the building management system or data loggers, with alarms set inside these limits so that corrective action starts before an excursion. NSW Clinical Excellence Commission guidance (2024) sets a risk assessment trigger at 8 hours outside range, escalation within 2 to 8 hours of onset, and reprocessing of RMDs with moisture on or in the packaging. Nominate a climate-controlled relocation area for sterile stock.</p>
+                    <p><strong>Single-Use Sterile Stock:</strong> Hold single-use sterile kits for defined emergency procedures, for example suturing, chest drain insertion, obstetric delivery and minor surgical procedures. Size the holding to the longest credible isolation period or resupply interval, and rotate by expiry date. AS 5369:2023 prohibits reprocessing or reuse of used single-use devices, and permits reprocessing of opened but unused single-use devices only where their reprocessing instructions allow it.</p>
+                    <p><strong>Temporary Equipment:</strong> Hired or containerised reprocessing units restore capacity where on-site repair will take longer than delivery and installation. Confirm in advance the supplier, lead time, transport access, hardstand or floor loading, and connection requirements (electrical supply rating, water, treated water, drainage and steam). Consider providing a permanent external connection point. AS 5369:2023 requires OQ immediately after installation or relocation, followed by PQ for the loads to be processed.</p>
+                    <p>Pre-qualify each alternative processing route before it is needed:</p>
 
                     <div class="table-responsive">
                         <table class="table align-middle">
                             <thead>
                                 <tr>
-                                    <th>Backup Solution</th>
-                                    <th>Description &amp; Use Case Example</th>
+                                    <th>Route</th>
+                                    <th>Preconditions</th>
+                                    <th>Limitations</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>On-site redundant equipment</td>
-                                    <td>Maintain at least two sterilisers and two washers so one can cover if the other fails. Use case: A rural surgical hospital installs a second smaller autoclave to ensure emergency operations can continue during maintenance or breakdown.</td>
+                                    <td>Second large steam steriliser and washer-disinfector</td>
+                                    <td>Each unit sized to process at least the minimum essential load alone, preferably the full peak daily load within extended hours. Included in the PQ program and the traceability system.</td>
+                                    <td>Shared utilities (steam, water, power) can disable both units together.</td>
                                 </tr>
                                 <tr>
-                                    <td>Alternate sterilisation modality</td>
-                                    <td>Utilize a different method if primary system is down e.g. a low-temperature plasma steriliser or ethylene oxide unit, if available. Use case: When a main steam steriliser is offline, the hospital’s low-temp steriliser can handle small loads of critical instruments like endoscopes or cameras to keep surgeries running.</td>
+                                    <td>Small steam steriliser, chamber not greater than 60 L [2.1 cu ft]</td>
+                                    <td>Type B cycle for wrapped, hollow and porous loads. Type N cycles process unwrapped solid instruments only. PQ completed for each emergency set. Daily air removal and steam penetration test to ISO 11140-6 where the cycle uses vacuum air removal.</td>
+                                    <td>Low throughput. Set size and mass limited by chamber dimensions.</td>
                                 </tr>
                                 <tr>
-                                    <td>Disposable sterile instrument kits</td>
-                                    <td>Stockpile single-use instruments and pre-packed kits for key procedures. Use case: A remote clinic keeps disposable suture kits, chest tube insertion kits, and OB delivery packs so that basic emergency procedures aren’t halted by a steriliser outage. These are used if reusables cannot be processed.</td>
+                                    <td>Manual cleaning</td>
+                                    <td>Only for RMDs whose validated cleaning instructions require manual cleaning, or as pre-treatment before a washer-disinfector.</td>
+                                    <td>AS 5369:2023 restricts manual cleaning in health care facilities to these cases, so it is not a substitute for washer-disinfector capacity.</td>
                                 </tr>
                                 <tr>
-                                    <td>Mutual aid reprocessing</td>
-                                    <td>Pre-arranged support from a nearby hospital’s CSSD or a commercial reprocessor to handle instrument loads during an outage. Use case: After a steriliser malfunction, a district hospital sends its instrument trays to a larger base hospital 100 km away for rapid reprocessing, or contracts a courier to overnight them to a city-based offsite sterilisation service.</td>
+                                    <td>Low-temperature steriliser</td>
+                                    <td>Only for RMDs whose IFU specify the process.</td>
+                                    <td>Does not replace steam capacity for steam-compatible critical RMDs.</td>
                                 </tr>
                                 <tr>
-                                    <td>Mobile sterilisation unit</td>
-                                    <td>Deploy a portable sterilisation unit on-site temporarily. Use case: A trailer with generators and autoclaves is sent to a flood-isolated hospital whose CSSD is damaged, allowing local instrument processing to resume within 48 hours. Similarly, mobile instrument washers were delivered to Austin Hospital to recover their cleaning capacity.</td>
+                                    <td>Liquid chemical sterilisation</td>
+                                    <td>Sterilant included on the ARTG and used to the device and sterilant IFU.</td>
+                                    <td>Output is unwrapped and must be used immediately. High-level disinfection is not a substitute for sterilisation of critical RMDs.</td>
                                 </tr>
                                 <tr>
-                                    <td>Rationing and reuse protocols</td>
-                                    <td>Implement conservation measures: cancel non-urgent surgeries, reuse single-patient items where safe, and employ immediate-use (“flash”) sterilisation for urgent needs. Use case: During an autoclave failure, a hospital postpones elective surgeries and uses rapid flash sterilisation in the operating theatre for instruments needed in life-saving surgery, recognising this as a temporary, controlled measure.</td>
+                                    <td>Immediate-use sterilisation</td>
+                                    <td>Defined and validated in the sterilising protocols. Device used immediately, with a transfer method that minimises exposure to air and environmental contaminants.</td>
+                                    <td>AS 5369:2023 prohibits routine use as a convenience where RMD numbers are insufficient or as a cost-saving measure. Items are not stored or held for another procedure. Requires a functioning steriliser, so it does not offset loss of steriliser capacity.</td>
+                                </tr>
+                                <tr>
+                                    <td>Partner hospital SSU</td>
+                                    <td>Written agreement, validated processes compatible with the sending hospital’s RMDs, transport risk assessment, and traceability to the partner’s steriliser cycle.</td>
+                                    <td>Transport time adds to turnaround. Road closure removes the route.</td>
+                                </tr>
+                                <tr>
+                                    <td>Contracted reprocessor</td>
+                                    <td>Contract defining each party’s responsibilities and conformance with AS 5369:2023, with evidence of accreditation or audit.</td>
+                                    <td>Transit time from regional and remote sites. Dependent on courier availability.</td>
+                                </tr>
+                                <tr>
+                                    <td>Temporary or containerised unit</td>
+                                    <td>Supplier, lead time and utility connections confirmed in advance. OQ on installation and PQ for loads.</td>
+                                    <td>Requires site access and utilities, so of limited use when the site is isolated or utilities are lost.</td>
+                                </tr>
+                                <tr>
+                                    <td>Demand reduction</td>
+                                    <td>Clinical prioritisation of procedures by urgency, controlled issue of reserve sterile stock, and transfer of patients to sites with sterile supply.</td>
+                                    <td>Elective backlog grows for the duration of the outage. Transfer depends on receiving site capacity.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="small text-muted">Table 1. Backup Solutions for Sterilisation Disruptions, Examples and Use Cases.</p>
+                    <p class="small text-muted">Table 1. Alternative Processing Routes, Preconditions and Limitations.</p>
 
                     <p class="h3 section-anchor" id="staffing">2. Staffing Resilience and Emergency Workforce Plans</p>
-                    <p><strong>Cross-Training of Personnel:</strong> Wherever possible, hospitals should cross-train other staff in basic sterilisation duties. For example, operating theatre nurses or aides can be given orientation to the CSSD, learning how to wrap instrument trays, load an autoclave, or perform biological indicator tests. In a small hospital, it may be feasible to train a few interested nurses or allied health staff to act as auxiliary sterile processing technicians when needed. This cross-training ensures that if the sole CSSD technician is unexpectedly unavailable, someone else can at least run the steriliser for critical instrument sets even if efficiency is lower. It also helps during surge periods: for instance, if a large number of instrument sets need reprocessing quickly, perhaps after an emergency surgery influx or when clearing a backlog post-downtime, extra hands from nursing or dental staff can assist the core sterilisation staff. Hospitals should document which staff have received such training and what tasks they are competent to perform.</p>
-                    <p><strong>Relief Staffing Agreements:</strong> For public hospitals, health services can create staff-sharing arrangements within their Local Health District (LHD) or region. An infection control or sterilisation technician from a larger hospital could be dispatched to a smaller facility in an emergency. Some jurisdictions maintain a register of staff willing to be deployed to other sites. For private hospitals, if part of a larger group e.g. Ramsay Health, Healthscope, staff might be flown or driven from one hospital to another to provide temporary cover. These options require administrative planning, including how to handle travel, lodging, credentialing, and remuneration for temporary staff. The contingency plan should include contact details of nearby hospitals or corporate sister facilities and possibly agencies that can provide locum CSSD staff at short notice.</p>
-                    <p><strong>Succession and Skill Maintenance:</strong> In remote hospitals where one person may hold the only expertise, a common scenario, e.g. one sterilisation officer who’s been on the job for 20 years, it’s vital to have a succession plan. Encourage that specialist to mentor at least one other staff member. Consider sending staff to periodic training courses, such as those offered by the Sterilizing Research &amp; Advisory Council of Australia so that the knowledge base is not lost if someone retires or is away. Building redundancy in skills is just as important as redundancy in equipment.</p>
-                    <p><strong>Task Shifting During Crises:</strong> Clearly define how duties will be redistributed during a sterilisation service interruption. For instance, if the CSSD staff must focus solely on processing emergency instruments during a recovery phase, other routine duties like ward equipment sterilisation or outpatient instrument reprocessing might be put on hold or assigned to another clinic. Nurses may need to take on more instrument checking or aseptic packaging tasks. The plan should spell out these shifts in responsibility. This avoids confusion; staff should know in advance, “If we activate the sterilisation downtime plan, these are your additional duties…”.</p>
-                    <p><strong>Fatigue Management:</strong> A subtle but important aspect, in a crisis, say an autoclave breakdown that creates a backlog, there is a temptation for available CSSD staff to work around the clock to catch up. Supervisors must monitor for fatigue and enforce rest, possibly by using those cross-trained helpers or bringing in relief as mentioned. An overtired technician could make critical mistakes e.g. missing an instrument in a set or not noticing a steriliser failing a cycle indicator, which could create an infection risk. So the human factor needs just as much oversight during emergency operations.</p>
-                    <p><strong>Communication and Leadership:</strong> Identify a chain of command for decision-making in a sterilisation disruption. Typically, the CSSD manager or senior tech will be part of the incident command for the event. However, in small hospitals that person might not be on site or available; thus an alternate leader, like the Theatre Nursing Unit Manager or Infection Control Practitioner may need to coordinate the response. Make sure all relevant managers know the contingency plan and can step in to lead it. Regular emergency drills can include a sterilisation failure scenario to practice this coordination.</p>
-                    <p>In summary, a resilient staffing strategy means no single individual is irreplaceable in an emergency, and there are predefined ways to get help. By investing in cross-training and networking with other facilities, a regional hospital can dramatically reduce downtime due to staffing issues. Moreover, staff-related contingencies cost relatively little to implement, mainly training time and reciprocal arrangements, but pay huge dividends when a crisis hits.</p>
+                    <p><strong>Cross-Training:</strong> Train perioperative and other clinical staff in defined SSU tasks such as set assembly, packaging, steriliser loading, cycle selection and routine tests. Assess and record competency for each task, reassess at defined intervals, and restrict load release to staff assessed as competent for that function.</p>
+                    <p><strong>Relief Staffing:</strong> Arrange relief from larger facilities in the same local health district, hospital and health service or private hospital group, and from agencies. Pre-arrange credentialing, travel, accommodation and orientation to local equipment and procedures. Keep a current contact list in the business continuity plan.</p>
+                    <p><strong>Succession:</strong> Maintain at least two staff competent in each critical SSU function. Support staff to complete the nationally recognised Certificate III in Sterilisation Services, and record equipment fault histories and local operating knowledge in controlled procedures.</p>
+                    <p><strong>Task Reallocation:</strong> Define which routine work stops on activation, for example ward and outpatient reprocessing, so that SSU staff process emergency sets first. Assign the additional duties that perioperative staff take on.</p>
+                    <p><strong>Fatigue Management:</strong> Backlog recovery drives extended shifts. Set maximum shift lengths and rest breaks, use relief or cross-trained staff to hold them, and apply an independent check of set assembly and load release during recovery.</p>
+                    <p><strong>Incident Leadership:</strong> Name the SSU manager and an alternate, such as the perioperative nurse unit manager or the infection prevention and control lead, as incident lead for reprocessing failures.</p>
 
                     <p class="h3 section-anchor" id="cross-facility">3. Cross-Facility Collaboration and Resource Sharing</p>
-                    <p>One of the strongest assets for regional hospitals is collaboration, leveraging other facilities for mutual support. No hospital needs to face a sterilisation crisis in isolation if proper linkages are established. There are several models for cross-facility support:</p>
-                    <p><strong>Public-Public Support Networks:</strong> Within state public health systems, hospitals are increasingly linked in regional networks. Contingency planning should designate backup “buddy” facilities. For example, a small rural hospital might pair with a larger regional base hospital: if the small site’s steriliser fails, they immediately courier their instrument sets to the base hospital for processing and borrow pre-sterilised sets if available. This was effectively demonstrated when Brisbane’s Princess Alexandra Hospital faced the chemical residue issue, they reached out to other Metro South hospitals and the Royal Brisbane and Women’s Hospital to help process instruments at those sites. With neighboring hospitals “very kind enough to help us process those instruments at their facilities,” PA Hospital managed to re-sterilise all packs over a weekend and kept emergency surgeries going with reserve stock. Such cooperation is possible because public hospitals share the same standards and often the same supply chains. To formalise this, hospitals can establish Memoranda of Understanding (MOUs) for emergency support, including how to transport soiled and clean instruments safely between sites, and agreements on cost reimbursement if any.</p>
-                    <p><strong>Public-Private Partnerships:</strong> In regions with both public and private hospitals, partnering can increase resilience for both parties. An excellent case is in Griffith, NSW, where a new private hospital, St Vincent’s Private Community Hospital built a state-of-the-art sterilising unit that also services the adjacent public Griffith Base Hospital. The formal sterilising services agreement means that the public hospital’s instrument reprocessing was effectively outsourced to the private hospital’s CSSD, following a funding arrangement to modernise the facilities. While this is a permanent shared-service model rather than an ad-hoc emergency swap, it shows how public and private resources can be pooled for mutual benefit. In an emergency context, a public hospital could likewise send urgent instrument loads to a private hospital in the same town or vice versa if one has capacity. Administrators should identify the nearest alternate CSSD (public or private) and have emergency contact procedures ready. One consideration is compatibility, differing instrument tracking systems or packaging methods can be a hurdle. It’s wise to discuss these details in advance, for instance, ensure that if Hospital A’s trays go to Hospital B, they meet the receiving CSSD’s criteria and that there’s a process to document and return them.</p>
-                    <p><strong>Third-Party Sterilisation Services:</strong> As mentioned, independent companies now offer off-site reprocessing, primarily to private hospitals and day surgeries. These can also be a resource for public hospitals in a crunch. A hospital could arrange an emergency pickup of used instruments and receive them back sterilised by the next day. This approach “de-risks reprocessing” by having a highly specialized team handle it externally. However, reliance on this method in a remote emergency depends on transport logistics (roads being open, etc). Still, establishing a contract or at least a line of communication with such a service in advance can add an extra layer to your contingency options, particularly for private facilities that might not have a public sister hospital to lean on.</p>
-                    <p><strong>Sharing of Sterile Stock and Loaners:</strong> Hospitals can also support each other by sharing ready-to-use sterile supplies. For example, if one hospital’s autoclave fails, a nearby hospital might lend sealed sterile instrument sets, especially standardized ones like basic laparotomy sets or caesarean section trays to tide over a few surgeries. In return, the borrowing hospital later replaces those sets or covers the cost. Another angle is coordinating the use of loan instrument sets for surgeries like orthopaedics. If a rural hospital holds a loan set for an orthopaedic case and can’t sterilise it, it might send the set to a larger hospital that has similar cases, get it sterilised there, and even have the patient temporarily diverted for surgery at the larger hospital. Inter-hospital transfer of patients is indeed a valid contingency: in the worst-case scenario, patients should be moved to where sterile instruments are available rather than using instruments of questionable sterility. This is essentially what happened in the Austin Hospital incident,  the government facilitated some patients’ surgeries to occur at private hospitals to ensure they weren’t indefinitely delayed.</p>
-                    <p><strong>Communication and Transportation Logistics:</strong> Central to cross-facility help is a robust communication plan. The affected hospital must rapidly notify the partner facility of the issue and the kind of help needed, e.g., “Our steriliser is down, can you process 10 trays for us tonight?”. There should be a clear contact list with names of key people (sterile services manager, nursing supervisor, etc.) at each supporting facility. Additionally, transportation protocols need to be sorted out. Consider how instruments will be packaged for transport using tamper-proof sealed transport cases, according to Australian standards for moving contaminated medical devices, who will drive or courier them, and how tracking will be maintained. Hospitals should allocate funds in their contingency budget for couriers or fuel as needed. In remote areas, more creative solutions may be necessary, e.g., utilizing the Royal Flying Doctor Service or ambulance services to ferry critical instruments to a functioning steriliser site, if that could be life-saving.</p>
-                    <p>Cross-facility collaboration, when planned in advance, can significantly shorten the downtime experienced during a sterilisation outage. It effectively enlarges the safety net beyond the single hospital. To illustrate differences in how various types of hospitals leverage such support, Table 2 in the next section compares public vs private approaches and highlights additional challenges in rural vs remote settings.</p>
+                    <p>Inter-facility support is effective only when agreed and tested before an event.</p>
+                    <p><strong>Public Hospital Networks:</strong> Designate a partner SSU, normally the regional base hospital, for each smaller hospital. Record in a memorandum of understanding the processing services, sterile set loans, transport arrangements, traceability, communication contacts and cost recovery. Confirm that the partner’s validated processes suit the sending hospital’s RMDs, including cycle compatibility, set mass and packaging, and that instrument tracking records can be exchanged.</p>
+                    <p><strong>Public and Private Shared Services:</strong> A permanent shared service is a valid design option. In 2018 Murrumbidgee Local Health District contracted St Vincent’s Private Community Hospital Griffith to provide sterilising services to Griffith Base Hospital, sharing a single sterilising unit, with instruments moved by a hospital transport vehicle. For emergency support, identify the nearest public or private SSU with spare capacity and agree activation contacts in advance.</p>
+                    <p><strong>Contracted Reprocessors:</strong> AS 5369:2023 states that an agreement should be in place for outsourced reprocessing, defining each party’s responsibilities, including conformance with the standard. Its guidance calls for the contract to include evidence of accreditation, audit or equivalent quality activity. Put the contract and transport arrangements in place before an event, even where routine use is not planned.</p>
+                    <p><strong>Shared Sterile Stock:</strong> A partner facility can lend standard sterile sets, for example caesarean section or laparotomy sets, to cover a short outage. Record each loan in both tracking systems so that every item remains traceable to its sterilisation cycle.</p>
+                    <p><strong>Patient Transfer:</strong> Where sterile RMDs cannot be supplied in time, transfer the patient to a facility with sterile supply. Do not use RMDs of uncertain reprocessing status.</p>
+                    <p><strong>Transport:</strong> AS 5369:2023 requires a documented procedure for transporting used RMDs, and a risk assessment with documented nonconformance conditions for transport of reprocessed RMDs between sites. Use rigid, robust, leak-proof containers that can be sealed, labelled and cleaned. Specify the maximum time from use to reprocessing and the point-of-use pre-treatment that prevents soil drying in transit. Evaluate and document revalidation requirements whenever a new transport route or means is introduced. For remote sites, align processing with road and air freight schedules and fund courier costs in the contingency budget.</p>
 
                     <p class="h3 section-anchor" id="communication">4. Communication, Reporting and Regulatory Compliance</p>
-                    <p>Maintaining open communication and fulfilling regulatory obligations during a sterilisation service disruption are not only ethical duties but also legal ones in many cases. Hospital leadership teams must ensure that their contingency plans include protocols for internal communication, external notification, and documentation as required by oversight bodies.</p>
-                    <p><strong>Internal Communication and Incident Command:</strong> As soon as a sterilisation failure or risk is identified, an incident management structure should be activated. This often takes the form of a Hospital Incident Management Team or a crisis huddle involving executives (CEO or delegate), perioperative leaders, infection control, biomedical engineering, and communications staff. The situation must be clearly communicated to all relevant departments: surgical teams need to know which cases are affected, nursing units must be aware if certain reusable equipment like sterilised procedure trays are not available, and procurement/pharmacy might need to help marshal disposable alternatives. A status update system e.g. brief calls or messages every few hours can keep everyone informed as the contingency measures progress. This helps coordinate the response, for example, surgeons will understand why cases are being rescheduled and can explain it to patients, and the emergency department can divert certain patients if needed because they know the surgical capacity is limited for the time being.</p>
-                    <p><strong>Notification of Health Authorities:</strong> In Australia, public hospitals are typically required to notify the state health department of any serious service disruption or incident. NSW Health, for instance, mandates that serious clinical or corporate incidents with potential to affect patient safety or attract public interest be escalated to the Ministry via a Reportable Incident Brief within 24 hours. A sterilisation service failure that leads to widespread surgery cancellations or any risk of unsterile equipment use would certainly qualify. The hospital’s chief executive or their delegate should prepare a brief explaining the situation, immediate mitigations, and assistance required if any. In some cases, the Department may coordinate state-level resources like accessing mobile sterilisation units or authorizing patient transfers to other facilities as part of the response. Private hospitals, though not under direct government management, also have obligations, they are licensed by state authorities and must report incidents that significantly compromise patient care. Additionally, any incident involving potential patient harm, e.g. a contamination event would be reported through licensing/accreditation channels and possibly to the Australian Commission on Safety and Quality in Health Care (ACSQHC) if it meets criteria for a sentinel event or requires broader notification. Bottom line: the contingency plan should have a step to inform the appropriate regulatory body and outline who is responsible for that, usually the General Manager or Director of Clinical Services.</p>
-                    <p><strong>Open Disclosure to Patients:</strong> Transparency with patients and families is crucial. If a patient’s surgery is delayed because of sterilisation issues, they deserve to know the reason in honest but reassuring terms. Hospitals should follow the Australian Open Disclosure Framework, which encourages apologizing for the inconvenience and explaining the measures being taken to remedy the problem. In cases where a patient might have been exposed to improperly sterilised equipment, even if the risk is theoretical, prompt disclosure and a plan for monitoring or prophylaxis if needed must be provided. Thankfully, with proper contingency actions, exposure of a patient to unsterile instruments should be exceedingly rare, it’s more likely that patients are inconvenienced by delays rather than harmed by infection. Still, the communication to those affected should be empathetic and clear.</p>
-                    <p><strong>Adherence to Standards and Guidelines:</strong> Even during crises, hospitals must maintain compliance with core sterilisation standards to the extent possible. The Australian Guidelines for the Prevention and Control of Infection in Healthcare (2019) and AS/NZS 4187:2014 set out requirements that remain relevant in contingencies, for example, any alternate reprocessing method used should still achieve the required level of disinfection/sterility for the item’s intended use. If a hospital uses flash sterilisation or chemical disinfection as a temporary measure, it should do so under strict protocols that align with evidence-based practices. ACSQHC’s advice is that organisations need to have “contingency plans for service failures or disruptions for example, water, power supply, fires, delays in material supply, industrial action” and integrate these into risk management systems. This is essentially an accreditation expectation under the National Safety and Quality Health Service (NSQHS) Standards, specifically Standard 3 (Preventing and Controlling Infections) requires that reprocessing of reusable medical devices is safe, and by implication, that there are plans to manage it safely even in unusual circumstances. Auditors or accreditation surveyors may ask to see these contingency plans.</p>
-                    <p><strong>Regulatory Notifications for Equipment Issues:</strong> If the disruption is caused by a device malfunction or quality issue, for example, a steriliser that failed to reach temperature, or the chemical residue case at PA Hospital, there may be a need to notify federal agencies like the Therapeutic Goods Administration (TGA) or the manufacturer for investigation. Hospitals should document the incident thoroughly, cycle printouts, test results, photographs of any anomalies to support root cause analysis. This documentation and reporting is often done via the hospital’s risk management system and equipment management logs. In some instances, the manufacturer may issue hazard notices or recall advice, for example, if a particular model of steriliser is found to have a defect. Staying abreast of such notices via TGA alerts or the state’s health alerts is part of preparedness; implementing them promptly can prevent incidents.</p>
-                    <p><strong>Post-Incident Review and Improvement:</strong> After any major sterilisation service disruption is resolved, the hospital should conduct a debrief and investigation to identify lessons. This should involve the CSSD team as well as stakeholders from surgery, infection control, and administration. The review might ask: What caused the disruption? What worked well in our response and what didn’t? How can we bolster our plan for next time? These findings should be used to update the contingency plans. Often such an incident is a trigger to secure funding for improvements, for example, a hospital that suffered a breakdown may build a business case for purchasing an additional steriliser or upgrading infrastructure, noting how the incident demonstrated a risk to patient care. Demonstrating continuous improvement in emergency preparedness is also looked upon favorably in accreditation processes.</p>
-                    <p>In essence, regulatory and communication strategies ensure that a sterilisation disruption, despite being a negative event, is managed in a way that upholds patient trust and safety standards. By proactively planning these aspects, hospital leaders can avoid secondary harm such as misinformation, panic, or regulatory non-compliance. Table 2 below summarizes some differences in how public vs private hospitals and rural vs remote settings might handle the challenges discussed so far, including regulatory context and support mechanisms:</p>
+                    <p><strong>Incident Management:</strong> On confirmation of a reprocessing failure, activate the hospital incident management structure with executive, perioperative, SSU, infection prevention and control, engineering and communications representation. Issue status updates at fixed intervals stating available sterile stock, procedures affected, expected restoration time and changes to the operating list.</p>
+                    <p><strong>Notification:</strong> Report through the jurisdiction’s incident management system. In NSW public health services, PD2020_047 requires the Chief Executive to contact the Ministry of Health immediately for clinical incidents with the potential to become a matter of public interest. A Reportable Incident Brief (Part A within 24 hours, Part B within 72 hours) is required for Harm Score 1 incidents and for other incidents the Chief Executive determines, including clinical incidents arising from serious systemic problems. NSW licensed private health facilities report reportable incidents to the Ministry’s Regulation and Compliance Unit within 2 working days. Name the role responsible for each notification in the business continuity plan.</p>
+                    <p><strong>Recall and Traceability:</strong> AS 5369:2023 requires timely recall of released RMDs where there is evidence of failure during cleaning, disinfection, packaging, sterilisation, transport or storage, and traceability of each critical RMD to the individual steriliser cycle. Use cycle records to define the affected population and reconcile recalled quantities.</p>
+                    <p><strong>Device and Process Issues:</strong> Where a device malfunction or process chemical caused the disruption, report it to the TGA and the product sponsor, quarantine the affected components, and retain cycle records, test results and photographs for root cause analysis. Monitor TGA recall notices through the System for Australian Recall Actions (SARA).</p>
+                    <p><strong>Open Disclosure:</strong> Where a patient may have been exposed to an inadequately reprocessed RMD, apply the Australian Open Disclosure Framework. For deferred procedures, inform patients of the cause and the rescheduling plan.</p>
+                    <p><strong>Standards Compliance:</strong> ACSQHC Advisory AS24/01 (November 2024) applies AS 5369:2023 to NSQHS Standards Action 3.17, required a gap analysis by 30 June 2025, and requires a compliance plan with timeframes. Contingency processes must still meet AS 5369:2023 and the Australian Guidelines for the Prevention and Control of Infection in Healthcare (2019). Alternative processes require the same validation, routine monitoring and records as primary processes. Retain the business continuity plan and exercise records as accreditation evidence.</p>
+                    <p><strong>Post-Incident Review:</strong> Review cause, response timeline, stock consumption and decision points with SSU, perioperative, infection prevention and control, engineering and executive staff within the timeframe set by the incident policy. Update the business continuity plan, and use downtime and cancellation data to support capital requests for redundancy.</p>
+                    <p>Contingency measures by facility type and remoteness:</p>
 
                     <div class="table-responsive">
                         <table class="table align-middle">
@@ -381,92 +418,491 @@
                                     <th>Aspect</th>
                                     <th>Public Hospitals (Regional)</th>
                                     <th>Private Hospitals (Regional)</th>
-                                    <th>Additional Challenges in Remote Areas (Public or Private)</th>
+                                    <th>Additional Measures for Remote Sites</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Funding &amp; Resources</td>
-                                    <td>Government-funded equipment; capital improvements may be subject to budget cycles e.g. delays in replacing ageing sterilisation gear have occurred. In contingencies, state may allocate emergency funds or cover outsourcing (as Victoria did, paying for public patients to have surgery in private hospitals). Typically have access to state supply stockpiles for disposables in emergencies.</td>
-                                    <td>Corporate-funded; investment decisions based on business cases. Often faster procurement if justified e.g. to avoid revenue loss from surgery cancellations. Some private networks proactively invest in backups or external service contracts. May use offsite reprocessing providers routinely, which can be scaled up during local outages. Small private facilities sometimes rely on public hospitals or third-parties for sterilisation either ongoing or as backup.</td>
-                                    <td>Remoteness inflates costs and complexity for any solution. Getting new equipment or replacement parts is slower. Freight costs are higher for supplies. Government often provides extra support to remote public hospitals and sometimes grants to remote private clinics recognizing these challenges.</td>
-                                </tr>
-                                <tr>
                                     <td>Equipment Redundancy</td>
-                                    <td>Aim for ≥2 sterilisers in hospitals with surgery; regional base hospitals usually meet this, smaller district hospitals might have only 1, hence higher risk. Public guidelines strongly recommend redundancy particularly for rural/remote sites, but funding constraints can delay this in practice. Public facilities can sometimes borrow/rent equipment through state health engineering services in a pinch.</td>
-                                    <td>Many private hospitals also have multiple sterilisers if they have significant surgical volume to ensure continuity of service to surgeons. Smaller day hospitals might only have one autoclave, but they often have service contracts for swift repair or arrangements to use another facility’s CSSD if needed. Private sector has the flexibility to outsource, if their steriliser fails, they might shift to using a central offsite service temporarily, as long as transport is feasible.</td>
-                                    <td>For very remote hospitals e.g. small community hospitals/health centres, having two large sterilisers may be impractical; instead they might have one medium autoclave and one small backup unit or a tabletop unit. Redundancy might take creative forms like maintaining some disposable instrument capacity. Due to technician scarcity, repairs take longer, making internal redundancy crucial. Telemaintenance (remote guidance from manufacturer) might be used until a tech can fly in.</td>
+                                    <td>Provide two washer-disinfectors and two steam sterilisers where surgery is performed. Where only one is installed, record the risk on the facility risk register and document the partner SSU route and delivery time.</td>
+                                    <td>Provide the same configuration where surgical volume justifies it. Day hospitals with one steriliser hold a written agreement with an alternative reprocessing facility and a service contract with a defined regional response time.</td>
+                                    <td>Where two large sterilisers cannot be justified, provide one large steriliser and a small steam steriliser with a Type B cycle qualified for the emergency sets. Hold critical spares on site.</td>
                                 </tr>
                                 <tr>
-                                    <td>Staffing</td>
-                                    <td>Public hospitals have formal statewide staffing pools for emergencies though primarily for clinical staff. Within an LHD, staff can be redeployed, e.g. infection control practitioners or theatre nurses from a larger hospital can assist at a smaller site. Public sector also provides training pathways (certificate courses) for sterile processing; regional staff can tap into these. During crises, public facilities may get approval for overtime or agency hires more readily under emergency provisions.</td>
-                                    <td>Private hospitals rely on their group’s network or local agency staff. A large private hospital might “lend” a sterile services staff member to another in the network if needed. Some private groups have centralized teams that travel to support new or troubled sites. They also may cross-train theatre staff as a contingency. If a private facility cannot staff its CSSD safely, it might temporarily defer cases or transfer patients to public hospitals, particularly emergency cases, requiring goodwill and coordination with the public system.</td>
-                                    <td>Remote locations face chronic workforce shortages. There may be only one qualified CSSD tech for hundreds of kilometers, if any, sometimes nurses double up the role). Staff fatigue and burnout are concerns. Bringing in external help is tough; it might involve flying someone out, which can be delayed by weather or logistics. Cross-training is imperative so at least a basic service can continue if the main person is away. Also, in some remote Indigenous communities, language and training need special support to ensure local staff are confident in complex sterilisation protocols.</td>
+                                    <td>Capital Planning</td>
+                                    <td>Base replacement business cases on condition assessment, fault history, time to restore and case cost, and lodge them before units reach end of serviceable life to suit budget cycles.</td>
+                                    <td>Include lost theatre sessions and patient transfer costs in redundancy business cases.</td>
+                                    <td>Include freight, installation travel and validation travel in whole-of-life cost.</td>
                                 </tr>
                                 <tr>
-                                    <td>Cross-Facility Support</td>
-                                    <td>Well-defined within public networks: e.g. regional hubs support smaller spokes. Public hospitals can activate emergency protocols to divert instruments or patients to one another. Health departments may coordinate transfers (both of instruments and of surgical cases) in large-scale outages. Public-private collaboration is also arranged by health authorities when needed, as seen when the Victorian Health Minister stepped in to use private hospitals for Austin’s cancelled surgeries.</td>
-                                    <td>Private facilities often have service agreements with offsite processors or with larger hospitals for specific needs. In an urgent situation, a private hospital might call on a nearby public hospital for help sterilising critical items (informally or via existing MOU). Within private groups, if one hospital’s CSSD is down, a sister hospital might take some of its cases or process its instruments. However, competition and logistics can complicate these arrangements unless pre-planned. Some regions have innovative partnerships e.g. public hospital purchasing sterilisation services from a co-located private hospital which blur the public/private divide and provide resilience for both.</td>
-                                    <td>Remoteness limits timely physical support. The nearest helping hospital might be hundreds of kilometers away. For example, a remote hospital might have to airlift instruments to a regional center for sterilisation, feasible for small, critical sets but not for large volumes. Thus, remote facilities must be more self-sufficient. They may rely on periodic centralised reprocessing for elective cases, shipping instruments out days in advance and keep local capability only for emergencies. Any support plans must consider transport timeframes, e.g. a charter flight or weekly supply plane schedule. Additional space to store loan sets longer is needed due to courier delays. The cost of transport and lack of courier services pose extra hurdles.</td>
+                                    <td>Workforce</td>
+                                    <td>Arrange relief within the local health district or hospital and health service, with relief staff pre-credentialed.</td>
+                                    <td>Arrange relief from group facilities or agencies, with relief staff pre-credentialed.</td>
+                                    <td>Train at least two local staff to competency in emergency processing. Allow for travel delay in relief arrangements.</td>
                                 </tr>
                                 <tr>
-                                    <td>Regulatory Oversight &amp; Reporting</td>
-                                    <td>Public hospitals operate under direct government oversight. They must follow state health policies for emergency management and incident reporting. For critical incidents like a prolonged sterilisation outage affecting services, they must file reports e.g. via ims+ in NSW, with 24-hour and 72-hour updates. They are subject to accreditation (NSQHS Standards) which includes meeting requirements for instrument reprocessing (Standard 3). Expect scrutiny from bodies like the Clinical Excellence Commission if infection risks emerge.</td>
-                                    <td>Private hospitals are licensed by states and accredited by independent agencies, but they also must report major patient safety issues to Health Departments. A serious sterilisation failure could jeopardize their license if not managed properly, so they tend to err on the side of transparency with regulators. Private facilities also adhere to NSQHS Standards; they need contingency plans as part of risk management evidence for accreditation. They might involve their corporate clinical governance in reviews of such incidents.</td>
-                                    <td>Remote area clinics/hospitals, mostly public have additional accountability given the vulnerabilities of the populations they serve. Any service disruption in a remote hospital might trigger involvement of higher authorities e.g. the State Health Emergency Operations Centre especially if patient transfers are required. Also, media/public interest can be high if a remote community’s only hospital cannot do surgeries, making communication plans even more critical. Culturally appropriate communication, e.g. involving Aboriginal health workers for messaging in Indigenous communities is an added consideration.</td>
+                                    <td>Inter-Facility Support</td>
+                                    <td>Designate a partner SSU within the network under a written agreement.</td>
+                                    <td>Hold agreements with a nearby public or private hospital SSU or a contracted reprocessor.</td>
+                                    <td>Set reserve stock and transport plans against road and air freight schedules and credible road closure periods.</td>
+                                </tr>
+                                <tr>
+                                    <td>Reporting</td>
+                                    <td>Follow the state incident management policy, in NSW PD2020_047 through ims+.</td>
+                                    <td>Report to the licensing regulator, in NSW reportable incidents within 2 working days, and escalate through corporate clinical governance.</td>
+                                    <td>Include community liaison, with Aboriginal Health Workers where present, in the communication plan for service restrictions.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="small text-muted">Table 2. Comparative Challenges and Approaches, Public vs Private, Rural vs Remote.</p>
+                    <p class="small text-muted">Table 2. Contingency Measures by Facility Type.</p>
+
+                    <p class="h3 section-anchor" id="cost-model">5. Cost Model: Outage Cost and Contingency Investment</p>
+                    <p><strong>Purpose:</strong> The model estimates the expected annual cost of reprocessing outages at a regional hospital and the installed cost at which each contingency measure breaks even. It uses public Australian cost data and stated planning assumptions. No equipment prices are used. Each measure is expressed as a break-even installed cost for comparison against site quotations. Costs are in Australian dollars in real terms. Index all inputs to the appraisal year and replace assumptions with site data before use.</p>
+                    <p><strong>Downtime Method:</strong> Unit unavailability is the number of unplanned failures per year multiplied by the mean time to restore in days, divided by 365. A site with one washer-disinfector and one steriliser in series is fully unavailable when either unit is down. A duplicated site is fully unavailable only when both units of the same type are down together, which for independent failures occurs with a probability equal to the square of unit unavailability. With one unit of a type down, the duplicated site runs at reduced capacity. Common-mode events (loss of power, steam or water quality) stop every unit regardless of configuration. Planned downtime for preventive maintenance and annual requalification is added separately. In a single-unit site it stops the service. In a duplicated site it reduces capacity.</p>
+                    <p><strong>Cost Method:</strong> Cost per outage day is the cost of cancelled elective procedures plus off-site processing, transport and overtime. An unplanned cancellation incurs stranded cost (theatre staffing and sessional costs already committed) plus a recovery premium (additional sessions or purchase from another provider). A planned cancellation, rostered in advance, incurs the recovery premium only. Two responses are modelled for a full outage: cancel all elective procedures, or process sets at a partner SSU 100 km [62 miles] away so that half of the elective procedures proceed. Emergency, obstetric and emergency department sets are processed off-site every outage day in both responses. Capital break-even is the avoided annual cost, less added operating cost, multiplied by the annuity factor. The annuity factor at 7 % real is 7.024 for 10 years and 4.100 for 5 years (3 %: 8.530 and 4.580, 10 %: 6.145 and 3.791). Excluded costs, including clinical harm from delay, patient travel, recall and infection follow-up, would increase the outage cost.</p>
+                    <p>Base-case inputs:</p>
+
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Input</th>
+                                    <th>Base Value</th>
+                                    <th>Basis</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Elective list days</td>
+                                    <td>240 per year</td>
+                                    <td>Assumption, 48 weeks of 5 days</td>
+                                </tr>
+                                <tr>
+                                    <td>Elective procedures</td>
+                                    <td>12 per list day</td>
+                                    <td>Assumption, 2 theatres of 6 procedures</td>
+                                </tr>
+                                <tr>
+                                    <td>Reusable sets per elective procedure</td>
+                                    <td>1.5</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Emergency, obstetric and emergency department sets</td>
+                                    <td>6 per day, every day</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Unplanned failures</td>
+                                    <td>2 per unit per year, each washer-disinfector and steriliser</td>
+                                    <td>Assumption. Replace with 3 years of site work order history</td>
+                                </tr>
+                                <tr>
+                                    <td>Mean time to restore</td>
+                                    <td>1 day metropolitan, 2 days regional, 4 days remote</td>
+                                    <td>Assumption, reflecting technician travel and parts freight</td>
+                                </tr>
+                                <tr>
+                                    <td>Common-mode events</td>
+                                    <td>Power 0.3 per year of 1 day, steam 0.1 per year of 2 days, water quality 0.1 per year of 2 days</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Planned downtime</td>
+                                    <td>2.5 days per unit per year, 50 % falling on list days</td>
+                                    <td>Assumption covering preventive maintenance and the annual requalification AS 5369:2023 requires</td>
+                                </tr>
+                                <tr>
+                                    <td>Capacity of one unit in a duplicated pair</td>
+                                    <td>80 % of peak daily sets with 4 hours overtime (upsized case 100 %)</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Episode cost</td>
+                                    <td>$6,415 per procedure</td>
+                                    <td>IHACPA national average cost per acute separation, 2023 to 2024 financial year (same-day $1,840, overnight $13,126)</td>
+                                </tr>
+                                <tr>
+                                    <td>Stranded cost on unplanned cancellation</td>
+                                    <td>30 % of episode cost</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Recovery premium</td>
+                                    <td>25 % of episode cost</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Elective procedures proceeding with partner SSU support</td>
+                                    <td>50 %</td>
+                                    <td>Assumption, limited by transport and turnaround</td>
+                                </tr>
+                                <tr>
+                                    <td>Technician cost</td>
+                                    <td>$45.50 per hour</td>
+                                    <td>NSW Health advertised Sterilising Technician Grade 2 rate of about $35 per hour, plus 30 % on-costs (on-cost assumption)</td>
+                                </tr>
+                                <tr>
+                                    <td>Overtime</td>
+                                    <td>4 hours per day at 1.75 times the hourly cost</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Partner processing labour and consumables</td>
+                                    <td>0.4 hours and $12 per set, plus 100 % overhead</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Transport</td>
+                                    <td>200 km [124 miles] round trip at $0.90 per km [$1.45 per mile], plus 3 hours driver time at $40 per hour</td>
+                                    <td>Assumption</td>
+                                </tr>
+                                <tr>
+                                    <td>Discount rate</td>
+                                    <td>7 % real, with 3 % and 10 % sensitivity</td>
+                                    <td>Office of Impact Analysis cost benefit analysis guidance (2023)</td>
+                                </tr>
+                                <tr>
+                                    <td>Analysis period</td>
+                                    <td>10 years for large sterilisers and washer-disinfectors, 5 years for small steam sterilisers</td>
+                                    <td>ATO TR 2022/1 effective life (pre-vacuum sterilisers and instrument washers 10 years, benchtop sterilisers 5 years)</td>
+                                </tr>
+                                <tr>
+                                    <td>Added operating cost of duplication</td>
+                                    <td>$25,000 per year for one added washer-disinfector and one added steriliser</td>
+                                    <td>Assumption covering preventive maintenance, parts and annual requalification</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="small text-muted">Table 3. Cost Model Base-Case Inputs.</p>
+
+                    <p>Derived unit costs:</p>
+
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Cost</th>
+                                    <th>Derivation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Unplanned cancellation</td>
+                                    <td>$3,528 per procedure</td>
+                                    <td>55 % of $6,415</td>
+                                </tr>
+                                <tr>
+                                    <td>Planned cancellation</td>
+                                    <td>$1,604 per procedure</td>
+                                    <td>25 % of $6,415</td>
+                                </tr>
+                                <tr>
+                                    <td>Partner charge</td>
+                                    <td>$60.40 per set</td>
+                                    <td>(0.4 hours at $45.50 plus $12) multiplied by 2</td>
+                                </tr>
+                                <tr>
+                                    <td>Transport</td>
+                                    <td>$300 per round trip</td>
+                                    <td>200 km at $0.90 plus 3 hours at $40</td>
+                                </tr>
+                                <tr>
+                                    <td>Overtime</td>
+                                    <td>$318.50 per day</td>
+                                    <td>4 hours at $45.50 multiplied by 1.75</td>
+                                </tr>
+                                <tr>
+                                    <td>Full outage, list day, all elective procedures cancelled</td>
+                                    <td>$43,001 per day</td>
+                                    <td>12 cancellations, 6 emergency sets off-site, 1 trip</td>
+                                </tr>
+                                <tr>
+                                    <td>Full outage, list day, partner SSU support</td>
+                                    <td>$22,676 per day</td>
+                                    <td>6 cancellations, 15 sets off-site, 2 trips</td>
+                                </tr>
+                                <tr>
+                                    <td>Full outage, non-list day</td>
+                                    <td>$662 per day</td>
+                                    <td>6 emergency sets off-site, 1 trip</td>
+                                </tr>
+                                <tr>
+                                    <td>One unit down at a duplicated site, list day</td>
+                                    <td>$11,609 per day cancelling the shortfall, $6,409 with partner SSU support</td>
+                                    <td>Capacity of 19.2 sets against demand of 24 leaves 3.2 procedures unsupported, plus overtime</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="small text-muted">Table 4. Derived Unit Costs.</p>
+
+                    <p><strong>Downtime and Annual Cost:</strong> At the regional base case, a site with one washer-disinfector and one steriliser averages 8.7 days of unplanned full outage and 5.0 days of planned full outage per year. Its expected outage cost is $298,100 per year when elective procedures are cancelled, and $160,500 per year with partner SSU support. With partner support in place, duplication with each unit able to carry 80 % of peak load reduces the cost to $94,500 per year. Upsizing each unit to carry 100 % of peak load with overtime reduces it to $21,400 per year, because loss of one unit no longer forces cancellations. Downtime and cost scale with time to restore, so remote sites carry the highest exposure. Results by location, with partner SSU support in place:</p>
+
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Measure</th>
+                                    <th>Metropolitan (1 day to restore)</th>
+                                    <th>Regional (2 days to restore)</th>
+                                    <th>Remote (4 days to restore)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Single-unit site, unplanned full outage days per year</td>
+                                    <td>4.7</td>
+                                    <td>8.7</td>
+                                    <td>16.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Duplicated site, unplanned full outage days per year</td>
+                                    <td>0.7</td>
+                                    <td>0.8</td>
+                                    <td>1.1</td>
+                                </tr>
+                                <tr>
+                                    <td>Duplicated site, unplanned reduced-capacity days per year</td>
+                                    <td>7.9</td>
+                                    <td>15.7</td>
+                                    <td>30.6</td>
+                                </tr>
+                                <tr>
+                                    <td>Single-unit site, expected annual outage cost</td>
+                                    <td>$100,500</td>
+                                    <td>$160,500</td>
+                                    <td>$279,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Duplicated site, 80 % unit capacity, expected annual outage cost</td>
+                                    <td>$60,900</td>
+                                    <td>$94,500</td>
+                                    <td>$161,500</td>
+                                </tr>
+                                <tr>
+                                    <td>Duplicated site, 100 % unit capacity, expected annual outage cost</td>
+                                    <td>$17,200</td>
+                                    <td>$21,400</td>
+                                    <td>$31,400</td>
+                                </tr>
+                                <tr>
+                                    <td>Break-even installed cost of the added washer-disinfector and steriliser, 80 % unit capacity</td>
+                                    <td>$102,100</td>
+                                    <td>$287,800</td>
+                                    <td>$653,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Break-even installed cost of the added washer-disinfector and steriliser, 100 % unit capacity</td>
+                                    <td>$408,900</td>
+                                    <td>$801,600</td>
+                                    <td>$1,567,400</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="small text-muted">Table 5. Downtime, Annual Outage Cost and Duplication Break-Even by Location.</p>
+
+                    <p><strong>Investment Appraisal:</strong> Each measure is assessed at the regional base case against the single-unit site. A measure is justified where its installed cost is less than the break-even value, or where its benefit to cost ratio exceeds 1.</p>
+
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Measure</th>
+                                    <th>Added Annual Cost</th>
+                                    <th>Avoided Annual Outage Cost</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Partner SSU agreement</td>
+                                    <td>$8,000 (assumption covering agreement administration, an annual exercise and transport containers)</td>
+                                    <td>$137,600</td>
+                                    <td>Benefit to cost ratio of 17. Pays back if it converts 0.4 outage list days per year from full cancellation to partner support.</td>
+                                </tr>
+                                <tr>
+                                    <td>Duplicate washer-disinfector and steriliser, 80 % unit capacity, with partner agreement</td>
+                                    <td>$25,000</td>
+                                    <td>$66,000</td>
+                                    <td>Justified where the two added units cost less than $287,800 installed.</td>
+                                </tr>
+                                <tr>
+                                    <td>Duplicate washer-disinfector and steriliser, 100 % unit capacity, with partner agreement</td>
+                                    <td>$25,000</td>
+                                    <td>$139,100</td>
+                                    <td>Justified where the two added units cost less than $801,600 installed.</td>
+                                </tr>
+                                <tr>
+                                    <td>SSU on emergency power</td>
+                                    <td>$2,000 (assumption covering generator testing and maintenance share)</td>
+                                    <td>$4,500 at 0.3 power events per year</td>
+                                    <td>Justified where installed cost is less than $17,800. Each additional one-day power event avoided per year adds $106,300 to the break-even value.</td>
+                                </tr>
+                                <tr>
+                                    <td>Second steam source (integral electric steam generator)</td>
+                                    <td>$3,000 (assumption covering feedwater testing and generator maintenance)</td>
+                                    <td>$3,000 at 0.1 building steam failures per year of 2 days</td>
+                                    <td>Not justified at the base case. Each additional two-day steam failure avoided per year adds $212,600 to the break-even value.</td>
+                                </tr>
+                                <tr>
+                                    <td>Small steam steriliser with Type B cycle, 8 sets per day (assumption)</td>
+                                    <td>$4,000 (assumption covering maintenance, requalification and test packs)</td>
+                                    <td>$8,700 regional, $17,300 remote</td>
+                                    <td>Justified where installed cost is less than $19,400 regional or $54,500 remote. Covers steriliser outages only, as a washer-disinfector is still required. Excludes site isolation, where it is the only on-site sterilisation route.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cross-training of 3 staff, 40 hours initial and 8 hours annual reassessment each, plus $2,000 assessor time</td>
+                                    <td>$4,400 (initial training annualised over 5 years)</td>
+                                    <td>$69,600 if staffing shortfall list days fall from 6 to 1 per year at 50 % capacity (assumption)</td>
+                                    <td>Pays back if it prevents 0.2 staffing shortfall list days per year.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="small text-muted">Table 6. Investment Appraisal at the Regional Base Case.</p>
+
+                    <p><strong>Sensitivity:</strong> The break-even installed cost of duplication (80 % unit capacity, regional, partner agreement in place, base value $287,800) responds most to case cost, elective volume, unit downtime and the effectiveness of partner support. At low-cost, low-volume sites, outage cost alone does not justify duplication, and the decision rests on service continuity for emergency and obstetric care.</p>
+
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Input</th>
+                                    <th>Low Value</th>
+                                    <th>Break-Even at Low Value</th>
+                                    <th>High Value</th>
+                                    <th>Break-Even at High Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Unit downtime (failures per year multiplied by days to restore)</td>
+                                    <td>2 days per year</td>
+                                    <td>$102,100</td>
+                                    <td>8 days per year</td>
+                                    <td>$653,600</td>
+                                </tr>
+                                <tr>
+                                    <td>Episode cost</td>
+                                    <td>$1,840</td>
+                                    <td>Not justified</td>
+                                    <td>$13,126</td>
+                                    <td>$748,200</td>
+                                </tr>
+                                <tr>
+                                    <td>Elective procedures per list day</td>
+                                    <td>6</td>
+                                    <td>Not justified</td>
+                                    <td>18</td>
+                                    <td>$579,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Elective procedures proceeding with partner support</td>
+                                    <td>75 %</td>
+                                    <td>$74,700</td>
+                                    <td>25 %</td>
+                                    <td>$501,000</td>
+                                </tr>
+                                <tr>
+                                    <td>Stranded cost fraction</td>
+                                    <td>15 %</td>
+                                    <td>$189,300</td>
+                                    <td>45 %</td>
+                                    <td>$386,300</td>
+                                </tr>
+                                <tr>
+                                    <td>Recovery premium</td>
+                                    <td>10 %</td>
+                                    <td>$142,000</td>
+                                    <td>40 %</td>
+                                    <td>$433,700</td>
+                                </tr>
+                                <tr>
+                                    <td>Added operating cost of duplication</td>
+                                    <td>$40,000 per year</td>
+                                    <td>$182,500</td>
+                                    <td>$15,000 per year</td>
+                                    <td>$358,100</td>
+                                </tr>
+                                <tr>
+                                    <td>Real discount rate</td>
+                                    <td>10 %</td>
+                                    <td>$251,800</td>
+                                    <td>3 %</td>
+                                    <td>$349,600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="small text-muted">Table 7. Sensitivity of Duplication Break-Even Installed Cost.</p>
+
+                    <p><strong>Implications for Design:</strong> The partner SSU agreement and cross-training return the highest value for the lowest cost at every location. Implement them first. At the regional base case, upsizing each unit from 80 % to 100 % of peak load avoids more cost ($73,100 per year) than duplication at 80 % capacity ($66,000 per year). Specify each unit of a duplicated pair to carry the full peak daily load within extended hours. Second steam sources and SSU emergency power are justified by outage cost only where site event history shows frequent or long utility failures, so base those decisions on site event records. Small steam sterilisers are justified mainly at remote sites and for isolation scenarios.</p>
+                    <p><strong>Applying the Model:</strong> Derive failures per unit per year and time to restore from at least 3 years of work orders, including parts and technician travel time. Take procedures per list day and sets per procedure from the theatre management and instrument tracking systems. Replace the national average episode cost with patient-level costing for the affected case mix. Obtain partner processing charges and transport costs in writing. Compare the resulting break-even installed costs with site quotations that include building services, installation, IQ, OQ and PQ, and repeat the appraisal at 3 % and 10 %.</p>
 
                     <p class="h2 section-anchor" id="conclusion">Conclusion and Recommendations</p>
-                    <p>Sterilisation service disruptions pose a serious threat to hospital operations and patient safety, but with diligent preparedness, their impact can be contained. Regional Australian hospitals, whether a small remote clinic or a large regional base must view sterilisation continuity as a critical component of their emergency planning. This whitepaper has reviewed the risks, strategies, and case studies to guide hospitals in strengthening their contingency plans. In conclusion, we distill the findings into key recommendations for hospital leadership and technician teams:</p>
-                    <ol>
+                    <p>Apply the following measures in every regional hospital that performs procedures requiring sterile RMDs.</p>
+                    <ul>
                         <li>
-                            <p><strong>Develop a Formal Sterilisation Contingency Plan:</strong> Every hospital should have a written plan specifically for sterilisation service failure, as part of its broader business continuity documentation. This plan should address scenarios such as equipment breakdown, power/water loss, environmental control failure, and staff shortage, and delineate step-by-step actions for each. It must be regularly updated and readily accessible to all relevant staff.</p>
+                            <p><strong>Contingency Plan:</strong> Write a sterilisation contingency procedure within the business continuity plan covering equipment failure, utility loss, water and steam contamination, environmental control failure, workforce loss and site isolation. Define activation triggers, responsible roles and the activation process, and exercise the procedure at defined intervals.</p>
                         </li>
                         <li>
-                            <p><strong>Invest in Redundancy and Backup Capacity:</strong> Secure funding and approval to maintain at least two sterilisation units (autoclaves) in any hospital performing surgery. Similarly, have backups or alternatives for washers, dryers, and water treatment systems. Where adding a full second unit is not feasible, consider lower-cost backups e.g. a smaller steriliser or advanced tabletop unit that can sterilise a limited load in an emergency. Ensure critical utilities for CSSD have emergency power supply or alternative sources.</p>
+                            <p><strong>Redundancy:</strong> Provide two washer-disinfectors and two steam sterilisers, each sized for at least the minimum essential load and preferably the full peak daily load within extended hours. Where this cannot be justified, provide a small steam steriliser with a Type B cycle qualified for the emergency sets and document the off-site route.</p>
                         </li>
                         <li>
-                            <p><strong>Pre-stock and Pre-position Emergency Supplies:</strong> Keep an emergency store of disposable sterile instruments, gowns, drapes, and other consumables that can be used if reusables cannot be processed. Focus on items for life-saving and common urgent procedures. Monitor expiry dates and rotate this stock. If your hospital is in a remote area, work with suppliers to possibly station extra consumables locally before the wet season or periods of isolation.</p>
+                            <p><strong>Utilities:</strong> Place at least one washer-disinfector, one steriliser, the sterile store and their supporting plant (steam generation, water treatment, compressed air) on emergency power. Provide duplex water treatment or treated water storage.</p>
                         </li>
                         <li>
-                            <p><strong>Establish Mutual Aid Agreements:</strong> Coordinate with other hospitals (public and/or private) in your region to support each other during sterilisation outages. Draft MOUs that outline how instruments, staff, or even patients will be shared or transferred. Identify contact persons in each facility. For private hospitals, consider agreements with the nearest public hospital and vice versa for emergency reprocessing services or surgical backup. Test these pathways with occasional drills or small-scale transfers to ensure viability.</p>
+                            <p><strong>Steam and Water Change Control:</strong> Treat any change to boiler water treatment or water supply as a service change, and complete steam quality, condensate purity or water quality testing before releasing loads.</p>
                         </li>
                         <li>
-                            <p><strong>Utilize External Reprocessing Services:</strong> Particularly for private hospitals or day surgeries, set up a relationship with an external sterilisation provider if nearby as a contingency. Even if you do not use them routinely, having the paperwork and validation in place means you can quickly dispatch instruments to them when needed. Ensure a validated transport protocol is in place for moving contaminated and sterile items safely.</p>
+                            <p><strong>Maintenance:</strong> Hold critical spares, trend routine test results, and agree return-to-service test requirements for each repair type with the service provider.</p>
                         </li>
                         <li>
-                            <p><strong>Enhance Staff Training and Relief Coverage:</strong> Cross-train a pool of staff in basic sterilisation tasks, for example, have two theatre staff capable of running a cycle and doing instrument packing if needed. Conduct periodic competency assessments so they remain familiar. Additionally, maintain an updated call list for emergency staffing whether it’s contacting a retired local technician for short-term help or accessing a corporate float pool. Incorporate sterilisation failures into emergency drills so staff practice communication and role-switching under those conditions.</p>
+                            <p><strong>Reserve Stock:</strong> Hold reserve sterile sets and single-use kits sized to the longest credible isolation period, and rotate by expiry date.</p>
                         </li>
                         <li>
-                            <p><strong>Engage Biomedical Engineering Early:</strong> At any sign of sterilisation equipment issues, involve technicians or biomedical engineers immediately. Sometimes proactive maintenance or quick fixes can avert a larger outage. Keep critical spare parts on site if possible e.g. replacement seals, filters for sterilisers. If a major repair is needed, activate contingency plans while the fix is in progress, do not wait to see if it can be fixed last-minute. Have the vendor’s support line and service contract details readily available for 24/7 emergencies.</p>
+                            <p><strong>Mutual Aid:</strong> Execute written agreements with a partner SSU or contracted reprocessor covering processing, set loans, transport, traceability and cost recovery, and test them with periodic small-scale transfers.</p>
                         </li>
                         <li>
-                            <p><strong>Prioritize and Ration During Outages:</strong> When disruption hits, swiftly prioritize surgeries and procedures. Convene surgical and medical leadership to categorize what can be delayed and what must proceed. Implement rationing of any existing sterile goods, for example, open a new sterile kit only when absolutely needed, and consider keeping certain instruments in limited reuse by the same patient if safe to do so e.g. keeping a sterile catheter for that same patient’s later procedure rather than opening a new one. Use immediate-use sterilisation (flash) only for truly urgent, unplanned needs and with full adherence to infection control guidelines. Clearly communicate to all departments about the conservation measures in effect.</p>
+                            <p><strong>Workforce:</strong> Maintain at least two competent staff for each critical SSU function, cross-train perioperative staff for defined tasks, and pre-arrange relief staffing.</p>
                         </li>
                         <li>
-                            <p><strong>Communicate Early and Often:</strong> Ensure that internal alerts are sent out as soon as a problem is confirmed, including to executive on-call, department heads, and clinicians, so everyone understands the constraints and plan. Simultaneously, prepare external communications: notify your local health authority contact or regulator as required, and designate a spokesperson to handle any media or public inquiries if the situation becomes known publicly. Transparent communication will help manage expectations e.g. patients will be more understanding about delays if they know it’s due to an unforeseen equipment failure being addressed.</p>
+                            <p><strong>Restricted Processes:</strong> Do not use low-temperature processes, high-level disinfection or immediate-use sterilisation to replace lost steam sterilisation capacity. Do not reprocess or reuse used single-use devices.</p>
                         </li>
                         <li>
-                            <p><strong>Uphold Safety and Documentation:</strong> Do not compromise on monitoring and indicators during a crisis. If you must run unusual sterilisation cycles or use alternative methods, document each load, result of biological/chemical indicators, and any deviations. Continue to follow validation protocols for instance, if using an older backup steriliser, ensure it’s still within its validation date or re-qualify it before use if needed. After the event, conduct a full incident analysis and share lessons learned with the team and across the network. Use those lessons to update the contingency plan, and consider advocating for any system-level changes such as state-level instrument loan pools or funding for upgrades that would improve future resilience.</p>
+                            <p><strong>Cost Appraisal:</strong> Calculate expected annual outage cost from site failure history, time to restore, elective volume and patient-level case cost. Express each contingency measure as a break-even installed cost at 7 % real over its effective life, and compare it with site quotations.</p>
                         </li>
-                    </ol>
-                    <p>By implementing these recommendations, hospital administrators and sterile services teams can create a robust safety net for one of healthcare’s most indispensable functions. The ultimate measure of success is that even if sterilisation services are disrupted, patient care continues safely, perhaps on a limited basis, but without catastrophic failure. Regional and remote hospitals owe it to their communities to be ready for such challenges. As the saying goes in emergency management: Hope for the best, but plan for the worst. With the strategies outlined in this whitepaper, hospitals can confidently ensure that a sterilisation service disruption, however unwelcome, will be met with a swift, organised, and effective response that safeguards patients and upholds the standards of care.</p>
+                        <li>
+                            <p><strong>Reporting:</strong> Specify notification roles and timeframes for the jurisdiction, the recall procedure and the open disclosure process in the business continuity plan.</p>
+                        </li>
+                    </ul>
 
-                    <p class="h2 section-anchor" id="sources">Sources:</p>
+                    <p class="h2 section-anchor" id="sources">Sources</p>
                     <ol>
-                        <li>Austin Hospital equipment failure case - ABC News (2019)</li>
-                        <li>Princess Alexandra Hospital sterilisation incident - ABC News (2019)</li>
-                        <li>Australasian Health Facility Guidelines (2022) - Sterilising Services Unit recommendations</li>
-                        <li>Mackay HHS Business Continuity Plan (2013) - CSSD contingency excerpt</li>
-                        <li>St Vincent’s Private Hospital Griffith - Facilities description (2021)</li>
-                        <li>NSW Health Incident Management Policy (2020)</li>
-                        <li>ACSQHC Infection Prevention Workbook (2023) - risk management guidance</li>
-                        <li>ACIPC Forum discussion (2017) - contingency planning for CSSD environment failure</li>
-                        <li>ABC News – Griffith base hospital sterilisation partnership (2013)</li>
+                        <li>Standards Australia (2023). AS 5369:2023 Reprocessing of reusable medical devices and other devices in health and non-health related facilities.</li>
+                        <li>Australasian Health Facility Guidelines (2022). Part B, HPU 0190 Sterilizing Services and Endoscope Reprocessing Units, Revision 7.0. <a class="body-link" href="https://healthfacilityguidelines.com.au/hpu/sterilizing-services-and-endoscope-reprocessing-unit" target="_blank" rel="noopener">healthfacilityguidelines.com.au</a></li>
+                        <li>Australian Commission on Safety and Quality in Health Care (2024). Advisory AS24/01 NSQHS Standards requirements for reprocessing of reusable medical devices in health service organisations. <a class="body-link" href="https://www.safetyandquality.gov.au/accreditation/advisories/advisory-as2401-national-safety-and-quality-health-service-standards-requirements-reprocessing-reusable-medical-devices-health-service-organisations" target="_blank" rel="noopener">safetyandquality.gov.au</a></li>
+                        <li>NSW Health (2020). Policy Directive PD2020_047 Incident Management. <a class="body-link" href="https://www1.health.nsw.gov.au/pds/ActivePDSDocuments/PD2020_047.pdf" target="_blank" rel="noopener">health.nsw.gov.au</a></li>
+                        <li>NSW Health. Incident reporting for licensed private health facilities. <a class="body-link" href="https://www.health.nsw.gov.au/Hospitals/privatehealth/Pages/incident-reporting.aspx" target="_blank" rel="noopener">health.nsw.gov.au</a></li>
+                        <li>NSW Clinical Excellence Commission (2024). Risk assessment and escalation of temperature or humidity variation in perioperative and sterile stock environments. <a class="body-link" href="https://www.cec.health.nsw.gov.au/__data/assets/pdf_file/0007/941560/Risk-assessment-and-escalation-of-temperature-or-humidity-variation-in-perioperative-and-sterile-stock-environments.pdf" target="_blank" rel="noopener">cec.health.nsw.gov.au</a></li>
+                        <li>Victorian Health and Human Services Building Authority (2020). HTA-2019-001 Response to humidity control events in sterile store and perioperative areas. <a class="body-link" href="https://www.vhba.vic.gov.au/sites/default/files/2020-04/VHHSBA-HTA-2019-001-Humidity-Control-Event-Paper.pdf" target="_blank" rel="noopener">vhba.vic.gov.au</a></li>
+                        <li>ABC News (23 August 2019). Surgeries cancelled at PA Hospital amid probe into cause of sterilisation malfunction. <a class="body-link" href="https://www.abc.net.au/news/2019-08-23/pah-surgery-finds-cause-of-equipment-sterilisation-problems/11440108" target="_blank" rel="noopener">abc.net.au</a></li>
+                        <li>3AW (9 September 2019). Equipment fault forces Melbourne hospital to cancel 150 surgeries. <a class="body-link" href="https://www.3aw.com.au/equipment-fault-forces-melbourne-hospital-to-cancel-150-surgeries/" target="_blank" rel="noopener">3aw.com.au</a></li>
+                        <li>3AW (11 September 2019). Hundreds of surgeries cancelled at Austin Hospital due to equipment failure. <a class="body-link" href="https://www.3aw.com.au/austin-hospital-76-year-olds-life-saving-surgery-among-hundreds-of-surgeries-cancelled-due-to-equipment-failure/" target="_blank" rel="noopener">3aw.com.au</a></li>
+                        <li>Premier of Victoria (12 September 2019). Statement on Austin Health Surgery. <a class="body-link" href="https://www.premier.vic.gov.au/statement-austin-health-surgery" target="_blank" rel="noopener">premier.vic.gov.au</a></li>
+                        <li>Austin Health. Austin Health welcomes Safer Care Victoria review findings. <a class="body-link" href="https://austin.org.au/austinhealthwelcomesscvreviewfindings" target="_blank" rel="noopener">austin.org.au</a></li>
+                        <li>The Area News (13 February 2018). Base hospital to purchase sterilisation services off St Vincent’s. <a class="body-link" href="https://www.areanews.com.au/story/5226231/base-hospital-to-purchase-sterilisation-services-off-st-vincents/" target="_blank" rel="noopener">areanews.com.au</a></li>
+                        <li>National Health and Medical Research Council (2019). Australian Guidelines for the Prevention and Control of Infection in Healthcare. <a class="body-link" href="https://www.nhmrc.gov.au/about-us/publications/australian-guidelines-prevention-and-control-infection-healthcare-2019" target="_blank" rel="noopener">nhmrc.gov.au</a></li>
+                        <li>Australian Commission on Safety and Quality in Health Care (2013). Australian Open Disclosure Framework.</li>
+                        <li>Independent Health and Aged Care Pricing Authority (2026). National Hospital Cost Data Collection, Public Sector Report, 2023 to 2024 financial year. <a class="body-link" href="https://www.ihacpa.gov.au/sites/default/files/2026-05/nhcdc_public_sector_report_2023-24.pdf" target="_blank" rel="noopener">ihacpa.gov.au</a></li>
+                        <li>Office of Impact Analysis (2023). Cost-benefit analysis guidance note. <a class="body-link" href="https://oia.pmc.gov.au/sites/default/files/2023-07/cost-benefit-analysis.pdf" target="_blank" rel="noopener">oia.pmc.gov.au</a></li>
+                        <li>Australian Taxation Office (2022). TR 2022/1 Income tax: effective life of depreciating assets, health care and social assistance. <a class="body-link" href="https://www.ato.gov.au/law/view/document?DocID=TXR%2FTR20221%2FNAT%2FATO%2F00019" target="_blank" rel="noopener">ato.gov.au</a></li>
+                        <li>NSW Health. Sterilising Technician Grade 1 and Grade 2, Coffs Harbour Health Campus, job advertisements stating hourly remuneration. <a class="body-link" href="https://jobs.health.nsw.gov.au/jobs/sterilising-technician-grade-2-coffs-harbour-health-campus-287123" target="_blank" rel="noopener">jobs.health.nsw.gov.au</a></li>
                     </ol>
                 </section>
             </div>
@@ -478,7 +914,7 @@
                         <div class="mb-0"><a class="heading" href="index.html">Malone Hospital Services</a></div>
                         <div class="mb-2">ABN 80 061 127 179</div>
                         <div class="mb-3"><a href="mailto:sales@malones.com.au">sales@malones.com.au</a></div>
-                        <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-nsw?share">24 Tathra Street <br>West Gosford, NSW, 2251</a></div>
+                        <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-nsw?share">24 Tathra Street <br>West Gosford, NSW, 2250</a></div>
                         <div class="mb-0"><a target="_blank" rel="noopener" href="tel:+61243239731">(02) 4323 9731</a></div>
                         <div class="mb-3">Electrical Licence 240395C</div>
                         <div class="mb-0"><a target="_blank" rel="noopener" href="https://g.page/malone-hospital-services-qld?share">7/9 Redcliffe Gardens Drive <br>Clontarf, QLD, 4019</a></div>
@@ -503,10 +939,6 @@
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
-                        <div class="heading">Resources</div>
-                        <ul class="list-unstyled m-0">
-                            <li class="mb-3"><a href="white-papers.html">White Papers</a></li>
-                        </ul>
                         <div class="heading">Accessories</div>
                         <ul class="list-unstyled m-0">
                             <li class="mb-1"><a href="accessory-detergent.html">Detergent</a></li>
@@ -516,6 +948,12 @@
                         <ul class="list-unstyled m-0">
                             <li class="mb-1"><a href="thermoline-tbw-250.html">Thermoline TBW 250</a></li>
                             <li class="mb-3"><a href="thermoline-tbw-520.html">Thermoline TBW 520</a></li>
+                        </ul>
+                        <div class="heading">Steam Sterilisers</div>
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-1"><a href="ajc-steri-21.html">AJC Steri 21</a></li>
+                            <li class="mb-1"><a href="ajc-uniclave-99.html">AJC Uniclave 99</a></li>
+                            <li class="mb-3"><a href="ajc-amaro-5000.html">AJC Amaro 5000</a></li>
                         </ul>
                     </div>
                     <div class="col-6 col-lg-2">
@@ -549,7 +987,11 @@
                             <li class="mb-1"><a href="ken-dw-330.html">KEN DW 330</a></li>
                             <li class="mb-1"><a href="ken-dw-410.html">KEN DW 410</a></li>
                             <li class="mb-3"><a href="ken-dw-412.html">KEN DW 412</a></li>
-                        </ul>  
+                        </ul>
+                        <div class="heading">Resources</div>
+                        <ul class="list-unstyled m-0">
+                            <li class="mb-3"><a href="white-papers.html">White Papers</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
